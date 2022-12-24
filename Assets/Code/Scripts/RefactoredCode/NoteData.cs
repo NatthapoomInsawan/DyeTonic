@@ -15,6 +15,10 @@ namespace DyeTonic
         [Tooltip("Position of this note in beat")]
         public float beat;
 
+        [Tooltip("Track position of this note")]
+        [Range(1, 4)]
+        public int track;
+
         [Tooltip("End position of long note (If it is single note set the value to 0)")]
         public float endBeat;
     }

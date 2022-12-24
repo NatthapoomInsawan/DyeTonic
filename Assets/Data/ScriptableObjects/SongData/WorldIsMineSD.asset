@@ -13,56 +13,84 @@ MonoBehaviour:
   m_Name: WorldIsMineSD
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: ed6f2ac3fb9352f4ea500ceb0d464845, type: 3}
-  notes:
+  songBpm: 160
+  notesLine1:
   - beat: 5
+    track: 2
     endBeat: 0
   - beat: 6
+    track: 4
     endBeat: 0
   - beat: 9
+    track: 2
     endBeat: 0
   - beat: 10
+    track: 1
     endBeat: 0
   - beat: 12
+    track: 3
     endBeat: 0
   - beat: 13
+    track: 2
     endBeat: 0
   - beat: 14
+    track: 4
     endBeat: 0
   - beat: 15
+    track: 4
     endBeat: 0
   - beat: 16
+    track: 3
     endBeat: 0
   - beat: 17
+    track: 2
     endBeat: 0
   - beat: 18
+    track: 1
     endBeat: 0
   - beat: 19
+    track: 1
     endBeat: 0
   - beat: 20
+    track: 2
     endBeat: 0
   - beat: 21
+    track: 3
     endBeat: 0
   - beat: 22
+    track: 4
     endBeat: 0
   - beat: 25
+    track: 2
     endBeat: 0
   - beat: 26
+    track: 1
     endBeat: 0
   - beat: 27
+    track: 2
     endBeat: 0
   - beat: 28
+    track: 3
     endBeat: 0
   - beat: 29
+    track: 2
     endBeat: 0
   - beat: 30
+    track: 2
     endBeat: 0
   - beat: 32
+    track: 1
     endBeat: 0
   - beat: 34
+    track: 3
     endBeat: 0
   - beat: 36
+    track: 4
     endBeat: 0
   - beat: 48
+    track: 1
     endBeat: 0
   - beat: 49
+    track: 2
     endBeat: 0
+  notesLine2: []
