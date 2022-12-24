@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DyeTonic
 {
-    public class Note : MonoBehaviour, INote
+    public abstract class Note : MonoBehaviour
     {
         [SerializeField] SongManager _songManager;
 
@@ -13,12 +13,12 @@ namespace DyeTonic
         public NoteData NoteData { get; set; }
 
         // Update is called once per frame
-        void Update()
+        protected virtual void Update()
         {
             MoveToEndPoint();
         }
 
-        public void MoveToEndPoint()
+        protected virtual void MoveToEndPoint()
         {
             transform.position = Vector3.Lerp(StartTransform.position, EndTransform.position, (_songManager.songPosInBeats / NoteData.beat));
         }
