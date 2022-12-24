@@ -29,6 +29,9 @@ namespace DyeTonic
             //record the time when the song starts
             dspSongTime = (float)AudioSettings.dspTime;
 
+            //reset songPositionInBeats to 0
+            _songManager.songPosInBeats = 0;
+
             //start the song
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.clip = _songData.song;
