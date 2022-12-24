@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 124316892230020576}
   - component: {fileID: 7363467028323402666}
   - component: {fileID: 8520169124921497575}
+  - component: {fileID: 6756191937691825764}
   m_Layer: 0
   m_Name: NormalNote
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6756191937691825764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7967211962095986510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01be740292e20a7418fe474c9ad263a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}

@@ -13,11 +13,17 @@ namespace DyeTonic
         [Header("Note Prefabs")]
         [SerializeField] GameObject _normalNotes;
 
-        [Header("Track1 Position")]
+        [Header("Track 1 start transform")]
         [SerializeField] Transform[] track1Transform = new Transform[4];
 
-        [Header("Track2 Position")]
+        [Header("Track 2 start transform")]
         [SerializeField] Transform[] track2Transform = new Transform[4];
+
+        [Header("Track 1 end transform")]
+        [SerializeField] Transform[] track1EndTransform = new Transform[4];
+
+        [Header("Track 2 end transform")]
+        [SerializeField] Transform[] track2EndTransform = new Transform[4];
 
 
         // Start is called before the first frame update
@@ -28,9 +34,13 @@ namespace DyeTonic
             {
                 if (noteData.endBeat == 0)
                 {
-                    var instantateObject = _normalNotes;
+                    var instantateObject = Instantiate(_normalNotes, track1Transform[noteData.track - 1]);
 
-                    Instantiate(instantateObject, track1Transform[noteData.track - 1]);
+                    Note noteComponent = instantateObject.GetComponent<Note>();
+
+                    noteComponent.NoteData = noteData;
+                    noteComponent.StartTransform = track1Transform[noteData.track - 1];
+                    noteComponent.EndTransform = track1EndTransform[noteData.track - 1];
 
                 }
             }
