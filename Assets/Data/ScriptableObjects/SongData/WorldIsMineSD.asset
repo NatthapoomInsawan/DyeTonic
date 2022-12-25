@@ -17,16 +17,16 @@ MonoBehaviour:
   notesLine1:
   - beat: 5
     track: 2
-    endBeat: 0
+    endBeat: 5.5
   - beat: 6
     track: 4
-    endBeat: 0
+    endBeat: 8
   - beat: 9
     track: 2
     endBeat: 0
   - beat: 10
     track: 1
-    endBeat: 0
+    endBeat: 11
   - beat: 12
     track: 3
     endBeat: 0
@@ -53,13 +53,13 @@ MonoBehaviour:
     endBeat: 0
   - beat: 20
     track: 2
-    endBeat: 0
+    endBeat: 21
   - beat: 21
     track: 3
-    endBeat: 0
+    endBeat: 22
   - beat: 22
     track: 4
-    endBeat: 0
+    endBeat: 24
   - beat: 25
     track: 2
     endBeat: 0
@@ -77,16 +77,16 @@ MonoBehaviour:
     endBeat: 0
   - beat: 30
     track: 2
-    endBeat: 0
+    endBeat: 31
   - beat: 32
     track: 1
-    endBeat: 0
+    endBeat: 33
   - beat: 34
     track: 3
-    endBeat: 0
+    endBeat: 35
   - beat: 36
     track: 4
-    endBeat: 0
+    endBeat: 47
   - beat: 48
     track: 1
     endBeat: 0
