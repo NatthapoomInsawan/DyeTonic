@@ -17,7 +17,7 @@ MonoBehaviour:
   notesLine1:
   - beat: 5
     track: 2
-    endBeat: 0
+    endBeat: 5.5
   - beat: 6
     track: 4
     endBeat: 0
