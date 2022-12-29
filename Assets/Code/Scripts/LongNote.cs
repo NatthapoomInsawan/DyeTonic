@@ -28,7 +28,7 @@ namespace DyeTonic
 
         protected override void MoveToEndPoint()
         {
-            //move to hit    point
+            //move to hit point
             transform.position = Vector3.LerpUnclamped(StartTransform.position, EndTransform.position, (_songManager.songPosInBeats / NoteData.beat));
 
             //Destroy when endBeat pass or equal 1.5 beat
