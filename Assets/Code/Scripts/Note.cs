@@ -7,7 +7,7 @@ namespace DyeTonic
 {
     public abstract class Note : MonoBehaviour
     {
-        [SerializeField] SongManager _songManager;
+        [SerializeField] protected SongManager _songManager;
 
         public Transform StartTransform { get; set; }
         public Transform EndTransform { get; set; }
