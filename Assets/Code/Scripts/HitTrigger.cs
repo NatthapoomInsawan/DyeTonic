@@ -29,15 +29,39 @@ namespace DyeTonic
 
         }
 
-        public void Track1 (InputAction.CallbackContext context) => CalculateScore(context);
+        public void Track1(InputAction.CallbackContext context) 
+        { 
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
 
-        public void Track2 (InputAction.CallbackContext context) => CalculateScore(context);
+        public void Track2 (InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
 
-        public void Track3 (InputAction.CallbackContext context) => CalculateScore(context);
+        public void Track3 (InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
 
-        public void Track4 (InputAction.CallbackContext context) => CalculateScore(context);
+        public void Track4 (InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
 
-        private void CalculateScore (InputAction.CallbackContext context)
+        private void OnKeypressed(InputAction.CallbackContext context)
         {
 
             Ray ray = new Ray(transform.position + new Vector3(0, 0, -2.5f), transform.forward);
@@ -71,7 +95,10 @@ namespace DyeTonic
 
                 }
             }
+        }
 
+        private void OnKeyRelease(InputAction.CallbackContext context)
+        {
             if (context.action.WasReleasedThisFrame())
             {
                 wasPressed = false;
@@ -82,6 +109,10 @@ namespace DyeTonic
                     Destroy(hitLongNote.gameObject);
                 }
             }
+        }
+
+        private void CalculateScore (InputAction.CallbackContext context)
+        {
 
             if (context.action.actionMap.name == "Player2")
             {
