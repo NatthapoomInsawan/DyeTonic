@@ -46,7 +46,7 @@
                 {
                     "name": "",
                     "id": "1702d5c3-d7c8-472e-aa87-8ba5fda0370a",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -57,7 +57,7 @@
                 {
                     "name": "",
                     "id": "f64ae7fc-db18-4a90-a61a-aa365091b9dd",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -68,7 +68,7 @@
                 {
                     "name": "",
                     "id": "5319dc9b-75fc-4df7-bcc8-c01c568d471f",
-                    "path": "<Keyboard>/semicolon",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -79,7 +79,7 @@
                 {
                     "name": "",
                     "id": "f7d2167e-6deb-4289-a05a-90c48c69130b",
-                    "path": "<Keyboard>/quote",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -134,7 +134,7 @@
                 {
                     "name": "",
                     "id": "e516f5f2-16b1-4a9e-80fc-13964b0c6c84",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -145,7 +145,7 @@
                 {
                     "name": "",
                     "id": "cd3d2213-a32c-43a9-b458-ba704e7021fb",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -156,7 +156,7 @@
                 {
                     "name": "",
                     "id": "dfd4baaf-3368-4a1f-9f15-ae5d2243af82",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -167,7 +167,7 @@
                 {
                     "name": "",
                     "id": "e3e6366b-533d-4955-b937-f2b72b5f87f6",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/quote",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
