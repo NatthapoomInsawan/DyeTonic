@@ -5,10 +5,21 @@ using UnityEngine.InputSystem;
 
 namespace DyeTonic
 {
+    public enum NoteQuality
+    {
+        Offbeat,
+        Good,
+        Perfect,
+        Miss,
+    }
+
     public class HitTrigger : MonoBehaviour
     {
+        [SerializeField] SongManager _songManager;
+
         bool wasPressed;
         LongNote hitLongNote;
+        NoteQuality noteQuality;
 
         private void Update()
         {
@@ -39,18 +50,23 @@ namespace DyeTonic
                 if (Physics.Raycast(ray, out hit, 5))
                 {
                     LongNote longnoteComponent = hit.transform.GetComponent<LongNote>();
-
-                    Debug.Log(hit.transform.gameObject.name);
-                    Debug.Log(wasPressed);
+                    NormalNote normalnoteComponent = hit.transform.GetComponent<NormalNote>();
 
                     if (longnoteComponent != null)
                     {
+                        //assign hiitlongNote reference to calculate when release note
                         hitLongNote = longnoteComponent;
+                        noteQuality = CalculateBeatQuality(longnoteComponent.NoteData);
+                        Debug.Log(noteQuality);
                     }
-                    else
+                    else if (normalnoteComponent != null)
                     {
                         if (context.action.WasPressedThisFrame())
+                        {
+                            Debug.Log(CalculateBeatQuality(normalnoteComponent.NoteData));
                             Destroy(hit.transform.gameObject);
+                        }
+
                     }
 
                 }
@@ -59,8 +75,10 @@ namespace DyeTonic
             if (context.action.WasReleasedThisFrame())
             {
                 wasPressed = false;
-                if (hitLongNote != null)
+                if (hitLongNote != null && _songManager.songPosInBeats < hitLongNote.NoteData.endBeat)
                 {
+                    noteQuality = NoteQuality.Miss;
+                    Debug.Log(noteQuality);
                     Destroy(hitLongNote.gameObject);
                 }
             }
@@ -73,6 +91,23 @@ namespace DyeTonic
             {
 
             }
+
+        }
+
+        private NoteQuality CalculateBeatQuality(NoteData noteData)
+        {
+            //Calculate error value
+            float errorValue = (_songManager.songPosInBeats-noteData.beat)/noteData.beat * 100;
+            NoteQuality noteQuality = NoteQuality.Miss;
+
+            if (errorValue < 0)
+                noteQuality = NoteQuality.Offbeat;
+            else if ( Mathf.Abs(errorValue) < 1.5f)
+                noteQuality = NoteQuality.Perfect;
+            else if (Mathf.Abs(errorValue) < 2.5f)
+                noteQuality = NoteQuality.Good;
+
+            return noteQuality;
 
         }
 
