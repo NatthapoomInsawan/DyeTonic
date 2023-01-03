@@ -17,6 +17,10 @@ namespace DyeTonic
         //the current position of the song (in seconds)
         [SerializeField] float songPosition;
 
+        //Song position in beat to show
+
+        [SerializeField] float songPositionInBeats;
+
         //how much time (in seconds) has passed since the song started
         float dspSongTime;
 
@@ -47,6 +51,8 @@ namespace DyeTonic
 
             //calculate the position in beats
             _songManager.songPosInBeats = songPosition / secPerBeat;
+
+            songPositionInBeats = _songManager.songPosInBeats;
 
         }
 
