@@ -32,31 +32,40 @@ namespace DyeTonic
         void Start()
         {
             //spawn notes on line 1
-            foreach (NoteData noteData in _songData.notesLine1)
+            SpawnNote(track1Transform, track1EndTransform, _songData.notesLine1);
+
+            //spawn notes on line 2
+            //SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2);
+        }
+
+        void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas)
+        {
+            //spawn notes
+            foreach (NoteData noteData in noteDatas)
             {
                 if (noteData.endBeat == 0)
                 {
-                    var instantateObject = Instantiate(_normalNote, track1Transform[noteData.track - 1]);
+                    var instantateObject = Instantiate(_normalNote, trackTransforms[noteData.track - 1]);
 
                     Note noteComponent = instantateObject.GetComponent<Note>();
 
                     noteComponent.NoteData = noteData;
-                    noteComponent.StartTransform = track1Transform[noteData.track - 1];
-                    noteComponent.EndTransform = track1EndTransform[noteData.track - 1];
+                    noteComponent.StartTransform = trackTransforms[noteData.track - 1];
+                    noteComponent.EndTransform = trackEndTransforms[noteData.track - 1];
 
                 }
                 else
                 {
-                    var headNote = Instantiate( _headNote, track1Transform[noteData.track - 1]);
-                    var tailNote = Instantiate( _tailNote, track1Transform[noteData.track - 1]);
+                    var headNote = Instantiate(_headNote, trackTransforms[noteData.track - 1]);
+                    var tailNote = Instantiate(_tailNote, trackEndTransforms[noteData.track - 1]);
 
                     LongNote headNoteComponent = headNote.GetComponent<LongNote>();
                     Note tailNoteComponent = tailNote.GetComponent<Note>();
 
                     //assign head note component
                     headNoteComponent.NoteData = noteData;
-                    headNoteComponent.StartTransform = track1Transform[noteData.track - 1];
-                    headNoteComponent.EndTransform = track1EndTransform[noteData.track - 1];
+                    headNoteComponent.StartTransform = trackTransforms[noteData.track - 1];
+                    headNoteComponent.EndTransform = trackEndTransforms[noteData.track - 1];
 
                     //assign tail note component
                     NoteData tailData = new NoteData();
@@ -65,8 +74,8 @@ namespace DyeTonic
                     tailData.endBeat = 0;
 
                     tailNoteComponent.NoteData = tailData;
-                    tailNoteComponent.StartTransform = track1Transform[noteData.track - 1];
-                    tailNoteComponent.EndTransform = track1EndTransform[noteData.track - 1];
+                    tailNoteComponent.StartTransform = trackTransforms[noteData.track - 1];
+                    tailNoteComponent.EndTransform = trackEndTransforms[noteData.track - 1];
 
                     //set line
                     headNoteComponent.TailNoteTransform = tailNote.transform;
