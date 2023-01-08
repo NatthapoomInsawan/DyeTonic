@@ -19,7 +19,7 @@ namespace DyeTonic
 
         bool wasPressed;
         LongNote hitLongNote;
-        NoteQuality noteQuality;
+        NoteQuality hitLongNoteQality;
 
         private void Update()
         {
@@ -78,16 +78,20 @@ namespace DyeTonic
 
                     if (longnoteComponent != null)
                     {
-                        //assign hiitlongNote reference to calculate when release note
+                        //assign hitlongNote reference to calculate when release note
                         hitLongNote = longnoteComponent;
-                        noteQuality = CalculateBeatQuality(longnoteComponent.NoteData);
-                        Debug.Log(noteQuality);
+                        hitLongNoteQality = CalculateBeatQuality(longnoteComponent.NoteData);
+                        Debug.Log(hitLongNoteQality);
+                        //calculate score
+                        CalculateScore(context, hitLongNoteQality);
                     }
                     else if (normalnoteComponent != null)
                     {
                         if (context.action.WasPressedThisFrame())
                         {
                             Debug.Log(CalculateBeatQuality(normalnoteComponent.NoteData));
+                            CalculateScore(context, hitLongNoteQality);
+                            //calculate score
                             Destroy(hit.transform.gameObject);
                         }
 
@@ -102,25 +106,70 @@ namespace DyeTonic
             if (context.action.WasReleasedThisFrame())
             {
                 wasPressed = false;
+
+                //check if longnote release before it should
                 if (hitLongNote != null && _songManager.songPosInBeats < hitLongNote.NoteData.endBeat)
                 {
-                    noteQuality = NoteQuality.Miss;
-                    Debug.Log(noteQuality);
+                    hitLongNoteQality = NoteQuality.Miss;
+                    Debug.Log(hitLongNoteQality);
+                    //calculate score
+                    CalculateScore(context, hitLongNoteQality);
                     Destroy(hitLongNote.gameObject);
                 }
             }
         }
 
-        private void CalculateScore (InputAction.CallbackContext context)
+        private void CalculateScore (InputAction.CallbackContext context, NoteQuality noteQuality)
         {
+            int score = 0;
 
+            //assign score
+            switch (noteQuality)
+            {
+                case NoteQuality.Good:
+                    score += 100;
+                    break;
+                case NoteQuality.Perfect:
+                    score += 150;
+                    break;
+                default:
+                    score = 0;
+                    break;
+            }
+
+            //check if combo is break
+            if (noteQuality == NoteQuality.Miss)
+                _songManager.songCombo = 0;
+            else
+                _songManager.songCombo++;
+
+            //check score multiplier by combo
+            if (_songManager.songCombo > 20)
+                _songManager.scoreMultiplier = 5;
+            else if (_songManager.songCombo > 15)
+                _songManager.scoreMultiplier = 4;
+            else if (_songManager.songCombo > 10)
+                _songManager.scoreMultiplier = 3;
+            else if (_songManager.songCombo > 5)
+                _songManager.scoreMultiplier = 2;
+            else
+                _songManager.scoreMultiplier = 1;
+
+            //Multiply score
+            score = score * _songManager.scoreMultiplier;
+
+            //assign score to player
             if (context.action.actionMap.name == "Player2")
             {
+                _songManager.player2Score += score;
 
+                UpdateHitNotes(_songManager.play2HitNotes, noteQuality);
             }
             else
             {
+                _songManager.player1Score += score;
 
+                UpdateHitNotes(_songManager.play1HitNotes, noteQuality);
             }
 
         }
@@ -140,6 +189,26 @@ namespace DyeTonic
 
             return noteQuality;
 
+        }
+
+        private void UpdateHitNotes(int[] hitNotesArray, NoteQuality noteQuality)
+        {
+            //update hit note
+            switch (noteQuality)
+            {
+                case NoteQuality.Offbeat:
+                    hitNotesArray[0] += 1;
+                    break;
+                case NoteQuality.Perfect:
+                    hitNotesArray[1] += 1;
+                    break;
+                case NoteQuality.Good:
+                    hitNotesArray[2] += 1;
+                    break;
+                case NoteQuality.Miss:
+                    hitNotesArray[3] += 1;
+                    break;
+            }
         }
 
     }
