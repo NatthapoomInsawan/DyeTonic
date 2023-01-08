@@ -144,13 +144,13 @@ namespace DyeTonic
                 _songManager.songCombo++;
 
             //check score multiplier by combo
-            if (_songManager.songCombo > 20)
+            if (_songManager.songCombo > 200)
                 _songManager.scoreMultiplier = 5;
-            else if (_songManager.songCombo > 15)
+            else if (_songManager.songCombo > 150)
                 _songManager.scoreMultiplier = 4;
-            else if (_songManager.songCombo > 10)
+            else if (_songManager.songCombo > 100)
                 _songManager.scoreMultiplier = 3;
-            else if (_songManager.songCombo > 5)
+            else if (_songManager.songCombo > 50)
                 _songManager.scoreMultiplier = 2;
             else
                 _songManager.scoreMultiplier = 1;
