@@ -36,6 +36,23 @@ namespace DyeTonic
             //reset songPositionInBeats to 0
             _songManager.songPosInBeats = 0;
 
+            //reset song combo
+            _songManager.songCombo = 0;
+
+            //reset score multiplier
+            _songManager.scoreMultiplier = 1;
+
+            //reset score
+            _songManager.player1Score = 0;
+            _songManager.player2Score = 0;
+
+            //reset player hit notes
+            for (int i = 0; i < 4; i++)
+            {
+                _songManager.play1HitNotes[i] = 0;
+                _songManager.play2HitNotes[i] = 0;
+            }
+
             //start the song
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.clip = _songData.song;
