@@ -25,6 +25,7 @@ namespace DyeTonic
         //Declare Events
         public static event Action OnScoreUpdate;
         public static event Action<NoteQuality> OnNoteQualityUpdate;
+        public static event Action OnNoteMiss;
 
         private void Update()
         {
@@ -121,6 +122,7 @@ namespace DyeTonic
                     CalculateScore(context, hitLongNoteQality);
                     //Update to UI
                     OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
+                    OnNoteMiss?.Invoke();
                     Destroy(hitLongNote.gameObject);
                 }
             }
@@ -199,6 +201,9 @@ namespace DyeTonic
 
             //Update to UI
             OnNoteQualityUpdate?.Invoke(noteQuality);
+            
+            if (noteQuality == NoteQuality.Miss)
+                OnNoteMiss?.Invoke();
 
             return noteQuality;
 
