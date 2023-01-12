@@ -819,6 +819,7 @@ GameObject:
   - component: {fileID: 583961907}
   - component: {fileID: 583961909}
   - component: {fileID: 583961908}
+  - component: {fileID: 583961910}
   m_Layer: 5
   m_Name: NoteQuality Text
   m_TagString: Untagged
@@ -943,6 +944,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583961906}
   m_CullTransparentMesh: 1
+--- !u!114 &583961910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583961906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30f28b0bde4c974987bcc461078b3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135424836}
   - component: {fileID: 1135424837}
+  - component: {fileID: 1135424838}
   m_Layer: 5
   m_Name: HP bar
   m_TagString: Untagged
@@ -1429,7 +1444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -97, y: -45}
+  m_AnchoredPosition: {x: -108, y: -45}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135424837
@@ -1483,6 +1498,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1135424838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135424835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fb287f7cdaf1241a55790cbe2e7ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
 --- !u!1 &1278278924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1792,7 @@ GameObject:
   - component: {fileID: 1674791904}
   - component: {fileID: 1674791906}
   - component: {fileID: 1674791905}
+  - component: {fileID: 1674791907}
   m_Layer: 5
   m_Name: Score Text
   m_TagString: Untagged
@@ -1811,7 +1840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1874,7 +1903,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 13.960983, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1888,6 +1917,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674791903}
   m_CullTransparentMesh: 1
+--- !u!114 &1674791907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674791903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d540079903f000144b32c4ffa1179996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 0}
+  _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
 --- !u!4 &1695080779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
@@ -1915,6 +1958,7 @@ GameObject:
   - component: {fileID: 1719241407}
   - component: {fileID: 1719241409}
   - component: {fileID: 1719241408}
+  - component: {fileID: 1719241410}
   m_Layer: 5
   m_Name: Combo Text
   m_TagString: Untagged
@@ -2039,6 +2083,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719241406}
   m_CullTransparentMesh: 1
+--- !u!114 &1719241410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719241406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d12829ad4678b44b90e06f60dddb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 0}
+  _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
 --- !u!1001 &1722358320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2130,8 +2188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1834819098
 GameObject:
