@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,11 @@ namespace DyeTonic
         bool wasPressed;
         LongNote hitLongNote;
         NoteQuality hitLongNoteQality;
+
+        //Declare Events
+        public static event Action OnScoreUpdate;
+        public static event Action<NoteQuality> OnNoteQualityUpdate;
+        public static event Action OnNoteMiss;
 
         private void Update()
         {
@@ -114,6 +120,9 @@ namespace DyeTonic
                     Debug.Log(hitLongNoteQality);
                     //calculate score
                     CalculateScore(context, hitLongNoteQality);
+                    //Update to UI
+                    OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
+                    OnNoteMiss?.Invoke();
                     Destroy(hitLongNote.gameObject);
                 }
             }
@@ -172,6 +181,9 @@ namespace DyeTonic
                 UpdateHitNotes(_songManager.play1HitNotes, noteQuality);
             }
 
+            //Invoke OnScoreUpdate event
+            OnScoreUpdate?.Invoke();
+
         }
 
         private NoteQuality CalculateBeatQuality(NoteData noteData)
@@ -180,14 +192,21 @@ namespace DyeTonic
             float errorValue = (_songManager.songPosInBeats-noteData.beat)/noteData.beat * 100;
             NoteQuality noteQuality = NoteQuality.Miss;
 
-            if (errorValue < 0)
+            if (errorValue < 0 && errorValue < -2.5f)
                 noteQuality = NoteQuality.Offbeat;
             else if ( Mathf.Abs(errorValue) < 1.5f)
                 noteQuality = NoteQuality.Perfect;
             else if (Mathf.Abs(errorValue) < 2.5f)
                 noteQuality = NoteQuality.Good;
 
+            //Update to UI
+            OnNoteQualityUpdate?.Invoke(noteQuality);
+            
+            if (noteQuality == NoteQuality.Miss)
+                OnNoteMiss?.Invoke();
+
             return noteQuality;
+
 
         }
 
