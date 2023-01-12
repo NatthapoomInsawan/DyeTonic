@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ namespace DyeTonic
         public Transform EndTransform { get; set; }
         public NoteData NoteData { get; set; }
 
+        //OnNoteSelfDestroy
+        public static event Action OnNoteSelfDestroy;
+
         // Update is called once per frame
         protected virtual void Update()
         {
@@ -27,7 +31,10 @@ namespace DyeTonic
 
             //Destroy when pass or equal 1.5 beat
             if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f)
+            {
                 Destroy(gameObject);
+                OnNoteSelfDestroy?.Invoke();
+            }
 
         }
 
