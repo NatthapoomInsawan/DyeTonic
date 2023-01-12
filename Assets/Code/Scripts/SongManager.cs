@@ -26,6 +26,9 @@ namespace DyeTonic
         public int[] play1HitNotes = new int[4];
         public int[] play2HitNotes = new int[4];
 
+        //Song HP
+        public int HP;
+
 
 
     }

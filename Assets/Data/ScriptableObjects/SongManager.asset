@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: SongManager
   m_EditorClassIdentifier: 
   songPosInBeats: 0
+  songCombo: 6
+  scoreMultiplier: 1
+  player1Score: 0
+  player2Score: 2800
+  play1HitNotes: 00000000000000000000000000000000
+  play2HitNotes: 00000000000000000000000000000000
+  HP: 100
