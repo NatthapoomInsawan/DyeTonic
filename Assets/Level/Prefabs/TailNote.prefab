@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5798344160004496894}
   - component: {fileID: 124316892230020576}
   - component: {fileID: 7363467028323402666}
-  - component: {fileID: 4339346259253962924}
+  - component: {fileID: 5717713487973879707}
   m_Layer: 0
   m_Name: TailNote
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4339346259253962924
+--- !u!114 &5717713487973879707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7967211962095986510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2711b919fa8a58c448bb9c8cfafadba5, type: 3}
+  m_Script: {fileID: 11500000, guid: 272dd6a59893f9641808a80196c2061a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}

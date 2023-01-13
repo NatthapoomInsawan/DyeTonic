@@ -24,6 +24,32 @@ namespace DyeTonic
         //how much time (in seconds) has passed since the song started
         float dspSongTime;
 
+        private void Awake()
+        {
+            //reset songPositionInBeats to 0
+            _songManager.songPosInBeats = 0;
+
+            //reset song combo
+            _songManager.songCombo = 0;
+
+            //reset score multiplier
+            _songManager.scoreMultiplier = 1;
+
+            //reset score
+            _songManager.player1Score = 0;
+            _songManager.player2Score = 0;
+
+            //reset player hit notes
+            for (int i = 0; i < 4; i++)
+            {
+                _songManager.play1HitNotes[i] = 0;
+                _songManager.play2HitNotes[i] = 0;
+            }
+
+            //reset song HP
+            _songManager.HP = 100;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -32,9 +58,6 @@ namespace DyeTonic
 
             //record the time when the song starts
             dspSongTime = (float)AudioSettings.dspTime;
-
-            //reset songPositionInBeats to 0
-            _songManager.songPosInBeats = 0;
 
             //start the song
             AudioSource audioSource = GetComponent<AudioSource>();
