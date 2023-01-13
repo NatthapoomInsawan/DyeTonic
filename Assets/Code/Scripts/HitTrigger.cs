@@ -26,6 +26,7 @@ namespace DyeTonic
         public static event Action OnScoreUpdate;
         public static event Action<NoteQuality> OnNoteQualityUpdate;
         public static event Action OnNoteMiss;
+        public static event Action OnNoteHit;
 
         private void Update()
         {
@@ -204,6 +205,9 @@ namespace DyeTonic
             
             if (noteQuality == NoteQuality.Miss)
                 OnNoteMiss?.Invoke();
+
+            if (noteQuality == NoteQuality.Good || noteQuality == NoteQuality.Perfect)
+                OnNoteHit?.Invoke();
 
             return noteQuality;
 
