@@ -35,7 +35,7 @@ namespace DyeTonic
             SpawnNote(track1Transform, track1EndTransform, _songData.notesLine1);
 
             //spawn notes on line 2
-            //SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2);
+            SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2);
         }
 
         void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas)

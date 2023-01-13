@@ -9,6 +9,8 @@ namespace DyeTonic
     {
         private Slider HPSlider;
         [SerializeField] private SongManager _songManager;
+        [SerializeField] private int damageValue = 5;
+        [SerializeField] private int healValue = 1;
 
         private void Start()
         {
@@ -19,27 +21,44 @@ namespace DyeTonic
         private void OnEnable()
         {
             //subscribe event
-            HitTrigger.OnNoteMiss += UpdateUI;
-            Note.OnNoteSelfDestroy += UpdateUI;
+            HitTrigger.OnNoteMiss += DamageHP;
+            HitTrigger.OnNoteHit += HealHP;
+            Note.OnNoteSelfDestroy += DamageHP;
         }
 
         private void OnDisable()
         {
             //unsubscribe event
-            HitTrigger.OnNoteMiss -= UpdateUI;
-            Note.OnNoteSelfDestroy -= UpdateUI;
+            HitTrigger.OnNoteMiss -= DamageHP;
+            Note.OnNoteSelfDestroy -= DamageHP;
+            HitTrigger.OnNoteHit -= HealHP;
         }
 
         void UpdateUI()
         {
+            HPSlider.value = (float)_songManager.HP / 100;
+        }
+
+        void DamageHP()
+        {
             //reduce HP
-            if (_songManager.HP - 5 < 0)
+            if (_songManager.HP - damageValue < 0)
                 _songManager.HP = 0;
             else
-                _songManager.HP -= 5;
+                _songManager.HP -= damageValue;
 
-            HPSlider.value = (float)_songManager.HP / 100;
+            UpdateUI();
+        }
 
+        void HealHP()
+        {
+            //Heal HP
+            if (_songManager.HP + healValue > 100)
+                _songManager.HP = 100;
+            else
+                _songManager.HP += healValue;
+
+            UpdateUI();
         }
     }
 }
