@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Infi
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 44d0599ca93b2d740ba6eb10d4d92f9f, type: 3}
-  songBpm: 120
+  songBpm: 108
   notesLine1:
-  - beat: 5
+  - beat: 19
     track: 1
     endBeat: 0
   notesLine2: []
