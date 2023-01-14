@@ -17,8 +17,14 @@ MonoBehaviour:
   notesLine1:
   - beat: 50
     track: 1
-    endBeat: 0
+    endBeat: 52
+  - beat: 52
+    track: 1
+    endBeat: 56
+  - beat: 54
+    track: 1
+    endBeat: 58
   notesLine2:
-  - beat: 5
+  - beat: 0
     track: 1
     endBeat: 0
