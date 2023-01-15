@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -30,12 +31,16 @@ namespace DyeTonic
             Note.OnNoteSelfDestroy -= NoteSelfDestroy;
         }
 
-        void UpdateUI(NoteQuality noteQuality)
+        private void UpdateUI(NoteQuality noteQuality)
         {
             textMeshPro.text = noteQuality.ToString();
             textMeshPro.enabled = true;
+
+            //tween animation
+            TweenSequenceAnimation.PopSequence(transform, 1.2f, 0.1f);
+            transform.DOShakePosition(0.2f, 2f, 10, 0);
         }
-        void NoteSelfDestroy()
+        private void NoteSelfDestroy()
         {
             UpdateUI(NoteQuality.Miss);
         }
