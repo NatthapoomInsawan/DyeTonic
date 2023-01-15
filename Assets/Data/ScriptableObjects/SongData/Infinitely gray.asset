@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Infinitely gray
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 44d0599ca93b2d740ba6eb10d4d92f9f, type: 3}
-  songBpm: 108
+  songBpm: 160
   notesLine1:
   - beat: 50
     track: 1
