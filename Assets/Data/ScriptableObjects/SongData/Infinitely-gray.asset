@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
-  m_Name: Infi
+  m_Name: Infinitely-gray
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 44d0599ca93b2d740ba6eb10d4d92f9f, type: 3}
   songBpm: 108
