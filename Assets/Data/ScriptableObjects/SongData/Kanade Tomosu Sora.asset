@@ -27,4 +27,10 @@ MonoBehaviour:
   - beat: 17.8
     track: 1
     endBeat: 18
+  - beat: 17.8
+    track: 1
+    endBeat: 18
+  - beat: 17.8
+    track: 1
+    endBeat: 18
   notesLine2: []
