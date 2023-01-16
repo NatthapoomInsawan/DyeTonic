@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 namespace DyeTonic
 {
@@ -31,6 +32,8 @@ namespace DyeTonic
         void UpdateUI()
         {
             textMeshPro.text = (_songManager.player1Score + _songManager.player2Score).ToString();
+            //tween animation
+            transform.DOShakePosition(0.2f, 2f, 10, 0);
         }
     }
 }

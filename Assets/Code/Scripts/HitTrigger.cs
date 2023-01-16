@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace DyeTonic
 {
@@ -18,9 +19,13 @@ namespace DyeTonic
     {
         [SerializeField] SongManager _songManager;
 
-        bool wasPressed;
+        private float onPressBeat;
+
+        private bool wasPressed;
+
         LongNote hitLongNote;
         NoteQuality hitLongNoteQality;
+        InputAction.CallbackContext longNotecallbackContext;
 
         //Declare Events
         public static event Action OnScoreUpdate;
@@ -33,6 +38,25 @@ namespace DyeTonic
             //Draw line when held input
             if (wasPressed)
                 Debug.DrawLine(transform.position + new Vector3(0, 0, -2.5f), transform.position + new Vector3(0, 0, 2.5f), Color.red);
+
+            //Update long note press score
+            if (hitLongNote != null && wasPressed == true)
+            {
+                if (_songManager.songPosInBeats - onPressBeat > 0.5f) 
+                {
+                    AssignScore(longNotecallbackContext, 50, hitLongNoteQality);
+
+                    //increse song combo
+                    _songManager.songCombo++;
+
+                    //invoke quality
+                    OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
+
+                    //update onPressBeat
+                    onPressBeat = _songManager.songPosInBeats;
+
+                }
+            }
 
         }
 
@@ -89,6 +113,10 @@ namespace DyeTonic
                         hitLongNote = longnoteComponent;
                         hitLongNoteQality = CalculateBeatQuality(longnoteComponent.NoteData);
                         Debug.Log(hitLongNoteQality);
+                        //assign onPressbeat
+                        onPressBeat = _songManager.songPosInBeats;
+                        //assign long note callback context
+                        longNotecallbackContext = context;
                         //calculate score
                         CalculateScore(context, hitLongNoteQality);
                     }
@@ -168,22 +196,7 @@ namespace DyeTonic
             //Multiply score
             score = score * _songManager.scoreMultiplier;
 
-            //assign score to player
-            if (context.action.actionMap.name == "Player2")
-            {
-                _songManager.player2Score += score;
-
-                UpdateHitNotes(_songManager.play2HitNotes, noteQuality);
-            }
-            else
-            {
-                _songManager.player1Score += score;
-
-                UpdateHitNotes(_songManager.play1HitNotes, noteQuality);
-            }
-
-            //Invoke OnScoreUpdate event
-            OnScoreUpdate?.Invoke();
+            AssignScore(context, score, noteQuality);
 
         }
 
@@ -232,6 +245,27 @@ namespace DyeTonic
                     hitNotesArray[3] += 1;
                     break;
             }
+        }
+
+        private void AssignScore (InputAction.CallbackContext context, int score, NoteQuality noteQuality)
+        {
+            //assign score to player
+            if (context.action.actionMap.name == "Player2")
+            {
+                _songManager.player2Score += score;
+
+                UpdateHitNotes(_songManager.play2HitNotes, noteQuality);
+            }
+            else
+            {
+                _songManager.player1Score += score;
+
+                UpdateHitNotes(_songManager.play1HitNotes, noteQuality);
+            }
+
+            //Invoke OnScoreUpdate event
+            OnScoreUpdate?.Invoke();
+
         }
 
     }

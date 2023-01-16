@@ -35,6 +35,9 @@ namespace DyeTonic
         {
             textMeshPro.text = _songManager.songCombo.ToString();
             textMeshPro.enabled = true;
+
+            //tween animation
+            TweenSequenceAnimation.PopSequence(transform, 1.5f, 0.1f);
         }
 
     }
