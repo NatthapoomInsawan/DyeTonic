@@ -25,9 +25,6 @@ namespace DyeTonic
         [SerializeField] private GameObject goodHit;
         [SerializeField] private GameObject missHit;
 
-
-
-
         private float onPressBeat;
 
         private bool wasPressed;
