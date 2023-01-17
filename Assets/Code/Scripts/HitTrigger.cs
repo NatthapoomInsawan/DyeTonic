@@ -19,6 +19,15 @@ namespace DyeTonic
     {
         [SerializeField] SongManager _songManager;
 
+        [Header("Effect Prefab")]
+        [SerializeField] private GameObject offbeatHit;
+        [SerializeField] private GameObject perfectHit;
+        [SerializeField] private GameObject goodHit;
+        [SerializeField] private GameObject missHit;
+
+
+
+
         private float onPressBeat;
 
         private bool wasPressed;
@@ -54,6 +63,9 @@ namespace DyeTonic
 
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
+
+                    //spawn effect
+                    SpawnEffect(hitLongNoteQality);
 
                 }
             }
@@ -198,6 +210,8 @@ namespace DyeTonic
 
             AssignScore(context, score, noteQuality);
 
+            SpawnEffect(noteQuality);
+
         }
 
         private NoteQuality CalculateBeatQuality(NoteData noteData)
@@ -266,6 +280,26 @@ namespace DyeTonic
             //Invoke OnScoreUpdate event
             OnScoreUpdate?.Invoke();
 
+        }
+
+        private void SpawnEffect(NoteQuality noteQuality)
+        {
+            //update hit note
+            switch (noteQuality)
+            {
+                case NoteQuality.Offbeat:
+                    Instantiate(offbeatHit, transform);
+                    break;
+                case NoteQuality.Perfect:
+                    Instantiate(perfectHit, transform);
+                    break;
+                case NoteQuality.Good:
+                    Instantiate(goodHit, transform);
+                    break;
+                case NoteQuality.Miss:
+                    Instantiate(missHit, transform);
+                    break;
+            }
         }
 
     }
