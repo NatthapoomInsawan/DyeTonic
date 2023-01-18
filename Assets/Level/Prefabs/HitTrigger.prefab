@@ -48,4 +48,4 @@ MonoBehaviour:
   offbeatHit: {fileID: 8255215019295333937, guid: 3c9a56e09045052468964a058872f378, type: 3}
   perfectHit: {fileID: 3716275016998676315, guid: 35d4fdd2e65591c40b7a412346988a30, type: 3}
   goodHit: {fileID: 7194952087870367276, guid: e0a802203b8343146ba627dc4d15e1ad, type: 3}
-  missHit: {fileID: 483918908983999528, guid: ee62dbc5a04edc04399440da2e38b852, type: 3}
+  missHit: {fileID: 3722875482359105488, guid: e618c4deabb851e4c8018adfcbd0adfc, type: 3}
