@@ -185,6 +185,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
   m_PrefabInstance: {fileID: 37798780}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &37798782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+  m_PrefabInstance: {fileID: 37798780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8517603eb1a24ea6f1ad16182552b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &46891774
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +330,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: player
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337500, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_Name
@@ -547,6 +562,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
   m_PrefabInstance: {fileID: 225925453}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &225925455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+  m_PrefabInstance: {fileID: 225925453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8517603eb1a24ea6f1ad16182552b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297828019
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +659,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2077616372}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track1
+        m_MethodName: Track1Player2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -649,7 +675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1971349240}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track2
+        m_MethodName: Track2Player2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -665,7 +691,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1540788008}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track3
+        m_MethodName: Track3Player2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -681,7 +707,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1695080780}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track4
+        m_MethodName: Track4Player2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -694,24 +720,72 @@ MonoBehaviour:
     m_ActionId: 0a5b1d47-0aa7-4a73-a2c9-749f25d109a7
     m_ActionName: Player2/Track4[/Keyboard/quote]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 485c920a-0bd2-414c-9506-fbee5a5fbfd9
-    m_ActionName: Player/Track1[/Keyboard/k]
+      m_Calls:
+      - m_Target: {fileID: 37798782}
+        m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
+        m_MethodName: Track1Player1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3bb214fe-0782-46bf-9b6d-e008fe20c801
+    m_ActionName: Player2/Track1Player1[/Keyboard/a]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fbb82cc6-9736-43a4-9dce-9e7044e6fd4f
-    m_ActionName: Player/Track2[/Keyboard/l]
+      m_Calls:
+      - m_Target: {fileID: 225925455}
+        m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
+        m_MethodName: Track2Player1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9d9e2861-8405-4f34-b84c-45572f205b10
+    m_ActionName: Player2/Track2Player1[/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b1f2de30-677d-409b-8cd8-84e5ebf84230
-    m_ActionName: Player/Track3[/Keyboard/semicolon]
+      m_Calls:
+      - m_Target: {fileID: 1672880894}
+        m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
+        m_MethodName: Track3Player1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d59aa358-ce92-4934-b9ce-6a2de506e45b
+    m_ActionName: Player2/Track3Player1[/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8a8b80ec-92dd-4aab-b83a-bfde42516a8f
-    m_ActionName: Player/Track4[/Keyboard/quote]
+      m_Calls:
+      - m_Target: {fileID: 1589836928}
+        m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
+        m_MethodName: Track4Player1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07043c0b-7d82-4c4f-bfc0-adc5d9c87d0c
+    m_ActionName: Player2/Track4Player1[/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player2
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &297828021
@@ -1741,6 +1815,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337500, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_Name
       value: HitTrigger2
@@ -2739,6 +2817,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
   m_PrefabInstance: {fileID: 1589836926}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589836928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+  m_PrefabInstance: {fileID: 1589836926}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8517603eb1a24ea6f1ad16182552b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1608181461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +3020,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
   m_PrefabInstance: {fileID: 1672880892}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1672880894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+  m_PrefabInstance: {fileID: 1672880892}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c8517603eb1a24ea6f1ad16182552b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1674791903
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,6 +3397,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: player
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337500, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_Name
@@ -3758,6 +3862,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: player
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337500, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_Name
