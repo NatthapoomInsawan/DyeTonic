@@ -207,8 +207,6 @@ namespace DyeTonic
 
             AssignScore(context, score, noteQuality);
 
-            SpawnEffect(noteQuality);
-
         }
 
         private NoteQuality CalculateBeatQuality(NoteData noteData)
@@ -232,6 +230,9 @@ namespace DyeTonic
 
             if (noteQuality == NoteQuality.Good || noteQuality == NoteQuality.Perfect)
                 OnNoteHit?.Invoke();
+
+            //spawn effect
+            SpawnEffect(noteQuality);
 
             return noteQuality;
 
