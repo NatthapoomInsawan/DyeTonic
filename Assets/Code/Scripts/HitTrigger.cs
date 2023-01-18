@@ -17,7 +17,14 @@ namespace DyeTonic
 
     public class HitTrigger : MonoBehaviour
     {
-        [SerializeField] SongManager _songManager;
+        [SerializeField] private SongManager _songManager;
+        [SerializeField] private Player player = Player.Player2;
+
+        [Header("Effect Prefab")]
+        [SerializeField] private GameObject offbeatHit;
+        [SerializeField] private GameObject perfectHit;
+        [SerializeField] private GameObject goodHit;
+        [SerializeField] private GameObject missHit;
 
         private float onPressBeat;
 
@@ -27,11 +34,19 @@ namespace DyeTonic
         NoteQuality hitLongNoteQality;
         InputAction.CallbackContext longNotecallbackContext;
 
+        //enum
+        private enum Player
+        {
+            Player1,
+            Player2,
+        }
+
         //Declare Events
         public static event Action OnScoreUpdate;
         public static event Action<NoteQuality> OnNoteQualityUpdate;
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
+
 
         private void Update()
         {
@@ -55,12 +70,15 @@ namespace DyeTonic
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
 
+                    //spawn effect
+                    SpawnEffect(hitLongNoteQality);
+
                 }
             }
 
         }
 
-        public void Track1(InputAction.CallbackContext context) 
+        public void Track1Player2(InputAction.CallbackContext context) 
         { 
             if (context.performed)
                 OnKeypressed(context);
@@ -68,7 +86,7 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track2 (InputAction.CallbackContext context)
+        public void Track2Player2 (InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -76,7 +94,7 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track3 (InputAction.CallbackContext context)
+        public void Track3Player2 (InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -84,7 +102,38 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track4 (InputAction.CallbackContext context)
+        public void Track4Player2(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track1Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track2Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+        public void Track3Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track4Player1(InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -222,6 +271,9 @@ namespace DyeTonic
             if (noteQuality == NoteQuality.Good || noteQuality == NoteQuality.Perfect)
                 OnNoteHit?.Invoke();
 
+            //spawn effect
+            SpawnEffect(noteQuality);
+
             return noteQuality;
 
 
@@ -250,7 +302,7 @@ namespace DyeTonic
         private void AssignScore (InputAction.CallbackContext context, int score, NoteQuality noteQuality)
         {
             //assign score to player
-            if (context.action.actionMap.name == "Player2")
+            if (player == Player.Player2)
             {
                 _songManager.player2Score += score;
 
@@ -266,6 +318,26 @@ namespace DyeTonic
             //Invoke OnScoreUpdate event
             OnScoreUpdate?.Invoke();
 
+        }
+
+        private void SpawnEffect(NoteQuality noteQuality)
+        {
+            //update hit note
+            switch (noteQuality)
+            {
+                case NoteQuality.Offbeat:
+                    Instantiate(offbeatHit, transform);
+                    break;
+                case NoteQuality.Perfect:
+                    Instantiate(perfectHit, transform);
+                    break;
+                case NoteQuality.Good:
+                    Instantiate(goodHit, transform);
+                    break;
+                case NoteQuality.Miss:
+                    Instantiate(missHit, transform);
+                    break;
+            }
         }
 
     }
