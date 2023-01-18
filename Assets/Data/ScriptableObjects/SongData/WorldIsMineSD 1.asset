@@ -15,7 +15,7 @@ MonoBehaviour:
   song: {fileID: 8300000, guid: ed6f2ac3fb9352f4ea500ceb0d464845, type: 3}
   songBpm: 160
   notesLine1:
-  - beat: 16
+  - beat: 5
     track: 2
     endBeat: 5.5
   - beat: 6
