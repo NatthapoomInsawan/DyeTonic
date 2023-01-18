@@ -3,98 +3,10 @@
     "maps": [
         {
             "name": "Player",
-            "id": "989a33d1-0316-4f13-85d9-ec7448ea861e",
-            "actions": [
-                {
-                    "name": "Track1",
-                    "type": "Button",
-                    "id": "485c920a-0bd2-414c-9506-fbee5a5fbfd9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Track2",
-                    "type": "Button",
-                    "id": "fbb82cc6-9736-43a4-9dce-9e7044e6fd4f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Track3",
-                    "type": "Button",
-                    "id": "b1f2de30-677d-409b-8cd8-84e5ebf84230",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Track4",
-                    "type": "Button",
-                    "id": "8a8b80ec-92dd-4aab-b83a-bfde42516a8f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "1702d5c3-d7c8-472e-aa87-8ba5fda0370a",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Track1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f64ae7fc-db18-4a90-a61a-aa365091b9dd",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Track2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5319dc9b-75fc-4df7-bcc8-c01c568d471f",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Track3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f7d2167e-6deb-4289-a05a-90c48c69130b",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Track4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Player2",
             "id": "d4a92871-b122-47b5-a042-ce758f7e1e7f",
             "actions": [
                 {
-                    "name": "Track1",
+                    "name": "Track1Player2",
                     "type": "Button",
                     "id": "61453dae-ae8d-44f3-b91a-64a57511e9d7",
                     "expectedControlType": "Button",
@@ -103,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Track2",
+                    "name": "Track2Player2",
                     "type": "Button",
                     "id": "93f3b531-e15b-4e47-8a6a-140e8b288806",
                     "expectedControlType": "Button",
@@ -112,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Track3",
+                    "name": "Track3Player2",
                     "type": "Button",
                     "id": "a404c6e0-1f51-4225-a987-9ead1666e161",
                     "expectedControlType": "Button",
@@ -121,9 +33,45 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Track4",
+                    "name": "Track4Player2",
                     "type": "Button",
                     "id": "0a5b1d47-0aa7-4a73-a2c9-749f25d109a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Track1Player1",
+                    "type": "Button",
+                    "id": "3bb214fe-0782-46bf-9b6d-e008fe20c801",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Track2Player1",
+                    "type": "Button",
+                    "id": "9d9e2861-8405-4f34-b84c-45572f205b10",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Track3Player1",
+                    "type": "Button",
+                    "id": "d59aa358-ce92-4934-b9ce-6a2de506e45b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Track4Player1",
+                    "type": "Button",
+                    "id": "07043c0b-7d82-4c4f-bfc0-adc5d9c87d0c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -138,7 +86,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Track1",
+                    "action": "Track1Player2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -149,7 +97,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Track2",
+                    "action": "Track2Player2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -160,7 +108,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Track3",
+                    "action": "Track3Player2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -171,7 +119,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Track4",
+                    "action": "Track4Player2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dfc5dac-8b5a-4121-9ece-28c7dc180ed9",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Track1Player1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e87f91cb-22cf-4b26-8632-1927da15c98e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Track2Player1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30459b77-f708-449e-bcd0-a7871f4d7f47",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Track3Player1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ef73fdd-a99d-49fe-90ac-f598f3c01556",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Track4Player1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
