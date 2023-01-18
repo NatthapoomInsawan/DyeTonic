@@ -17,7 +17,8 @@ namespace DyeTonic
 
     public class HitTrigger : MonoBehaviour
     {
-        [SerializeField] SongManager _songManager;
+        [SerializeField] private SongManager _songManager;
+        [SerializeField] private Player player = Player.Player2;
 
         [Header("Effect Prefab")]
         [SerializeField] private GameObject offbeatHit;
@@ -33,11 +34,19 @@ namespace DyeTonic
         NoteQuality hitLongNoteQality;
         InputAction.CallbackContext longNotecallbackContext;
 
+        //enum
+        private enum Player
+        {
+            Player1,
+            Player2,
+        }
+
         //Declare Events
         public static event Action OnScoreUpdate;
         public static event Action<NoteQuality> OnNoteQualityUpdate;
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
+
 
         private void Update()
         {
@@ -69,7 +78,7 @@ namespace DyeTonic
 
         }
 
-        public void Track1(InputAction.CallbackContext context) 
+        public void Track1Player2(InputAction.CallbackContext context) 
         { 
             if (context.performed)
                 OnKeypressed(context);
@@ -77,7 +86,7 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track2 (InputAction.CallbackContext context)
+        public void Track2Player2 (InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -85,7 +94,7 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track3 (InputAction.CallbackContext context)
+        public void Track3Player2 (InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -93,7 +102,38 @@ namespace DyeTonic
                 OnKeyRelease(context);
         }
 
-        public void Track4 (InputAction.CallbackContext context)
+        public void Track4Player2(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track1Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track2Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+        public void Track3Player1(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OnKeypressed(context);
+            if (context.canceled)
+                OnKeyRelease(context);
+        }
+
+        public void Track4Player1(InputAction.CallbackContext context)
         {
             if (context.performed)
                 OnKeypressed(context);
@@ -262,7 +302,7 @@ namespace DyeTonic
         private void AssignScore (InputAction.CallbackContext context, int score, NoteQuality noteQuality)
         {
             //assign score to player
-            if (context.action.actionMap.name == "Player2")
+            if (player == Player.Player2)
             {
                 _songManager.player2Score += score;
 
