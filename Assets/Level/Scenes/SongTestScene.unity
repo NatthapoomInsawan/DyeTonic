@@ -1544,7 +1544,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 44d0599ca93b2d740ba6eb10d4d92f9f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d2ea50aad565154a81b1c85999f1bf0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.24
   m_Pitch: 1
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8b510ecf25744409049826b90c61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _songData: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+  _songData: {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
   _normalNote: {fileID: 7967211962095986510, guid: cc3045dfd8404654dada71983f600da2, type: 3}
   _headNote: {fileID: 7967211962095986510, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
   _tailNote: {fileID: 7967211962095986510, guid: 6ecb1db5a762b4343a20439f8f645766, type: 3}
@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
-  _songData: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+  _songData: {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
   secPerBeat: 0
   songPosition: 0
   songPositionInBeats: 0
