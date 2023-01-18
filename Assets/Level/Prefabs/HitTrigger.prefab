@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
-  offbeatHit: {fileID: 3716275016998676315, guid: 6b37cd66c053f5c438d7a6854a9ee401, type: 3}
-  perfectHit: {fileID: 3716275016998676315, guid: 6b37cd66c053f5c438d7a6854a9ee401, type: 3}
-  goodHit: {fileID: 3716275016998676315, guid: 6b37cd66c053f5c438d7a6854a9ee401, type: 3}
-  missHit: {fileID: 3716275016998676315, guid: 6b37cd66c053f5c438d7a6854a9ee401, type: 3}
+  offbeatHit: {fileID: 8255215019295333937, guid: 3c9a56e09045052468964a058872f378, type: 3}
+  perfectHit: {fileID: 3716275016998676315, guid: 35d4fdd2e65591c40b7a412346988a30, type: 3}
+  goodHit: {fileID: 7194952087870367276, guid: e0a802203b8343146ba627dc4d15e1ad, type: 3}
+  missHit: {fileID: 483918908983999528, guid: ee62dbc5a04edc04399440da2e38b852, type: 3}
