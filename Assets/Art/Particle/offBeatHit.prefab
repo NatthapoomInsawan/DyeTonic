@@ -14757,7 +14757,7 @@ GameObject:
   - component: {fileID: 8255215019295333939}
   - component: {fileID: 8255215019295333936}
   m_Layer: 0
-  m_Name: offBeat
+  m_Name: offBeatHit
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
