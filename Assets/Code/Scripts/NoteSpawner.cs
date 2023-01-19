@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace DyeTonic
 {
-    [RequireComponent(typeof(SongPlayer))]
     public class NoteSpawner : MonoBehaviour
     {
         [Header("Scriptable Objects referencing")]
@@ -31,6 +30,11 @@ namespace DyeTonic
         // Start is called before the first frame update
         void Start()
         {
+            SpawnNoteTwoLine();
+        }
+
+        public void SpawnNoteTwoLine()
+        {
             //spawn notes on line 1
             SpawnNote(track1Transform, track1EndTransform, _songData.notesLine1);
 
@@ -52,6 +56,9 @@ namespace DyeTonic
                     noteComponent.NoteData = noteData;
                     noteComponent.StartTransform = trackTransforms[noteData.track - 1];
                     noteComponent.EndTransform = trackEndTransforms[noteData.track - 1];
+
+                    //Name the note
+                    NoteNaming(instantateObject, noteData, noteDatas, trackTransforms);
 
                 }
                 else
@@ -80,8 +87,40 @@ namespace DyeTonic
                     //set line
                     headNoteComponent.TailNoteTransform = tailNote.transform;
 
+                    //Name the note
+                    NoteNaming(headNote, noteData, noteDatas, trackTransforms);
+
                 }
             }
+        }
+
+        void NoteNaming(GameObject gameObject, NoteData noteData, List<NoteData> noteDatas, Transform[] transforms)
+        {
+            if (transforms == track1Transform)
+                gameObject.name = "Line 1 index " + noteDatas.IndexOf(noteData);
+            else
+                gameObject.name = "Line 2 index " + noteDatas.IndexOf(noteData);
+
+        }
+
+        void ClearNotes(Transform[] transforms)
+        {
+            for (int i = 0; i < transforms.Length; i++)
+            {
+                Transform[] childGameObjects = transforms[i].GetComponentsInChildren<Transform>();
+
+                for (int j = 0; j < childGameObjects.Length; j++)
+                {
+                    if (childGameObjects[j].GetComponent<Note>() != null)
+                        Destroy(childGameObjects[j].gameObject);
+                }
+            }
+        }
+
+        public void ClearAllNotes()
+        {
+            ClearNotes(track1Transform);
+            ClearNotes(track2Transform);
         }
 
     }
