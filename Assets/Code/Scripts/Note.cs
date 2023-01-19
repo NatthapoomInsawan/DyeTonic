@@ -10,6 +10,8 @@ namespace DyeTonic
     {
         [SerializeField] protected SongManager _songManager;
 
+        [SerializeField] protected bool destoryWhenPassHitLine = true;
+
         public Transform StartTransform { get; set; }
         public Transform EndTransform { get; set; }
         public NoteData NoteData { get; set; }
@@ -30,7 +32,7 @@ namespace DyeTonic
             transform.position = Vector3.LerpUnclamped(StartTransform.position, EndTransform.position, (_songManager.songPosInBeats / NoteData.beat));
 
             //Destroy when pass or equal 1.5 beat
-            if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f)
+            if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f && destoryWhenPassHitLine)
             {
                 Destroy(gameObject);
                 OnNoteSelfDestroy?.Invoke();
