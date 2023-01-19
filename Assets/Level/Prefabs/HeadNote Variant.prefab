@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2714497085585726058, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
+      propertyPath: destoryWhenPassHitLine
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5798344160004496894, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7967211962095986510, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
       propertyPath: m_Name
-      value: HeadNote
+      value: HeadNote Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
