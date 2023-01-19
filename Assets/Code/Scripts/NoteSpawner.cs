@@ -101,7 +101,6 @@ namespace DyeTonic
             else
                 gameObject.name = "Line 2 index " + noteDatas.IndexOf(noteData);
 
-            gameObject.name = "Line 1 index " + noteDatas.IndexOf(noteData);
         }
 
     }
