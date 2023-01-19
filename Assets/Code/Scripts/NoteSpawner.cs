@@ -103,5 +103,25 @@ namespace DyeTonic
 
         }
 
+        void ClearNotes(Transform[] transforms)
+        {
+            for (int i = 0; i < transforms.Length; i++)
+            {
+                Transform[] childGameObjects = transforms[i].GetComponentsInChildren<Transform>();
+
+                for (int j = 0; j < childGameObjects.Length; j++)
+                {
+                    if (childGameObjects[j].GetComponent<Note>() != null)
+                        Destroy(childGameObjects[j].gameObject);
+                }
+            }
+        }
+
+        public void ClearAllNotes()
+        {
+            ClearNotes(track1Transform);
+            ClearNotes(track2Transform);
+        }
+
     }
 }
