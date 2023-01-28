@@ -1050,6 +1050,7 @@ MonoBehaviour:
   songDatas: []
   songButtonPrefab: {fileID: 2102112489993291245, guid: b83013697e7cbde4488f69d9c5d15e8a, type: 3}
   contentContainer: {fileID: 905413060}
+  songPanelGameObject: {fileID: 941255835}
 --- !u!1 &692960998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1276,7 @@ GameObject:
   - component: {fileID: 941255838}
   - component: {fileID: 941255837}
   - component: {fileID: 941255839}
+  - component: {fileID: 941255840}
   m_Layer: 5
   m_Name: Song Panel
   m_TagString: Untagged
@@ -1369,6 +1371,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &941255840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941255835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6630fbccd6a7a73448292d27c1b00f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _songData: {fileID: 0}
+  songNameText: {fileID: 692961000}
+  artistNameText: {fileID: 117601057}
+  songImage: {fileID: 88772766}
 --- !u!1 &1044719930
 GameObject:
   m_ObjectHideFlags: 0
