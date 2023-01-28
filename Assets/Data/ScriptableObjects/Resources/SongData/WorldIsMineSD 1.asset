@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
   m_Name: WorldIsMineSD 1
   m_EditorClassIdentifier: 
+  songName: World Is Mine
+  songArtist: Supercell
   song: {fileID: 8300000, guid: ed6f2ac3fb9352f4ea500ceb0d464845, type: 3}
   songBpm: 160
+  songSprite: {fileID: 21300000, guid: 0dbdc6a0eced43444b74fae039b7ac6a, type: 3}
   notesLine1:
   - beat: 5
     track: 2
