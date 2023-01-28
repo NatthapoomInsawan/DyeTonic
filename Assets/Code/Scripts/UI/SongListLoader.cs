@@ -21,7 +21,12 @@ namespace DyeTonic
             for (int i = 0; i < songDatas.Length; i++)
             {
                 var instantiateObject = Instantiate(songButtonPrefab, contentContainer);
-                instantiateObject.name = songDatas[i].name;
+
+                //rename instantiateObject
+                if (songDatas[i].songName != null)
+                    instantiateObject.name = songDatas[i].songName;
+                else
+                    instantiateObject.name = songDatas[i].name;
             }
         }
     }
