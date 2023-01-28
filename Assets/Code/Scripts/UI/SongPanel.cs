@@ -43,6 +43,8 @@ namespace DyeTonic
             if (songData.song != null)
             {
                 audioSource.clip = songData.song;
+                //play faster at 9.5 sec
+                audioSource.time = 9.5f;
                 audioSource.Play();
             }
         }
