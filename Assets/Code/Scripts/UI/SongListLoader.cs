@@ -9,10 +9,12 @@ namespace DyeTonic
         [SerializeField] private SongData[] songDatas;
         [SerializeField] private GameObject songButtonPrefab;
         [SerializeField] private Transform contentContainer;
+        [SerializeField] private GameObject songPanelGameObject;
 
         private void Awake()
         {
             songDatas = Resources.LoadAll<SongData>("SongData");
+            songPanelGameObject.GetComponent<SongPanel>().UpdateSongCoverDisplay(songDatas[0]);
         }
 
         // Start is called before the first frame update
@@ -24,10 +26,6 @@ namespace DyeTonic
 
                 //assign song data
                 instantiateObject.GetComponent<SongSelectButton>().UpdateSongCoverDisplay(songDatas[i]);
-
-                //assign cover to SongPanel
-                //if (i == 0)
-                //    instantiateObject.GetComponent<SongSelectButton>().OnButtonClick();
 
                 //rename instantiateObject
                 if (songDatas[i].songName != null)
