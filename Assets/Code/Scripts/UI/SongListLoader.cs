@@ -25,6 +25,10 @@ namespace DyeTonic
                 //assign song data
                 instantiateObject.GetComponent<SongSelectButton>()._songData = songDatas[i];
 
+                //assign cover to SongPanel
+                if (i == 0)
+                    instantiateObject.GetComponent<SongSelectButton>().OnButtonClick();
+
                 //rename instantiateObject
                 if (songDatas[i].songName != null)
                     instantiateObject.name = songDatas[i].songName;
