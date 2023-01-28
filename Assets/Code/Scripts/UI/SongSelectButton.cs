@@ -8,7 +8,7 @@ namespace DyeTonic
 {
     public class SongSelectButton : MonoBehaviour
     {
-        [SerializeField] private SongData _songData;
+        public SongData _songData;
         [SerializeField] private TextMeshProUGUI songNameText;
         [SerializeField] private TextMeshProUGUI artistNameText;
         [SerializeField] private Image songImage;
