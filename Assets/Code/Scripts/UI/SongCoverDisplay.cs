@@ -25,7 +25,7 @@ namespace DyeTonic
             _songData = songData;
 
             //song name text
-            if (_songData.songName != null)
+            if (_songData.songName != null || _songData.songName == "")
                 songNameText.text = _songData.songName;
             else
                 songNameText.text = _songData.name;
