@@ -9,7 +9,7 @@ namespace DyeTonic
 {
     public class SongSelectButton : SongCoverDisplay
     {
-        public static event Action OnSongSelectButtonClick;
+        public static event Action<SongData> OnSongSelectButtonClick;
 
         // Start is called before the first frame update
         protected override void Start()
@@ -20,7 +20,7 @@ namespace DyeTonic
 
         public void OnButtonClick()
         {
-            OnSongSelectButtonClick?.Invoke();
+            OnSongSelectButtonClick?.Invoke(_songData);
         }
 
     }
