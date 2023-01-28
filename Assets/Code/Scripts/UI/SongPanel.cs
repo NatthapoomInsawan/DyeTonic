@@ -10,12 +10,12 @@ namespace DyeTonic
     {
         private void OnEnable()
         {
-            SongSelectButton.OnSongSelectButtonClick += UpdateSongPanel;
+            SongSelectButton.OnSongSelectButtonClick += UpdateSongCoverDisplay;
         }
 
         private void OnDisable()
         {
-            SongSelectButton.OnSongSelectButtonClick -= UpdateSongPanel;
+            SongSelectButton.OnSongSelectButtonClick -= UpdateSongCoverDisplay;
         }
 
 
@@ -26,11 +26,9 @@ namespace DyeTonic
         }
 
         // Update is called once per frame
-        private void UpdateSongPanel(SongData songData)
+        public override void UpdateSongCoverDisplay(SongData songData)
         {
-            _songData = songData;
-
-            Start();
+            base.UpdateSongCoverDisplay(songData);
         }
     }
 }
