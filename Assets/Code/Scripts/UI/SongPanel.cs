@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 namespace DyeTonic
 {
+    [RequireComponent(typeof(AudioSource))]
     public class SongPanel : SongCoverDisplay
     {
+
+        [SerializeField] private AudioSource audioSource;
+
         private void OnEnable()
         {
             SongSelectButton.OnSongSelectButtonClick += UpdateSongCoverDisplay;
@@ -16,6 +20,11 @@ namespace DyeTonic
         private void OnDisable()
         {
             SongSelectButton.OnSongSelectButtonClick -= UpdateSongCoverDisplay;
+        }
+
+        private void Awake()
+        {
+            audioSource = GetComponent<AudioSource>();
         }
 
 
@@ -29,6 +38,13 @@ namespace DyeTonic
         public override void UpdateSongCoverDisplay(SongData songData)
         {
             base.UpdateSongCoverDisplay(songData);
+
+            //play song
+            if (songData.song != null)
+            {
+                audioSource.clip = songData.song;
+                audioSource.Play();
+            }
         }
     }
 }
