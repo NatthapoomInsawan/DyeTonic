@@ -8,6 +8,16 @@ namespace DyeTonic
 {
     public class SongPanel : SongCoverDisplay
     {
+        private void OnEnable()
+        {
+            SongSelectButton.OnSongSelectButtonClick += UpdateSongPanel;
+        }
+
+        private void OnDisable()
+        {
+            SongSelectButton.OnSongSelectButtonClick -= UpdateSongPanel;
+        }
+
 
         // Start is called before the first frame update
         protected override void Start()
@@ -16,9 +26,11 @@ namespace DyeTonic
         }
 
         // Update is called once per frame
-        void Update()
+        private void UpdateSongPanel(SongData songData)
         {
-        
+            _songData = songData;
+
+            Start();
         }
     }
 }
