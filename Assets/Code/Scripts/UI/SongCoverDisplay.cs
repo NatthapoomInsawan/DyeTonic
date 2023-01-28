@@ -8,7 +8,7 @@ namespace DyeTonic
 {
     public abstract class SongCoverDisplay : MonoBehaviour
     {
-        public SongData _songData;
+        [SerializeField] protected SongData _songData;
         [SerializeField] protected TextMeshProUGUI songNameText;
         [SerializeField] protected TextMeshProUGUI artistNameText;
         [SerializeField] protected Image songImage;
@@ -16,6 +16,14 @@ namespace DyeTonic
         // Start is called before the first frame update
         protected virtual void Start()
         {
+            if (_songData != null)
+                UpdateSongCoverDisplay(_songData);
+        }
+
+        public virtual void UpdateSongCoverDisplay (SongData songData)
+        {
+            _songData = songData;
+
             //song name text
             if (_songData.songName != null)
                 songNameText.text = _songData.songName;
