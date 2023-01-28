@@ -23,11 +23,11 @@ namespace DyeTonic
                 var instantiateObject = Instantiate(songButtonPrefab, contentContainer);
 
                 //assign song data
-                instantiateObject.GetComponent<SongSelectButton>()._songData = songDatas[i];
+                instantiateObject.GetComponent<SongSelectButton>().UpdateSongCoverDisplay(songDatas[i]);
 
                 //assign cover to SongPanel
-                if (i == 0)
-                    instantiateObject.GetComponent<SongSelectButton>().OnButtonClick();
+                //if (i == 0)
+                //    instantiateObject.GetComponent<SongSelectButton>().OnButtonClick();
 
                 //rename instantiateObject
                 if (songDatas[i].songName != null)
