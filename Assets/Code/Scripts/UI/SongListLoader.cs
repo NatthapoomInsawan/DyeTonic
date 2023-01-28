@@ -22,6 +22,9 @@ namespace DyeTonic
             {
                 var instantiateObject = Instantiate(songButtonPrefab, contentContainer);
 
+                //assign song data
+                instantiateObject.GetComponent<SongSelectButton>()._songData = songDatas[i];
+
                 //rename instantiateObject
                 if (songDatas[i].songName != null)
                     instantiateObject.name = songDatas[i].songName;
