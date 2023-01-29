@@ -8,7 +8,8 @@ namespace DyeTonic
     public class SongManager : ScriptableObject
     {
 
-        [SerializeField]
+        public SongData currentSongData;
+
         //the current position of the song (in beats)
         public float songPosInBeats;
 
