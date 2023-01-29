@@ -11,6 +11,7 @@ namespace DyeTonic
     {
 
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private SongManager _songManager;
 
         private void OnEnable()
         {
@@ -24,7 +25,7 @@ namespace DyeTonic
 
         private void Awake()
         {
-            audioSource = GetComponent<AudioSource>();
+            audioSource = gameObject.GetComponent<AudioSource>();
         }
 
 
@@ -38,6 +39,9 @@ namespace DyeTonic
         public override void UpdateSongCoverDisplay(SongData songData)
         {
             base.UpdateSongCoverDisplay(songData);
+
+            //set current songData
+            _songManager.currentSongData = songData;
 
             //play song
             if (songData.song != null)
