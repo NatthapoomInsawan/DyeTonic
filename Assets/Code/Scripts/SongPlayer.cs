@@ -26,6 +26,10 @@ namespace DyeTonic
 
         private void Awake()
         {
+            //if songdata is null load current songdata from songManager
+            if (_songData == null)
+                _songData = _songManager.currentSongData;
+
             //reset songPositionInBeats to 0
             _songManager.songPosInBeats = 0;
 

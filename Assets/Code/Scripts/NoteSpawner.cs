@@ -7,6 +7,7 @@ namespace DyeTonic
     public class NoteSpawner : MonoBehaviour
     {
         [Header("Scriptable Objects referencing")]
+        [SerializeField] SongManager _songManager;
         [SerializeField] SongData _songData;
 
         [Header("Note Prefabs")]
@@ -26,6 +27,12 @@ namespace DyeTonic
         [Header("Track 2 end transform")]
         [SerializeField] Transform[] track2EndTransform = new Transform[4];
 
+        private void Awake()
+        {
+            //if songdata is null load current songdata from songManager
+            if (_songData == null)
+                _songData = _songManager.currentSongData;
+        }
 
         // Start is called before the first frame update
         void Start()
