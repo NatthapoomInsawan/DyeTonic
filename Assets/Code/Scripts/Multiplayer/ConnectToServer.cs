@@ -16,15 +16,18 @@ namespace DyeTonic
 
         public void OnConnectButtonClick()
         {
-            connectButton.interactable = false;
+            if(nameInputField.text.Length > 0)
+            {
+                connectButton.interactable = false;
 
-            nameInputField.text = "Connecting..";
-            
-            //set player name
-            PhotonNetwork.NickName = nameInputField.text;
+                nameInputField.text = "Connecting..";
 
-            //connect to server
-            PhotonNetwork.ConnectUsingSettings();
+                //set player name
+                PhotonNetwork.NickName = nameInputField.text;
+
+                //connect to server
+                PhotonNetwork.ConnectUsingSettings();
+            }
         }
 
         public override void OnConnectedToMaster()
