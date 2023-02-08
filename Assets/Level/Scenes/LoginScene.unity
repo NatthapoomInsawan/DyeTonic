@@ -1581,6 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 1259099314}
   connectButton: {fileID: 1795692934}
+  connectButtonText: {fileID: 1107852451}
 --- !u!4 &2049328116
 Transform:
   m_ObjectHideFlags: 0

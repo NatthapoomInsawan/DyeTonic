@@ -13,26 +13,32 @@ namespace DyeTonic
 
         [SerializeField] private TMP_InputField nameInputField;
         [SerializeField] private Button connectButton;
+        [SerializeField] private TextMeshProUGUI connectButtonText;
+
+        private void Update()
+        {
+            if (nameInputField.text.Length == 0)
+                connectButton.interactable = false;
+            else
+                connectButton.interactable = true;
+        }
 
         public void OnConnectButtonClick()
         {
-            if(nameInputField.text.Length > 0)
-            {
-                connectButton.interactable = false;
+            connectButton.interactable = false;
 
-                nameInputField.text = "Connecting..";
+            connectButtonText.text = "Connecting..";
 
-                //set player name
-                PhotonNetwork.NickName = nameInputField.text;
+            //set player name
+            PhotonNetwork.NickName = nameInputField.text;
 
-                //connect to server
-                PhotonNetwork.ConnectUsingSettings();
-            }
+            //connect to server
+            PhotonNetwork.ConnectUsingSettings();
         }
 
         public override void OnConnectedToMaster()
         {
-            Debug.Log(PhotonNetwork.NickName + "connected to master server!");
+            Debug.Log(PhotonNetwork.NickName + " connected to master server!");
 
             Debug.Log("Connecting to lobby..");
 
@@ -42,7 +48,8 @@ namespace DyeTonic
 
         public override void OnJoinedLobby()
         {
-            Debug.Log("connected to lobby!");
+            connectButtonText.text = "Connected";
+            Debug.Log("Connected to lobby!");
             SceneManager.LoadScene("LobbyScene");
         }
 
