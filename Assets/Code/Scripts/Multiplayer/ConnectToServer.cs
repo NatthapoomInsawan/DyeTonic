@@ -29,12 +29,17 @@ namespace DyeTonic
 
         public override void OnConnectedToMaster()
         {
+            Debug.Log(PhotonNetwork.NickName + "connected to master server!");
+
+            Debug.Log("Connecting to lobby..");
+
             //connect to lobby
             PhotonNetwork.JoinLobby();
         }
 
         public override void OnJoinedLobby()
         {
+            Debug.Log("connected to lobby!");
             SceneManager.LoadScene("LobbyScene");
         }
 
