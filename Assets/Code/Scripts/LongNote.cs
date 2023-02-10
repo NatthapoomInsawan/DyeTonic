@@ -32,7 +32,7 @@ namespace DyeTonic
             transform.position = Vector3.LerpUnclamped(StartTransform.position, EndTransform.position, (_songManager.songPosInBeats / NoteData.beat));
 
             //Destroy when endBeat pass or equal 1.5 beat
-            if ((_songManager.songPosInBeats - NoteData.endBeat) >= 1.5f)
+            if ((_songManager.songPosInBeats - NoteData.endBeat) >= 1.5f && destoryWhenPassHitLine)
                 Destroy(gameObject);
 
         }

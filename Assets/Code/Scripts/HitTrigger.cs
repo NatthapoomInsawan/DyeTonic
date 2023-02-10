@@ -17,8 +17,10 @@ namespace DyeTonic
 
     public class HitTrigger : MonoBehaviour
     {
+        [Header("HitTrigger settings")]
         [SerializeField] private SongManager _songManager;
         [SerializeField] private Player player = Player.Player2;
+        [SerializeField] private bool isActive = true;
 
         [Header("Effect Prefab")]
         [SerializeField] private GameObject offbeatHit;
@@ -80,65 +82,89 @@ namespace DyeTonic
 
         public void Track1Player2(InputAction.CallbackContext context) 
         { 
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track2Player2 (InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track3Player2 (InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track4Player2(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track1Player1(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track2Player1(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
         public void Track3Player1(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         public void Track4Player1(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                OnKeypressed(context);
-            if (context.canceled)
-                OnKeyRelease(context);
+            if (isActive)
+            {
+                if (context.performed)
+                    OnKeypressed(context);
+                if (context.canceled)
+                    OnKeyRelease(context);
+            }
         }
 
         private void OnKeypressed(InputAction.CallbackContext context)
