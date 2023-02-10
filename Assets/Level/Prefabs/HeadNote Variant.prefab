@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4257362587768119535, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0db2286bd161254fabef41f7ed78077, type: 2}
     - target: {fileID: -2714497085585726058, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
       propertyPath: destoryWhenPassHitLine
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7363467028323402666, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0db2286bd161254fabef41f7ed78077, type: 2}
     - target: {fileID: 7967211962095986510, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
       propertyPath: m_Name
       value: HeadNote Variant
