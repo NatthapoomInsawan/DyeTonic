@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6ce348fd92aaab342beab6202ab701c5, type: 2}
+  - {fileID: 2100000, guid: fe064e0c37a367348ab3eb9023485362, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+  destoryWhenPassHitLine: 1
