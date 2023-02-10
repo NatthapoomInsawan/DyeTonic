@@ -17,6 +17,8 @@ namespace DyeTonic
         [SerializeField] private GameObject _normalNote;
         [SerializeField] private GameObject _headNote;
         [SerializeField] private GameObject _tailNote;
+        [SerializeField] private GameObject _normalNoteVariant;
+        [SerializeField] private GameObject _headNoteVariant;
 
         [Header("Track 1 start transform")]
         [SerializeField] private Transform[] track1Transform = new Transform[4];
@@ -46,20 +48,20 @@ namespace DyeTonic
         public void SpawnNoteTwoLine()
         {
             //spawn notes on line 1
-            SpawnNote(track1Transform, track1EndTransform, _songData.notesLine1);
+            SpawnNote(track1Transform, track1EndTransform, _songData.notesLine1, _normalNote, _headNote);
 
             //spawn notes on line 2
-            SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2);
+            SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2, _normalNoteVariant, _headNoteVariant);
         }
 
-        void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas)
+        void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas, GameObject normalNotePrefab, GameObject headNotePrefab)
         {
             //spawn notes
             foreach (NoteData noteData in noteDatas)
             {
                 if (noteData.endBeat == 0)
                 {
-                    var instantateObject = Instantiate(_normalNote, trackTransforms[noteData.track - 1]);
+                    var instantateObject = Instantiate(normalNotePrefab, trackTransforms[noteData.track - 1]);
 
                     Note noteComponent = instantateObject.GetComponent<Note>();
 
@@ -76,7 +78,7 @@ namespace DyeTonic
                 }
                 else
                 {
-                    var headNote = Instantiate(_headNote, trackTransforms[noteData.track - 1]);
+                    var headNote = Instantiate(headNotePrefab, trackTransforms[noteData.track - 1]);
                     var tailNote = Instantiate(_tailNote, trackEndTransforms[noteData.track - 1]);
 
                     LongNote headNoteComponent = headNote.GetComponent<LongNote>();
