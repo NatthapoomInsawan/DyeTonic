@@ -35,9 +35,14 @@ namespace DyeTonic
             if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f && destoryWhenPassHitLine)
             {
                 Destroy(gameObject);
-                OnNoteSelfDestroy?.Invoke();
+                InVokeSelfDestroy();
             }
 
+        }
+
+        protected void InVokeSelfDestroy()
+        {
+            OnNoteSelfDestroy?.Invoke();
         }
 
     }
