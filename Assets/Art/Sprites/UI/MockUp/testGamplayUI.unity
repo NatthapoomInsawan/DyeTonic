@@ -2683,9 +2683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
   _songData: {fileID: 0}
+  noteSelfDestroy: 1
   _normalNote: {fileID: 7967211962095986510, guid: cc3045dfd8404654dada71983f600da2, type: 3}
   _headNote: {fileID: 7967211962095986510, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
   _tailNote: {fileID: 7967211962095986510, guid: 6ecb1db5a762b4343a20439f8f645766, type: 3}
+  _normalNoteVariant: {fileID: 4067318773184339225, guid: 4c013ac5baee97a4ab4ac0aa566bab90, type: 3}
+  _headNoteVariant: {fileID: 2315551881551123087, guid: 35ef87e4b78f36c48beaf6c3c5eb0a8c, type: 3}
   track1Transform:
   - {fileID: 570036686}
   - {fileID: 1301102175}
