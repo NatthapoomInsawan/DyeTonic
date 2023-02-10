@@ -2060,6 +2060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2144,6 +2145,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &705586911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,7 +3775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8b510ecf25744409049826b90c61d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _songManager: {fileID: 0}
   _songData: {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
+  noteSelfDestroy: 0
   _normalNote: {fileID: 4067318773184339225, guid: 4c013ac5baee97a4ab4ac0aa566bab90, type: 3}
   _headNote: {fileID: 2315551881551123087, guid: 35ef87e4b78f36c48beaf6c3c5eb0a8c, type: 3}
   _tailNote: {fileID: 7967211962095986510, guid: 6ecb1db5a762b4343a20439f8f645766, type: 3}
