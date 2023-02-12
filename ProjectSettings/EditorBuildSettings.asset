@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/LobbyScene.unity
     guid: a8a94deca0394b34a88f5b7c570ba3d3
+  - enabled: 1
+    path: Assets/Level/Scenes/RoomCreateScene.unity
+    guid: 6efbd77976807fd42b4c8550a7462db4
   m_configObjects: {}
