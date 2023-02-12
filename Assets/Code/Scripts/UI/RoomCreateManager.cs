@@ -3,6 +3,7 @@ using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
@@ -59,6 +60,9 @@ namespace DyeTonic
 
             
             PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
+
+            //load room scene
+            SceneManager.LoadSceneAsync("RoomScene");
 
         }
 
