@@ -10,7 +10,7 @@ namespace DyeTonic
     public class RoomCreateManager : MonoBehaviourPunCallbacks
     {
         [SerializeField] private int character;
-        private string songDataToLoad;
+        [SerializeField] private string songDataToLoad;
 
         public override void OnEnable()
         {
@@ -42,10 +42,6 @@ namespace DyeTonic
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.MaxPlayers = 2;
 
-            //set room custom properties
-            Hashtable roomCustomProperties = new Hashtable();
-            roomCustomProperties.Add("songDataName", songDataToLoad);
-
             //create room by creator name
             PhotonNetwork.CreateRoom(PhotonNetwork.NickName, roomOptions);
 
@@ -53,17 +49,28 @@ namespace DyeTonic
 
         public override void OnCreatedRoom()
         {
+            //set room custom properties
+            var roomCustomProperties = new ExitGames.Client.Photon.Hashtable();
+            roomCustomProperties.Add("songDataName", songDataToLoad);
+
+            PhotonNetwork.CurrentRoom.SetCustomProperties(roomCustomProperties);
+
             //add player custom properties
             var playerCustomProperties = new ExitGames.Client.Photon.Hashtable();
             playerCustomProperties.Add("character", character);
             playerCustomProperties.Add("ready", false);
-
             
             PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
 
-            //load room scene
-            SceneManager.LoadSceneAsync("RoomScene");
+        }
 
+        public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
+        {
+            //load room scene
+            SceneManager.LoadScene("RoomScene");
+
+            Debug.Log(PhotonNetwork.CurrentRoom.CustomProperties["songDataName"]);
+            Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["character"]);
         }
 
 
