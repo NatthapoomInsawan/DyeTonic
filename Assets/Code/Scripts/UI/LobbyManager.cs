@@ -25,7 +25,7 @@ namespace DyeTonic
 
             //delete all current room
             foreach (Transform roomTransform in roomListTransform.GetComponentInChildren<Transform>())
-                Destroy(roomTransform);
+                Destroy(roomTransform.gameObject);
 
             //update all room
             foreach (RoomInfo room in roomList)
@@ -35,7 +35,8 @@ namespace DyeTonic
                 var roomButtonComponent = roomObject.GetComponent<RoomSelectButton>();
 
                 roomButtonComponent.RoomName = room.Name;
-                roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["SongData"]));
+
+                roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["songDataName"]));
             }
         }
     }
