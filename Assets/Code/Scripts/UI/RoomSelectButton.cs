@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
@@ -19,7 +20,7 @@ namespace DyeTonic
         // Update is called once per frame
         public void OnButtonClick()
         {
-
+            SceneManager.LoadScene("RoomScene");
         }
 
         public override void UpdateSongCoverDisplay(SongData songData)
