@@ -1,3 +1,5 @@
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -21,6 +23,7 @@ namespace DyeTonic
         public void OnButtonClick()
         {
             SceneManager.LoadScene("RoomScene");
+            PhotonNetwork.JoinRoom(RoomName);
         }
 
         public override void UpdateSongCoverDisplay(SongData songData)

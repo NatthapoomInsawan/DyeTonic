@@ -325,8 +325,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DyeTonic.SongSelectButton, Assembly-CSharp
+      - m_Target: {fileID: 8264152516414549437}
+        m_TargetAssemblyTypeName: DyeTonic.RoomSelectButton, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
