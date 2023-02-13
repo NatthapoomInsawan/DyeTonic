@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
@@ -17,6 +18,11 @@ namespace DyeTonic
         void Start()
         {
             playerNameText.text = PhotonNetwork.NickName;
+        }
+
+        public override void OnJoinedLobby()
+        {
+            Debug.Log("Connected to lobby!");
         }
 
         public override void OnRoomListUpdate(List<RoomInfo> roomList)
