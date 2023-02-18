@@ -43,14 +43,8 @@ namespace DyeTonic
             Debug.Log("Connecting to lobby..");
 
             //connect to lobby
-            PhotonNetwork.JoinLobby();
-        }
-
-        public override void OnJoinedLobby()
-        {
-            connectButtonText.text = "Connected";
-            Debug.Log("Connected to lobby!");
             SceneManager.LoadScene("LobbyScene");
+            PhotonNetwork.JoinLobby();
         }
 
         public override void OnJoinRoomFailed(short returnCode, string message)
