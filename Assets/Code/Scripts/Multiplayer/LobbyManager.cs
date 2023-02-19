@@ -36,13 +36,18 @@ namespace DyeTonic
             //update all room
             foreach (RoomInfo room in roomList)
             {
+
                 var roomObject = Instantiate(roomObjectPrefab, roomListTransform);
 
                 var roomButtonComponent = roomObject.GetComponent<RoomSelectButton>();
 
                 roomButtonComponent.RoomName = room.Name;
 
-                roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["songDataName"]));
+                if (room.CustomProperties["songDataName"] == null)
+                    Destroy(roomObject);
+                else
+                    roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["songDataName"]));
+
             }
         }
     }
