@@ -65,17 +65,10 @@ namespace DyeTonic
             
             PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
 
-        }
-
-        public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
-        {
             //load room scene
             SceneManager.LoadScene("RoomScene");
 
-            Debug.Log(PhotonNetwork.CurrentRoom.CustomProperties["songDataName"]);
-            Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["character"]);
         }
-
 
     }
 }
