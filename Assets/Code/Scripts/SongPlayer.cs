@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,8 +85,14 @@ namespace DyeTonic
 
             //game over condition
             if (songPosition >= _songManager.currentSongData.song.length + 2 || _songManager.HP <= 0)
-                SceneManager.LoadSceneAsync("GameOverScene");
+                GameOver();
 
+        }
+
+        private void GameOver()
+        {
+            DOTween.Clear();
+            SceneManager.LoadSceneAsync("GameOverScene");
         }
 
     }

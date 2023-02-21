@@ -10,13 +10,9 @@ namespace DyeTonic
 
         public static string PreviousScene { get; private set; }
 
-        private void OnDestroy()
-        {
-            PreviousScene = SceneManager.GetActiveScene().name;
-        }
-
         public void LoadScene(string sceneName)
         {
+            PreviousScene = SceneManager.GetActiveScene().name;
             SceneManager.LoadSceneAsync(sceneName);
         }
 
