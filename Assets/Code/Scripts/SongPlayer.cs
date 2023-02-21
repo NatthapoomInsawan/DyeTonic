@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
@@ -12,17 +13,17 @@ namespace DyeTonic
         [SerializeField] SongData _songData;
 
         //the duration of a beat
-        [SerializeField] float secPerBeat;
+        [SerializeField] private float secPerBeat;
 
         //the current position of the song (in seconds)
-        [SerializeField] float songPosition;
+        [SerializeField] private float songPosition;
 
         //Song position in beat to show
 
-        [SerializeField] float songPositionInBeats;
+        [SerializeField] private float songPositionInBeats;
 
         //how much time (in seconds) has passed since the song started
-        float dspSongTime;
+        private float dspSongTime;
 
         private void Awake()
         {
@@ -55,7 +56,7 @@ namespace DyeTonic
         }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             //calculate how many seconds is one beat
             secPerBeat = 60f / _songData.songBpm;
@@ -71,7 +72,7 @@ namespace DyeTonic
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             //calculate the position in seconds
             songPosition = (float)(AudioSettings.dspTime - dspSongTime);
@@ -80,6 +81,10 @@ namespace DyeTonic
             _songManager.songPosInBeats = songPosition / secPerBeat;
 
             songPositionInBeats = _songManager.songPosInBeats;
+
+            //game over condition
+            if (songPosition >= _songManager.currentSongData.song.length + 2 || _songManager.HP <= 0)
+                SceneManager.LoadSceneAsync("GameOverScene");
 
         }
 
