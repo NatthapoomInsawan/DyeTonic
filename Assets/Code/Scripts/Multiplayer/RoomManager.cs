@@ -25,8 +25,8 @@ namespace DyeTonic
 
         [Header("Button")]
         [SerializeField] private Button leaveButton;
-        [SerializeField] private Button button;
-        [SerializeField] private TextMeshProUGUI buttonText;
+        [SerializeField] private Button readyButton;
+        [SerializeField] private TextMeshProUGUI readyButtonText;
 
         [Header("Splash Art")]
         [SerializeField] private Sprite noneSplashArt;
@@ -92,8 +92,8 @@ namespace DyeTonic
                 //Start the game if player ready equal to 2
                 if (readyPlayer == 2)
                 {
-                    buttonText.text = "Starting..";
-                    button.interactable = false;
+                    readyButtonText.text = "Starting..";
+                    readyButton.interactable = false;
                     PhotonNetwork.LoadLevel("testGamplayUI");
                 }
             }
@@ -185,13 +185,13 @@ namespace DyeTonic
             {
                 playerCustomProperties.Add("ready", true);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
-                buttonText.text = "NOT READY";
+                readyButtonText.text = "NOT READY";
             }
             else
             {
                 playerCustomProperties.Add("ready", false);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
-                buttonText.text = "READY";
+                readyButtonText.text = "READY";
             }
         }
 
