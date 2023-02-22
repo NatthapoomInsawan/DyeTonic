@@ -27,6 +27,13 @@ namespace DyeTonic
         [SerializeField] private Button button;
         [SerializeField] private TextMeshProUGUI buttonText;
 
+        [Header("Splash Art")]
+        [SerializeField] private Sprite noneSplashArt;
+        [SerializeField] private Sprite ciarSplashArt;
+        [SerializeField] private Sprite lukeSplashArt;
+        [SerializeField] private Image player1Splash;
+        [SerializeField] private Image player2Splash;
+
 
         public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
         {
@@ -43,6 +50,9 @@ namespace DyeTonic
                 if (changedProps.ContainsKey("ready"))
                     SetReadyText(player1ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
 
+                if (changedProps.ContainsKey("character"))
+                    SetSplashArt(player1Splash, (int)targetPlayer.CustomProperties["character"]);
+
             }
             else
             {
@@ -50,6 +60,9 @@ namespace DyeTonic
 
                 if (changedProps.ContainsKey("ready"))
                     SetReadyText(player2ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
+
+                if (changedProps.ContainsKey("character"))
+                    SetSplashArt(player2Splash, (int)targetPlayer.CustomProperties["character"]);
 
             }
 
@@ -102,11 +115,13 @@ namespace DyeTonic
             {
                 player1NameText.text = "NONE";
                 SetReadyText(player1ReadyText, false);
+                player1Splash.sprite = noneSplashArt;
             }
             else
             {
                 player2NameText.text = "NONE";
                 SetReadyText(player2ReadyText, false);
+                player2Splash.sprite = noneSplashArt;
             }
         }
 
@@ -125,6 +140,7 @@ namespace DyeTonic
             //show master client property
             player1NameText.text = PhotonNetwork.MasterClient.NickName;
             SetReadyText(player1ReadyText, (bool)PhotonNetwork.MasterClient.CustomProperties["ready"]);
+            SetSplashArt(player1Splash, (int)PhotonNetwork.MasterClient.CustomProperties["character"]);
         }
 
         private void SetReadyText (TextMeshProUGUI readyText, bool ready)
@@ -138,6 +154,19 @@ namespace DyeTonic
             {
                 readyText.text = "NOT READY";
                 readyText.color = new Color32(253, 51, 51, 255);
+            }
+        }
+
+        private void SetSplashArt (Image splashArtImage, int character)
+        {
+            switch(character)
+            {
+                case 0:
+                    splashArtImage.sprite = ciarSplashArt;
+                    break;
+                case 1:
+                    splashArtImage.sprite = lukeSplashArt;
+                    break;
             }
         }
 
