@@ -24,8 +24,16 @@ namespace DyeTonic
         [SerializeField] private TextMeshProUGUI player2ReadyText;
 
         [Header("Button")]
-        [SerializeField] private Button button;
-        [SerializeField] private TextMeshProUGUI buttonText;
+        [SerializeField] private Button leaveButton;
+        [SerializeField] private Button readyButton;
+        [SerializeField] private TextMeshProUGUI readyButtonText;
+
+        [Header("Splash Art")]
+        [SerializeField] private Sprite noneSplashArt;
+        [SerializeField] private Sprite ciarSplashArt;
+        [SerializeField] private Sprite lukeSplashArt;
+        [SerializeField] private Image player1Splash;
+        [SerializeField] private Image player2Splash;
 
 
         public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
@@ -43,6 +51,9 @@ namespace DyeTonic
                 if (changedProps.ContainsKey("ready"))
                     SetReadyText(player1ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
 
+                if (changedProps.ContainsKey("character"))
+                    SetSplashArt(player1Splash, (int)targetPlayer.CustomProperties["character"]);
+
             }
             else
             {
@@ -51,15 +62,23 @@ namespace DyeTonic
                 if (changedProps.ContainsKey("ready"))
                     SetReadyText(player2ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
 
+                if (changedProps.ContainsKey("character"))
+                    SetSplashArt(player2Splash, (int)targetPlayer.CustomProperties["character"]);
+
             }
 
             Debug.Log(targetPlayer.NickName + " ready " + targetPlayer.CustomProperties["ready"]);
             Debug.Log(targetPlayer.NickName + " character " + targetPlayer.CustomProperties["character"]);
+            
+            GameStartCheck();
+        }
 
+        private void GameStartCheck()
+        {
             //if player is equal 2
             if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
-                Debug.Log("in condition");
+                Debug.Log("Room is noew full");
 
                 int readyPlayer = 0;
 
@@ -72,8 +91,9 @@ namespace DyeTonic
                 //Start the game if player ready equal to 2
                 if (readyPlayer == 2)
                 {
-                    buttonText.text = "Starting..";
-                    button.interactable = false;
+                    readyButtonText.text = "Starting..";
+                    readyButton.interactable = false;
+                    leaveButton.interactable = false;
                     PhotonNetwork.LoadLevel("testGamplayUI");
                 }
             }
@@ -102,11 +122,13 @@ namespace DyeTonic
             {
                 player1NameText.text = "NONE";
                 SetReadyText(player1ReadyText, false);
+                player1Splash.sprite = noneSplashArt;
             }
             else
             {
                 player2NameText.text = "NONE";
                 SetReadyText(player2ReadyText, false);
+                player2Splash.sprite = noneSplashArt;
             }
         }
 
@@ -125,6 +147,7 @@ namespace DyeTonic
             //show master client property
             player1NameText.text = PhotonNetwork.MasterClient.NickName;
             SetReadyText(player1ReadyText, (bool)PhotonNetwork.MasterClient.CustomProperties["ready"]);
+            SetSplashArt(player1Splash, (int)PhotonNetwork.MasterClient.CustomProperties["character"]);
         }
 
         private void SetReadyText (TextMeshProUGUI readyText, bool ready)
@@ -141,6 +164,19 @@ namespace DyeTonic
             }
         }
 
+        private void SetSplashArt (Image splashArtImage, int character)
+        {
+            switch(character)
+            {
+                case 0:
+                    splashArtImage.sprite = ciarSplashArt;
+                    break;
+                case 1:
+                    splashArtImage.sprite = lukeSplashArt;
+                    break;
+            }
+        }
+
         public void OnReadyButton()
         {
             var playerCustomProperties = new ExitGames.Client.Photon.Hashtable();
@@ -149,13 +185,13 @@ namespace DyeTonic
             {
                 playerCustomProperties.Add("ready", true);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
-                buttonText.text = "NOT READY";
+                readyButtonText.text = "NOT READY";
             }
             else
             {
                 playerCustomProperties.Add("ready", false);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(playerCustomProperties);
-                buttonText.text = "READY";
+                readyButtonText.text = "READY";
             }
         }
 
