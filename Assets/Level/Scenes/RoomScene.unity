@@ -1966,8 +1966,8 @@ MonoBehaviour:
   player2NameText: {fileID: 1421322308}
   player2ReadyText: {fileID: 1037102931}
   leaveButton: {fileID: 1786552502}
-  button: {fileID: 1444392329}
-  buttonText: {fileID: 1421880581}
+  readyButton: {fileID: 1444392329}
+  readyButtonText: {fileID: 1421880581}
   noneSplashArt: {fileID: 21300000, guid: abd866e6e8261f74c9d73dfa8eaccb80, type: 3}
   ciarSplashArt: {fileID: 21300000, guid: cd4ef640bbb284249a7bd1286ed8fb08, type: 3}
   lukeSplashArt: {fileID: 21300000, guid: 5b3623e766766b24e87b62f89c9ebbba, type: 3}
