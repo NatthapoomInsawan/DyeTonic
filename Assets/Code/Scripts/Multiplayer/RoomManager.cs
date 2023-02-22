@@ -24,6 +24,7 @@ namespace DyeTonic
         [SerializeField] private TextMeshProUGUI player2ReadyText;
 
         [Header("Button")]
+        [SerializeField] private Button leaveButton;
         [SerializeField] private Button button;
         [SerializeField] private TextMeshProUGUI buttonText;
 
@@ -68,11 +69,17 @@ namespace DyeTonic
 
             Debug.Log(targetPlayer.NickName + " ready " + targetPlayer.CustomProperties["ready"]);
             Debug.Log(targetPlayer.NickName + " character " + targetPlayer.CustomProperties["character"]);
+            
+            GameStartCheck();
+        }
 
+        private void GameStartCheck()
+        {
             //if player is equal 2
             if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
-                Debug.Log("in condition");
+                Debug.Log("Starting the game..");
+                leaveButton.interactable = false;
 
                 int readyPlayer = 0;
 
