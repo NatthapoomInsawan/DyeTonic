@@ -78,8 +78,7 @@ namespace DyeTonic
             //if player is equal 2
             if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
-                Debug.Log("Starting the game..");
-                leaveButton.interactable = false;
+                Debug.Log("Room is noew full");
 
                 int readyPlayer = 0;
 
@@ -94,6 +93,7 @@ namespace DyeTonic
                 {
                     readyButtonText.text = "Starting..";
                     readyButton.interactable = false;
+                    leaveButton.interactable = false;
                     PhotonNetwork.LoadLevel("testGamplayUI");
                 }
             }
