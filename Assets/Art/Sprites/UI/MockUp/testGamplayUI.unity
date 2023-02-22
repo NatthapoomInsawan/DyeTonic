@@ -708,7 +708,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2077616372}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track1Player2
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -724,7 +724,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1971349240}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track2Player2
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -740,7 +740,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1540788008}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track3Player2
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -756,7 +756,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1695080780}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track4Player2
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -772,7 +772,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 37798782}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track1Player1
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -788,7 +788,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 225925455}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track2Player1
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -804,7 +804,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1672880894}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track3Player1
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -820,7 +820,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1589836928}
         m_TargetAssemblyTypeName: DyeTonic.HitTrigger, Assembly-CSharp
-        m_MethodName: Track4Player1
+        m_MethodName: ProcessTriggerInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

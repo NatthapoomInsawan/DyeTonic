@@ -80,84 +80,8 @@ namespace DyeTonic
 
         }
 
-        public void Track1Player2(InputAction.CallbackContext context) 
+        public void ProcessTriggerInput(InputAction.CallbackContext context) 
         { 
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track2Player2 (InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track3Player2 (InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track4Player2(InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track1Player1(InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track2Player1(InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-        public void Track3Player1(InputAction.CallbackContext context)
-        {
-            if (isActive)
-            {
-                if (context.performed)
-                    OnKeypressed(context);
-                if (context.canceled)
-                    OnKeyRelease(context);
-            }
-        }
-
-        public void Track4Player1(InputAction.CallbackContext context)
-        {
             if (isActive)
             {
                 if (context.performed)
