@@ -11,7 +11,7 @@ namespace DyeTonic
     {
         private AudioSource audioSource;
 
-        private List<AudioChannelSO> audioChannels;
+        [SerializeField] private List<AudioChannelSO> audioChannels;
 
         // Start is called before the first frame update
         void Start()
