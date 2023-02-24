@@ -35,11 +35,10 @@ namespace DyeTonic
             }
         }
 
-        public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float _timeToStart)
+        public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup)
         {
             audioSource.clip = _audioClip;
             audioSource.outputAudioMixerGroup = _audioMixerGroup;
-            audioSource.time = _timeToStart;
             audioSource.Play();
         }
 

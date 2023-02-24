@@ -9,12 +9,12 @@ namespace DyeTonic
     [CreateAssetMenu(menuName = "Scriptable Object/Audio Channel")]
     public class AudioChannelSO : ScriptableObject
     {
-        public event Action<AudioClip, AudioMixerGroup, float> OnAudioPlayRequest;
+        public event Action<AudioClip, AudioMixerGroup> OnAudioPlayRequest;
         [field:SerializeField] public AudioMixerGroup AudioMixerGroup { get; private set; }
 
-        public void RaisePlayRequest(AudioClip audioClip, float time)
+        public void RaisePlayRequest(AudioClip audioClip)
         {
-            OnAudioPlayRequest?.Invoke(audioClip, AudioMixerGroup, time);
+            OnAudioPlayRequest?.Invoke(audioClip, AudioMixerGroup);
         }
 
     }
