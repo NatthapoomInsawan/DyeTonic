@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c508adcd73e0f489914ae295d50aee, type: 3}
   m_Name: MusicChannel
   m_EditorClassIdentifier: 
-  <AudioMixerGroup>k__BackingField: {fileID: 0}
+  <AudioMixerGroup>k__BackingField: {fileID: -5386174103388625574, guid: e2b93e131584c1e4b926be734cb02a57, type: 2}
