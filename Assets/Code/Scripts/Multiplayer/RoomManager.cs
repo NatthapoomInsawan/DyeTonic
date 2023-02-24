@@ -94,7 +94,7 @@ namespace DyeTonic
                     readyButtonText.text = "Starting..";
                     readyButton.interactable = false;
                     leaveButton.interactable = false;
-                    PhotonNetwork.LoadLevel("testGamplayUI");
+                    PhotonNetwork.LoadLevel("GameplayScene");
                 }
             }
         }
