@@ -49,6 +49,7 @@ namespace DyeTonic
 
             //play song
             _audioSource.clip = _songManager.currentSongData.song;
+            _audioSource.Play();
         }
 
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
