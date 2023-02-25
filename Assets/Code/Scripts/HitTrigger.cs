@@ -290,5 +290,10 @@ namespace DyeTonic
             }
         }
 
+        public void SetHitTriggerActive (bool setting)
+        {
+            isActive = setting;
+        }
+
     }
 }
