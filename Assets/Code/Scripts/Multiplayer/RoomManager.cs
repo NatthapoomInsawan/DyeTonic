@@ -49,6 +49,7 @@ namespace DyeTonic
 
             //play song
             _audioSource.clip = _songManager.currentSongData.song;
+            _audioSource.time = 9.5f;
             _audioSource.Play();
         }
 
