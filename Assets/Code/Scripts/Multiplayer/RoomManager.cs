@@ -11,9 +11,13 @@ namespace DyeTonic
 {
     public class RoomManager : MonoBehaviourPunCallbacks
     {
+        [Header("Scriptable Object referencing")]
+        [SerializeField] private SongManager _songManager;
+
         [Header("Room Information")]
         [SerializeField] private SongData _roomSongData;
         [SerializeField] private TextMeshProUGUI songNameText;
+        [SerializeField] private AudioSource _audioSource;
 
         [Header("Player 1 Text")]
         [SerializeField] private TextMeshProUGUI player1NameText;
@@ -38,8 +42,13 @@ namespace DyeTonic
 
         public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
         {
+            //load song data
             _roomSongData = Resources.Load<SongData>("SongData/" + PhotonNetwork.CurrentRoom.CustomProperties["songDataName"]);
             songNameText.text = _roomSongData.songName;
+            _songManager.currentSongData = _roomSongData;
+
+            //play song
+            _audioSource.clip = _songManager.currentSongData.song;
         }
 
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
