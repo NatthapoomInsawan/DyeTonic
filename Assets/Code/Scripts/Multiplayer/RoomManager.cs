@@ -45,12 +45,8 @@ namespace DyeTonic
             //load song data
             _roomSongData = Resources.Load<SongData>("SongData/" + PhotonNetwork.CurrentRoom.CustomProperties["songDataName"]);
             songNameText.text = _roomSongData.songName;
-            _songManager.currentSongData = _roomSongData;
 
-            //play song
-            _audioSource.clip = _songManager.currentSongData.song;
-            _audioSource.time = 9.5f;
-            _audioSource.Play();
+            PlayRoomSong();
         }
 
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
@@ -82,6 +78,16 @@ namespace DyeTonic
             Debug.Log(targetPlayer.NickName + " character " + targetPlayer.CustomProperties["character"]);
             
             GameStartCheck();
+        }
+
+        private void PlayRoomSong()
+        {
+            _songManager.currentSongData = _roomSongData;
+
+            //play song
+            _audioSource.clip = _songManager.currentSongData.song;
+            _audioSource.time = 9.5f;
+            _audioSource.Play();
         }
 
         private void GameStartCheck()
@@ -159,6 +165,8 @@ namespace DyeTonic
             player1NameText.text = PhotonNetwork.MasterClient.NickName;
             SetReadyText(player1ReadyText, (bool)PhotonNetwork.MasterClient.CustomProperties["ready"]);
             SetSplashArt(player1Splash, (int)PhotonNetwork.MasterClient.CustomProperties["character"]);
+
+            PlayRoomSong();
         }
 
         private void SetReadyText (TextMeshProUGUI readyText, bool ready)
