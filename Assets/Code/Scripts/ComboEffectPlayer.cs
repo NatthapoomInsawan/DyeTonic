@@ -18,11 +18,13 @@ namespace DyeTonic
         {
             //subscribe event
             HitTrigger.OnScoreUpdate += PlayEffect;
+            HitTrigger.OnNoteMiss += NoteMiss;
         }
 
         private void OnDisable()
         {
             HitTrigger.OnScoreUpdate -= PlayEffect;
+            HitTrigger.OnNoteMiss -= NoteMiss;
         }
 
         private void PlayEffect()
@@ -37,6 +39,11 @@ namespace DyeTonic
                 leftScreenParticle.Play();
                 rightScreenParticle.Play();
             }
+        }
+
+        private void NoteMiss()
+        {
+            counter = 0;
         }
 
     }
