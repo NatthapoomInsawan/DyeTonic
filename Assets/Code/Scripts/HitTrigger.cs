@@ -117,6 +117,8 @@ namespace DyeTonic
 
                     if (longnoteComponent != null)
                     {
+                        longnoteComponent.HitByTrigger = true;
+
                         //assign hitlongNote reference to calculate when release note
                         hitLongNote = longnoteComponent;
                         hitLongNoteQality = CalculateBeatQuality(longnoteComponent.NoteData);
