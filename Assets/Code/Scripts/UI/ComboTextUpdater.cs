@@ -21,14 +21,14 @@ namespace DyeTonic
         {
             //subscribe event
             HitTrigger.OnScoreUpdate += UpdateUI;
-            Note.OnNoteSelfDestroy += UpdateUI;
+
         }
 
         private void OnDisable()
         {
             //unsubscribe event
             HitTrigger.OnScoreUpdate -= UpdateUI;
-            Note.OnNoteSelfDestroy -= UpdateUI;
+
         }
 
         void UpdateUI()

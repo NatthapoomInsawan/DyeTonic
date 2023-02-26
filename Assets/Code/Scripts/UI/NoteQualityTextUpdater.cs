@@ -21,14 +21,14 @@ namespace DyeTonic
         {
             //subscribe event
             HitTrigger.OnNoteQualityUpdate += UpdateUI;
-            Note.OnNoteSelfDestroy += NoteSelfDestroy;
+
         }
 
         private void OnDisable()
         {
             //unsubscribe event
             HitTrigger.OnNoteQualityUpdate -= UpdateUI;
-            Note.OnNoteSelfDestroy -= NoteSelfDestroy;
+
         }
 
         private void UpdateUI(NoteQuality noteQuality)
@@ -39,10 +39,6 @@ namespace DyeTonic
             //tween animation
             TweenSequenceAnimation.PopSequence(transform, 1.2f, 0.1f);
             transform.DOShakePosition(0.2f, 2f, 10, 0);
-        }
-        private void NoteSelfDestroy()
-        {
-            UpdateUI(NoteQuality.Miss);
         }
 
     }
