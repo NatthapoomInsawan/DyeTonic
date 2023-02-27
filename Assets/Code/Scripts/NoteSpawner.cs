@@ -1,3 +1,5 @@
+using Fungus;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,7 +42,7 @@ namespace DyeTonic
         }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             SpawnNoteTwoLine();
         }
@@ -54,7 +56,7 @@ namespace DyeTonic
             SpawnNote(track2Transform, track2EndTransform, _songData.notesLine2, _normalNoteVariant, _headNoteVariant);
         }
 
-        void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas, GameObject normalNotePrefab, GameObject headNotePrefab)
+        private void SpawnNote(Transform[] trackTransforms, Transform[] trackEndTransforms, List<NoteData> noteDatas, GameObject normalNotePrefab, GameObject headNotePrefab)
         {
             //spawn notes
             foreach (NoteData noteData in noteDatas)
@@ -74,6 +76,9 @@ namespace DyeTonic
 
                     //Name the note
                     NoteNaming(instantateObject, noteData, noteDatas, trackTransforms);
+
+                    //disable different note
+                    SetNetworkNoteComponent(trackTransforms, noteComponent);
 
                 }
                 else
@@ -108,11 +113,14 @@ namespace DyeTonic
                     //Name the note
                     NoteNaming(headNote, noteData, noteDatas, trackTransforms);
 
+                    //disable different note
+                    SetNetworkNoteComponent(trackTransforms, headNoteComponent);
+
                 }
             }
         }
 
-        void NoteNaming(GameObject gameObject, NoteData noteData, List<NoteData> noteDatas, Transform[] transforms)
+        private void NoteNaming(GameObject gameObject, NoteData noteData, List<NoteData> noteDatas, Transform[] transforms)
         {
             if (transforms == track1Transform)
                 gameObject.name = "Line 1 index " + noteDatas.IndexOf(noteData);
@@ -121,7 +129,7 @@ namespace DyeTonic
 
         }
 
-        void ClearNotes(Transform[] transforms)
+        private void ClearNotes(Transform[] transforms)
         {
             for (int i = 0; i < transforms.Length; i++)
             {
@@ -133,6 +141,22 @@ namespace DyeTonic
                         Destroy(childGameObjects[j].gameObject);
                 }
             }
+        }
+
+        private void SetNetworkNoteComponent (Transform[] trackTransforms, Note note)
+        {
+            if (!PhotonNetwork.InRoom)
+                return;
+
+            if ((int)PhotonNetwork.LocalPlayer.CustomProperties["character"] == 0 && trackTransforms == track1Transform)
+            {
+                note.DestoryWhenPassHitLine = false;
+            }
+            else if ((int)PhotonNetwork.LocalPlayer.CustomProperties["character"] == 1 && trackTransforms == track2Transform)
+            {
+                note.DestoryWhenPassHitLine = false;
+            }
+
         }
 
         public void ClearAllNotes()
