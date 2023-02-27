@@ -16,7 +16,7 @@ namespace DyeTonic
         public NoteData NoteData { get; set; }
 
         //OnNoteSelfDestroy
-        public static event Action OnNoteSelfDestroy;
+        public static event Action<Transform, NoteData> OnNoteSelfDestroy;
 
         // Update is called once per frame
         protected virtual void Update()
@@ -41,7 +41,7 @@ namespace DyeTonic
 
         protected void InVokeSelfDestroy()
         {
-            OnNoteSelfDestroy?.Invoke();
+            OnNoteSelfDestroy?.Invoke(EndTransform, NoteData);
         }
 
     }
