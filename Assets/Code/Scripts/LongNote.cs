@@ -10,8 +10,7 @@ namespace DyeTonic
 
         LineRenderer lineRenderer;
 
-        public Transform TailNoteTransform { private get; set; }
-        public bool HitByTrigger { private get; set; } = false;
+        public Transform TailNoteTransform { get; set; }
 
         // Start is called before the first frame update
         void Start()
@@ -36,8 +35,7 @@ namespace DyeTonic
             if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f && DestoryWhenPassHitLine && GetComponent<MeshRenderer>().enabled == true)
             {
                 GetComponent<MeshRenderer>().enabled = false;
-                if (!HitByTrigger)
-                    InVokeSelfDestroy();
+                InVokeSelfDestroy();
             }
 
             //Destroy when endBeat pass or equal end beat
