@@ -34,6 +34,7 @@ namespace DyeTonic
 
         LongNote hitLongNote;
         NoteQuality hitLongNoteQality;
+        InputAction.CallbackContext longNotecallbackContext;
 
         //enum
         private enum Player
@@ -48,16 +49,6 @@ namespace DyeTonic
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
 
-        private void OnEnable()
-        {
-            Note.OnNoteSelfDestroy += NoteSelfDestroy;
-        }
-
-        private void OnDisable()
-        {
-            Note.OnNoteSelfDestroy -= NoteSelfDestroy;
-        }
-
 
         private void Update()
         {
@@ -70,7 +61,7 @@ namespace DyeTonic
             {
                 if (_songManager.songPosInBeats - onPressBeat > 0.5f) 
                 {
-                    AssignScore(50, hitLongNoteQality);
+                    AssignScore(longNotecallbackContext, 50, hitLongNoteQality);
 
                     //increse song combo
                     _songManager.songCombo++;
@@ -117,24 +108,23 @@ namespace DyeTonic
 
                     if (longnoteComponent != null)
                     {
-                        longnoteComponent.HitByTrigger = true;
-
                         //assign hitlongNote reference to calculate when release note
                         hitLongNote = longnoteComponent;
                         hitLongNoteQality = CalculateBeatQuality(longnoteComponent.NoteData);
                         Debug.Log(hitLongNoteQality);
                         //assign onPressbeat
                         onPressBeat = _songManager.songPosInBeats;
-
+                        //assign long note callback context
+                        longNotecallbackContext = context;
                         //calculate score
-                        CalculateScore( hitLongNoteQality);
+                        CalculateScore(context, hitLongNoteQality);
                     }
                     else if (normalnoteComponent != null)
                     {
                         if (context.action.WasPressedThisFrame())
                         {
                             Debug.Log(CalculateBeatQuality(normalnoteComponent.NoteData));
-                            CalculateScore(hitLongNoteQality);
+                            CalculateScore(context, hitLongNoteQality);
                             //calculate score
                             Destroy(hit.transform.gameObject);
                         }
@@ -157,7 +147,7 @@ namespace DyeTonic
                     hitLongNoteQality = NoteQuality.Miss;
                     Debug.Log(hitLongNoteQality);
                     //calculate score
-                    CalculateScore(hitLongNoteQality);
+                    CalculateScore(context, hitLongNoteQality);
                     //Update to UI
                     OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
                     OnNoteMiss?.Invoke();
@@ -166,7 +156,7 @@ namespace DyeTonic
             }
         }
 
-        private void CalculateScore (NoteQuality noteQuality)
+        private void CalculateScore (InputAction.CallbackContext context, NoteQuality noteQuality)
         {
             int score = 0;
 
@@ -205,7 +195,7 @@ namespace DyeTonic
             //Multiply score
             score = score * _songManager.scoreMultiplier;
 
-            AssignScore(score, noteQuality);
+            AssignScore(context, score, noteQuality);
 
         }
 
@@ -259,7 +249,7 @@ namespace DyeTonic
             }
         }
 
-        private void AssignScore (int score, NoteQuality noteQuality)
+        private void AssignScore (InputAction.CallbackContext context, int score, NoteQuality noteQuality)
         {
             //assign score to player
             if (player == Player.Player2)
@@ -298,21 +288,6 @@ namespace DyeTonic
                     Instantiate(missHit, transform);
                     break;
             }
-        }
-
-        private void NoteSelfDestroy(Transform targetTransform, NoteData noteData)
-        {
-            if (targetTransform != transform)
-                return;
-
-            CalculateBeatQuality(noteData);
-            CalculateScore(NoteQuality.Miss);
-
-        }
-
-        public void SetHitTriggerActive (bool setting)
-        {
-            isActive = setting;
         }
 
     }

@@ -23,12 +23,14 @@ namespace DyeTonic
             //subscribe event
             HitTrigger.OnNoteMiss += DamageHP;
             HitTrigger.OnNoteHit += HealHP;
+            Note.OnNoteSelfDestroy += DamageHP;
         }
 
         private void OnDisable()
         {
             //unsubscribe event
             HitTrigger.OnNoteMiss -= DamageHP;
+            Note.OnNoteSelfDestroy -= DamageHP;
             HitTrigger.OnNoteHit -= HealHP;
         }
 
