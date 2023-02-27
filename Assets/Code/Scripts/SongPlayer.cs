@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,8 +21,11 @@ namespace DyeTonic
         [SerializeField] private float songPosition;
 
         //Song position in beat to show
-
         [SerializeField] private float songPositionInBeats;
+
+        private bool songEnd;
+
+        public static event Action OnSongeEnd;
 
         //how much time (in seconds) has passed since the song started
         private float dspSongTime;
@@ -82,6 +86,13 @@ namespace DyeTonic
             _songManager.songPosInBeats = songPosition / secPerBeat;
 
             songPositionInBeats = _songManager.songPosInBeats;
+
+            //invoke song end
+            if (songPosition >= _songManager.currentSongData.song.length && songEnd != true)
+            {
+                OnSongeEnd?.Invoke();
+                songEnd = true;
+            }
 
             //game over condition
             if (songPosition >= _songManager.currentSongData.song.length + 2 || _songManager.HP <= 0)

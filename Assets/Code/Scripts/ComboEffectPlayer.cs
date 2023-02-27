@@ -13,18 +13,22 @@ namespace DyeTonic
         [Header("Effect Particle")]
         [SerializeField] ParticleSystem leftScreenParticle;
         [SerializeField] ParticleSystem rightScreenParticle;
+        [SerializeField] ParticleSystem stageClearParticle;
 
         private void OnEnable()
         {
             //subscribe event
             HitTrigger.OnScoreUpdate += PlayEffect;
             HitTrigger.OnNoteMiss += NoteMiss;
+            SongPlayer.OnSongeEnd += SongEnd;
+            
         }
 
         private void OnDisable()
         {
             HitTrigger.OnScoreUpdate -= PlayEffect;
             HitTrigger.OnNoteMiss -= NoteMiss;
+            SongPlayer.OnSongeEnd -= SongEnd;
         }
 
         private void PlayEffect()
@@ -44,6 +48,11 @@ namespace DyeTonic
         private void NoteMiss()
         {
             counter = 0;
+        }
+
+        private void SongEnd()
+        {
+            stageClearParticle.Play();
         }
 
     }
