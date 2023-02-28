@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 
 namespace DyeTonic
 {
-    [RequireComponent(typeof(AudioSource))]
     public class AudioPlayer : MonoBehaviour
     {
         private static AudioPlayer instance;
