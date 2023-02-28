@@ -9,15 +9,23 @@ namespace DyeTonic
     [RequireComponent(typeof(AudioSource))]
     public class AudioPlayer : MonoBehaviour
     {
-        private AudioSource audioSource;
+        private static AudioPlayer instance;
+
+        private void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                instance = this;
+            }
+
+            DontDestroyOnLoad(gameObject);
+        }
 
         [SerializeField] private List<AudioChannelSO> audioChannels;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
 
         private void OnEnable()
         {
@@ -37,9 +45,15 @@ namespace DyeTonic
 
         public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup)
         {
+
+            GameObject instantiateAudio = new GameObject("Instantiated Audio");
+            AudioSource audioSource = (AudioSource)instantiateAudio.AddComponent(typeof(AudioSource));
+
             audioSource.clip = _audioClip;
             audioSource.outputAudioMixerGroup = _audioMixerGroup;
             audioSource.Play();
+
+            Destroy(instantiateAudio, audioSource.clip.length);
         }
 
     }
