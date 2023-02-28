@@ -10,7 +10,8 @@ namespace DyeTonic
 
         LineRenderer lineRenderer;
 
-        public Transform TailNoteTransform { get; set; }
+        public Transform TailNoteTransform { private get; set; }
+        public bool HitByTrigger { private get; set; } = false;
 
         // Start is called before the first frame update
         void Start()
@@ -31,8 +32,16 @@ namespace DyeTonic
             //move to hit point
             transform.position = Vector3.LerpUnclamped(StartTransform.position, EndTransform.position, (_songManager.songPosInBeats / NoteData.beat));
 
-            //Destroy when endBeat pass or equal 1.5 beat
-            if ((_songManager.songPosInBeats - NoteData.endBeat) >= 1.5f && destoryWhenPassHitLine)
+            //Hide when pass or equal 1.5 beat
+            if ((_songManager.songPosInBeats - NoteData.beat) >= 1.5f && DestoryWhenPassHitLine && GetComponent<MeshRenderer>().enabled == true)
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+                if (!HitByTrigger)
+                    InVokeSelfDestroy();
+            }
+
+            //Destroy when endBeat pass or equal end beat
+            if ((_songManager.songPosInBeats - NoteData.endBeat) >= 1.5f && DestoryWhenPassHitLine)
                 Destroy(gameObject);
 
         }

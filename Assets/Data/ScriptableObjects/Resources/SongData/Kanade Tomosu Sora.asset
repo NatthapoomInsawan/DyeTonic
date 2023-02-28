@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
   m_Name: Kanade Tomosu Sora
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   songName: 
+=======
+  songName: Kanade Tomosu-Sora
+>>>>>>> origin/main
   songArtist: 
   song: {fileID: 8300000, guid: 5d2ea50aad565154a81b1c85999f1bf0, type: 3}
   songBpm: 79
