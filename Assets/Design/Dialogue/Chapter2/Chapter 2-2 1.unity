@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -1021,8 +1021,8 @@ MonoBehaviour:
   storyText: "\u0E22\u0E39\u0E4A\u0E27\u0E27\u0E27\u0E27\u0E27\u0E2B\u0E39\u0E49\u0E27\u0E27\u0E27\u0E27
     \u0E2A\u0E19\u0E38\u0E01\u0E0A\u0E30\u0E21\u0E31\u0E14\u0E40\u0E25\u0E22\u0E22\u0E22 "
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 2005128449}
+  portrait: {fileID: 21300000, guid: 2726bc1de47dd2145b106542ed59ad46, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1200,8 +1200,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ...................................................
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 2056225451}
+  portrait: {fileID: 21300000, guid: 3292652dee31d5143858180621b26564, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1258,8 +1258,8 @@ MonoBehaviour:
   storyText: "\u0E07\u0E31\u0E49\u0E19\u0E19\u0E32\u0E22\u0E01\u0E47\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19\u0E01\u0E31\u0E1A\u0E0A\u0E31\u0E49\u0E19\u0E2A\u0E34
     \u0E21\u0E32\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E35\u0E2A\u0E35\u0E2A\u0E31\u0E19\u0E01\u0E31\u0E19"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 167942096}
+  portrait: {fileID: 21300000, guid: 69d0a8d13671e8948bb1d74e01561a1d, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1315,8 +1315,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u0E41\u0E15\u0E48\u0E27\u0E48\u0E32 \u0E0A\u0E32\u0E27\u0E1A\u0E49\u0E32\u0E19\u0E21\u0E2D\u0E07\u0E40\u0E23\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E1E\u0E27\u0E01\u0E19\u0E2D\u0E01\u0E23\u0E35\u0E15\u0E19\u0E30"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 937191839}
+  portrait: {fileID: 21300000, guid: 99e19c560842d4d49b001b1c065668b8, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -1801,7 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Character Name
+  nameText: Luke
   nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
   soundEffect: {fileID: 0}
   portraits:
