@@ -92,6 +92,10 @@ namespace DyeTonic
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
 
+                    //invoke NetworkEvent
+                    if (PhotonNetwork.InRoom)
+                        SendNetworkData(50, hitLongNoteQality, player);
+
                     //spawn effect
                     SpawnEffect(hitLongNoteQality);
 
