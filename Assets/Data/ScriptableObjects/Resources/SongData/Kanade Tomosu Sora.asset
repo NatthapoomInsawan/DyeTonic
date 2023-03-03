@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
   m_Name: Kanade Tomosu Sora
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  songName: 
-=======
   songName: Kanade Tomosu-Sora
->>>>>>> origin/main
   songArtist: 
   song: {fileID: 8300000, guid: 5d2ea50aad565154a81b1c85999f1bf0, type: 3}
   songBpm: 79
@@ -61,16 +57,4 @@ MonoBehaviour:
   - beat: 23.3
     track: 1
     endBeat: 23.4
-  - beat: 24.4
-    track: 3
-    endBeat: 24.6
-  - beat: 24.7
-    track: 3
-    endBeat: 25.2
-  - beat: 25.3
-    track: 3
-    endBeat: 25.6
-  - beat: 25.8
-    track: 2
-    endBeat: 26.2
   notesLine2: []
