@@ -20,6 +20,7 @@ namespace DyeTonic
 
         //event coded
         private const byte SCORE_UPDATE_EVENT = 0;
+        private const byte GAME_END_EVENT = 1;
 
         //event
         public static event Action<int, NoteQuality, int, bool, bool> OnRecieveNetworkDatas;
@@ -45,14 +46,20 @@ namespace DyeTonic
         {
             PhotonNetwork.AddCallbackTarget(this);
             HitTrigger.OnNetworkDataSend += InvokePhotonEvent;
-            Note.OnNoteSelfDestroy += NoteSelfDestroy;
+            SongPlayer.OnGameEnd += GameEnd; 
         }
 
         private void OnDisable()
         {
             PhotonNetwork.RemoveCallbackTarget(this);
             HitTrigger.OnNetworkDataSend -= InvokePhotonEvent;
-            Note.OnNoteSelfDestroy -= NoteSelfDestroy;
+            SongPlayer.OnGameEnd -= GameEnd;
+        }
+
+        private void GameEnd()
+        {
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            PhotonNetwork.RaiseEvent(GAME_END_EVENT, null, raiseEventOptions, SendOptions.SendUnreliable);
         }
 
         private void InvokePhotonEvent(int score, int qualityNumber, int track, bool isSongCombo,bool isPlayer1)
@@ -60,21 +67,8 @@ namespace DyeTonic
             object[] datas = new object[] { score, qualityNumber, track, isSongCombo, isPlayer1 };
 
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(NetworkGameplayManager.SCORE_UPDATE_EVENT, datas, raiseEventOptions, SendOptions.SendReliable);
+            PhotonNetwork.RaiseEvent(SCORE_UPDATE_EVENT, datas, raiseEventOptions, SendOptions.SendUnreliable);
         }
-
-        private void NoteSelfDestroy(Transform transform, NoteData noteData)
-        {
-            bool isPlayer1;
-
-            if (player2HitTriggers[0].GetHitTriggerActive())
-                isPlayer1 = false;
-            else
-                isPlayer1 = true;
-
-            InvokePhotonEvent(0, 3, noteData.track, false, isPlayer1);
-        }
-
         public void OnEvent(EventData photonEvent)
         {
             byte eventCode = photonEvent.Code;
@@ -109,6 +103,11 @@ namespace DyeTonic
                 //Invoke event
                 OnRecieveNetworkDatas?.Invoke(score, noteQuality, track, isSongCombo, isPlayer1);
 
+            }
+            
+            if (eventCode == GAME_END_EVENT)
+            {
+                PhotonNetwork.LoadLevel("GameOverScene");
             }
 
         }

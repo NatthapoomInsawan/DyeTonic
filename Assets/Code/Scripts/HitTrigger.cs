@@ -83,7 +83,11 @@ namespace DyeTonic
                     _songManager.songCombo++;
 
                     //invoke quality
-                    OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
+                    InvokeNoteQualityEvent(hitLongNoteQality);
+
+                    //invoke NetworkEvent
+                    if (PhotonNetwork.InRoom)
+                        SendNetworkData(50, hitLongNoteQality, player);
 
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
@@ -400,12 +404,9 @@ namespace DyeTonic
 
             SpawnEffect(noteQuality);
 
-            //invoke Note quality event
             InvokeNoteQualityEvent(noteQuality);
 
             AssignScore(score, noteQuality, playerData);
-
-            Debug.Log("Event invoked");
         }
 
     }
