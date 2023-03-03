@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
+  m_Name: WorldIsMineSD 1
+  m_EditorClassIdentifier: 
+  songName: World Is Mine
+  songArtist: Supercell
+  song: {fileID: 8300000, guid: ed6f2ac3fb9352f4ea500ceb0d464845, type: 3}
+  songBpm: 160
+  songSprite: {fileID: 21300000, guid: 0dbdc6a0eced43444b74fae039b7ac6a, type: 3}
+  notesLine1:
+  - beat: 5
+    track: 2
+    endBeat: 5.5
+  - beat: 6
+    track: 4
+    endBeat: 8
+  - beat: 9
+    track: 2
+    endBeat: 0
+  - beat: 10
+    track: 1
+    endBeat: 11
+  - beat: 12
+    track: 3
+    endBeat: 0
+  - beat: 13
+    track: 2
+    endBeat: 0
+  - beat: 14
+    track: 4
+    endBeat: 0
+  - beat: 15
+    track: 4
+    endBeat: 0
+  - beat: 16
+    track: 3
+    endBeat: 0
+  - beat: 17
+    track: 2
+    endBeat: 0
+  - beat: 18
+    track: 1
+    endBeat: 0
+  - beat: 19
+    track: 1
+    endBeat: 0
+  - beat: 20
+    track: 2
+    endBeat: 21
+  - beat: 21
+    track: 3
+    endBeat: 22
+  - beat: 22
+    track: 4
+    endBeat: 24
+  - beat: 25
+    track: 2
+    endBeat: 0
+  - beat: 26
+    track: 1
+    endBeat: 0
+  - beat: 27
+    track: 2
+    endBeat: 0
+  - beat: 28
+    track: 3
+    endBeat: 0
+  - beat: 29
+    track: 2
+    endBeat: 0
+  - beat: 30
+    track: 2
+    endBeat: 31
+  - beat: 32
+    track: 1
+    endBeat: 33
+  - beat: 34
+    track: 3
+    endBeat: 35
+  - beat: 36
+    track: 4
+    endBeat: 47
+  - beat: 48
+    track: 1
+    endBeat: 0
+  - beat: 49
+    track: 2
+    endBeat: 0
+  notesLine2:
+  - beat: 5
+    track: 2
+    endBeat: 5.5
+  - beat: 6
+    track: 4
+    endBeat: 8
+  - beat: 9
+    track: 2
+    endBeat: 0
+  - beat: 10
+    track: 1
+    endBeat: 11
+  - beat: 12
+    track: 3
+    endBeat: 0
+  - beat: 13
+    track: 2
+    endBeat: 0
+  - beat: 14
+    track: 4
+    endBeat: 0
+  - beat: 15
+    track: 4
+    endBeat: 0
+  - beat: 16
+    track: 3
+    endBeat: 0
+  - beat: 17
+    track: 2
+    endBeat: 0
+  - beat: 18
+    track: 1
+    endBeat: 0
+  - beat: 19
+    track: 1
+    endBeat: 0
+  - beat: 20
+    track: 2
+    endBeat: 21
+  - beat: 21
+    track: 3
+    endBeat: 22
+  - beat: 22
+    track: 4
+    endBeat: 24
+  - beat: 25
+    track: 2
+    endBeat: 0
+  - beat: 26
+    track: 1
+    endBeat: 0
+  - beat: 27
+    track: 2
+    endBeat: 0
+  - beat: 28
+    track: 3
+    endBeat: 0
+  - beat: 29
+    track: 2
+    endBeat: 0
+  - beat: 30
+    track: 2
+    endBeat: 31
+  - beat: 32
+    track: 1
+    endBeat: 33
+  - beat: 34
+    track: 3
+    endBeat: 35
+  - beat: 36
+    track: 4
+    endBeat: 47
+  - beat: 48
+    track: 1
+    endBeat: 0
+  - beat: 49
+    track: 2
+    endBeat: 0

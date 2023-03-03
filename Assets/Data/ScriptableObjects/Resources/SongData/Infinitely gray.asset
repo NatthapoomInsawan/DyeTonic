@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
+  m_Name: Infinitely gray
+  m_EditorClassIdentifier: 
+  songName: Infinitely Gray
+  songArtist: 
+  song: {fileID: 8300000, guid: 44d0599ca93b2d740ba6eb10d4d92f9f, type: 3}
+  songBpm: 108
+  songSprite: {fileID: 0}
+  notesLine1:
+  - beat: 50
+    track: 1
+    endBeat: 50.4
+  - beat: 50.5
+    track: 2
+    endBeat: 50.6
+  - beat: 50.6
+    track: 3
+    endBeat: 50.9
+  - beat: 51
+    track: 4
+    endBeat: 52
+  - beat: 53
+    track: 2
+    endBeat: 54
+  - beat: 56
+    track: 3
+    endBeat: 59
+  - beat: 60
+    track: 4
+    endBeat: 62
+  - beat: 63
+    track: 3
+    endBeat: 64
+  - beat: 65
+    track: 2
+    endBeat: 84
+  - beat: 85
+    track: 1
+    endBeat: 89
+  - beat: 90
+    track: 3
+    endBeat: 91
+  - beat: 91
+    track: 4
+    endBeat: 92
+  - beat: 93
+    track: 4
+    endBeat: 98
+  - beat: 98
+    track: 1
+    endBeat: 99
+  - beat: 99
+    track: 2
+    endBeat: 100
+  notesLine2: []
