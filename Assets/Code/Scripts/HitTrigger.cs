@@ -1,3 +1,5 @@
+using Photon.Pun;
+using Photon.Realtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +23,8 @@ namespace DyeTonic
         [SerializeField] private SongManager _songManager;
         [SerializeField] private Player player = Player.Player2;
         [SerializeField] private bool isActive = true;
+        [Range(1,4)]
+        [SerializeField] private int track = 1;
 
         [Header("Effect Prefab")]
         [SerializeField] private GameObject offbeatHit;
@@ -47,15 +51,18 @@ namespace DyeTonic
         public static event Action<NoteQuality> OnNoteQualityUpdate;
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
+        public static event Action<int, int, int,bool, bool> OnNetworkDataSend;
 
         private void OnEnable()
         {
             Note.OnNoteSelfDestroy += NoteSelfDestroy;
+            NetworkGameplayManager.OnRecieveNetworkDatas += RecieveNetworkDatas;
         }
 
         private void OnDisable()
         {
             Note.OnNoteSelfDestroy -= NoteSelfDestroy;
+            NetworkGameplayManager.OnRecieveNetworkDatas -= RecieveNetworkDatas;
         }
 
 
@@ -70,7 +77,7 @@ namespace DyeTonic
             {
                 if (_songManager.songPosInBeats - onPressBeat > 0.5f) 
                 {
-                    AssignScore(50, hitLongNoteQality);
+                    AssignScore(50, hitLongNoteQality, player);
 
                     //increse song combo
                     _songManager.songCombo++;
@@ -80,6 +87,10 @@ namespace DyeTonic
 
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
+
+                    //invoke NetworkEvent
+                    if (PhotonNetwork.InRoom)
+                        SendNetworkData(50, hitLongNoteQality, player);
 
                     //spawn effect
                     SpawnEffect(hitLongNoteQality);
@@ -203,9 +214,13 @@ namespace DyeTonic
                 _songManager.scoreMultiplier = 1;
 
             //Multiply score
-            score = score * _songManager.scoreMultiplier;
+            score *= _songManager.scoreMultiplier;
 
-            AssignScore(score, noteQuality);
+            //invoke NetworkEvent
+            if (PhotonNetwork.InRoom)
+                SendNetworkData(score, noteQuality, player);
+
+            AssignScore(score, noteQuality, player);
 
         }
 
@@ -223,13 +238,7 @@ namespace DyeTonic
                 noteQuality = NoteQuality.Good;
 
             //Update to UI
-            OnNoteQualityUpdate?.Invoke(noteQuality);
-            
-            if (noteQuality == NoteQuality.Miss)
-                OnNoteMiss?.Invoke();
-
-            if (noteQuality == NoteQuality.Good || noteQuality == NoteQuality.Perfect)
-                OnNoteHit?.Invoke();
+            InvokeNoteQualityEvent(noteQuality);
 
             //spawn effect
             SpawnEffect(noteQuality);
@@ -237,6 +246,18 @@ namespace DyeTonic
             return noteQuality;
 
 
+        }
+
+        private void InvokeNoteQualityEvent(NoteQuality noteQuality)
+        {
+            //Update to UI
+            OnNoteQualityUpdate?.Invoke(noteQuality);
+
+            if (noteQuality == NoteQuality.Miss)
+                OnNoteMiss?.Invoke();
+
+            if (noteQuality == NoteQuality.Good || noteQuality == NoteQuality.Perfect)
+                OnNoteHit?.Invoke();
         }
 
         private void UpdateHitNotes(int[] hitNotesArray, NoteQuality noteQuality)
@@ -259,7 +280,7 @@ namespace DyeTonic
             }
         }
 
-        private void AssignScore (int score, NoteQuality noteQuality)
+        private void AssignScore (int score, NoteQuality noteQuality, Player player)
         {
             //assign score to player
             if (player == Player.Player2)
@@ -313,6 +334,78 @@ namespace DyeTonic
         public void SetHitTriggerActive (bool setting)
         {
             isActive = setting;
+        }
+
+        public bool GetHitTriggerActive()
+        {
+            return isActive;
+        }
+
+        private void SendNetworkData(int score, NoteQuality noteQuality, Player player)
+        {
+            int qualityNumber = 0;
+            bool isPlayer1;
+            bool isSongCombo;
+
+            //convert note quality to int
+            switch (noteQuality)
+            {
+                case NoteQuality.Offbeat:
+                    qualityNumber = 0;
+                    break;
+                case NoteQuality.Perfect:
+                    qualityNumber = 1;
+                    break;
+                case NoteQuality.Good:
+                    qualityNumber = 2;
+                    break;
+                case NoteQuality.Miss:
+                    qualityNumber = 3;
+                    break;
+            }
+
+            //convert player to boolean
+            if (player == Player.Player1)
+                isPlayer1 = true;
+            else
+                isPlayer1 = false;
+
+            //check if song is combo
+            if (_songManager.songCombo != 0)
+                isSongCombo = true;
+            else
+                isSongCombo = false;
+
+            OnNetworkDataSend?.Invoke(score, qualityNumber, track, isSongCombo, isPlayer1);
+
+        }
+
+        private void RecieveNetworkDatas (int score, NoteQuality noteQuality, int trackData, bool isSongCombo, bool isPlayer1)
+        {
+            Player playerData;
+
+            if (isPlayer1)
+                playerData = Player.Player1;
+            else
+                playerData = Player.Player2;
+
+            if (playerData != player || track != trackData)
+                return;
+
+            //assign song combo
+            if (isSongCombo)
+                _songManager.songCombo++;
+            else
+                _songManager.songCombo = 0;
+
+            SpawnEffect(noteQuality);
+
+            //invoke Note quality event
+            InvokeNoteQualityEvent(noteQuality);
+
+            AssignScore(score, noteQuality, playerData);
+
+            Debug.Log("Event invoked");
         }
 
     }
