@@ -1436,7 +1436,7 @@ MonoBehaviour:
   dimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   fadeDuration: 0.75
   moveDuration: 1
-  fadeEaseType: 4
+  fadeEaseType: 19
   shiftOffset: {x: 0, y: 0}
   defaultPosition: {fileID: 623033240}
   positions:
