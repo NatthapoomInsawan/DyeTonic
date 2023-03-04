@@ -9,7 +9,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 namespace DyeTonic
 {
-    public class NetworkGameplayManager : MonoBehaviour, IOnEventCallback
+    public class NetworkGameplayManager : MonoBehaviour, IOnEventCallback, IPunObservable
     {
         [Header("SongManager")]
         [SerializeField] SongManager _songManager;
@@ -117,6 +117,20 @@ namespace DyeTonic
             foreach (HitTrigger hitTrigger in hitTriggers)
             {
                 hitTrigger.SetHitTriggerActive(false);
+            }
+        }
+
+        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+        {
+            if (stream.IsWriting)
+            {
+                stream.SendNext(_songManager.HP);
+            }
+            else if (stream.IsReading)
+            {
+                Debug.Log("current HP" + (int)stream.ReceiveNext());
+                Debug.Log("recieved HP" + _songManager.HP);
+                _songManager.HP = (int)stream.ReceiveNext();
             }
         }
     }
