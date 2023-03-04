@@ -5,7 +5,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 namespace DyeTonic
 {
@@ -18,9 +17,15 @@ namespace DyeTonic
         [SerializeField] private List<HitTrigger> player1HitTriggers;
         [SerializeField] private List<HitTrigger> player2HitTriggers;
 
+        [Header("Track Transform")]
+        [SerializeField] private List<Transform> track1Transform;
+        [SerializeField] private List<Transform> track2Transform;
+
+
         //event coded
         private const byte SCORE_UPDATE_EVENT = 0;
         private const byte GAME_END_EVENT = 1;
+        private const byte NOTE_REMOVE_EVENT = 2;
 
         //event
         public static event Action<int, NoteQuality, int, bool, bool> OnRecieveNetworkDatas;
@@ -46,6 +51,7 @@ namespace DyeTonic
         {
             PhotonNetwork.AddCallbackTarget(this);
             HitTrigger.OnNetworkDataSend += InvokePhotonEvent;
+            HitTrigger.OnNoteRemove += InvokeNoteRemoveEvent;
             SongPlayer.OnGameEnd += GameEnd; 
         }
 
@@ -53,6 +59,7 @@ namespace DyeTonic
         {
             PhotonNetwork.RemoveCallbackTarget(this);
             HitTrigger.OnNetworkDataSend -= InvokePhotonEvent;
+            HitTrigger.OnNoteRemove -= InvokeNoteRemoveEvent;
             SongPlayer.OnGameEnd -= GameEnd;
         }
 
@@ -110,6 +117,16 @@ namespace DyeTonic
                 PhotonNetwork.LoadLevel("GameOverScene");
             }
 
+            if (eventCode == NOTE_REMOVE_EVENT)
+            {
+                object[] datas = (object[])photonEvent.CustomData;
+                
+                if ((bool)datas[2])
+                    NoteRemove((float)datas[0], (int)datas[1], track1Transform);
+                else
+                    NoteRemove((float)datas[0], (int)datas[1], track2Transform);
+            }
+
         }
 
         private void DisableHitTriggers (List<HitTrigger> hitTriggers)
@@ -128,10 +145,35 @@ namespace DyeTonic
             }
             else if (stream.IsReading)
             {
-                Debug.Log("current HP" + (int)stream.ReceiveNext());
-                Debug.Log("recieved HP" + _songManager.HP);
                 _songManager.HP = (int)stream.ReceiveNext();
             }
         }
+
+        private void InvokeNoteRemoveEvent(float beat, int track, bool isPlayer1)
+        {
+            object[] datas = new object[] { beat, track, isPlayer1 };
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            PhotonNetwork.RaiseEvent(NOTE_REMOVE_EVENT, datas, raiseEventOptions,SendOptions.SendUnreliable);
+        }
+
+        private void NoteRemove(float beat, int track, List<Transform> trackTransform)
+        {
+            foreach (Transform transform in trackTransform[track - 1].GetComponentInChildren<Transform>())
+            {
+                Note note;
+
+                if (transform.GetComponent<NormalNote>() != null)
+                    note = transform.GetComponent<NormalNote>();
+                else if (transform.GetComponent<LongNote>() != null)
+                    note = transform.GetComponent<LongNote>();
+                else
+                    note = null;
+
+                if (note != null && note.NoteData.beat == beat)
+                    Destroy(transform.gameObject);
+
+            }
+        }
+
     }
 }
