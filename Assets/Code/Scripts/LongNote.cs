@@ -11,7 +11,7 @@ namespace DyeTonic
         LineRenderer lineRenderer;
 
         public Transform TailNoteTransform { private get; set; }
-        public bool HitByTrigger { private get; set; } = false;
+        public bool HitByTrigger { get; set; } = false;
 
         // Start is called before the first frame update
         void Start()
