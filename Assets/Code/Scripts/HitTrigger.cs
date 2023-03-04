@@ -145,8 +145,8 @@ namespace DyeTonic
                         if (context.action.WasPressedThisFrame())
                         {
                             Debug.Log(CalculateBeatQuality(normalnoteComponent.NoteData));
-                            CalculateScore(hitLongNoteQality);
                             //calculate score
+                            CalculateScore(CalculateBeatQuality(normalnoteComponent.NoteData));
                             Destroy(hit.transform.gameObject);
                         }
 
