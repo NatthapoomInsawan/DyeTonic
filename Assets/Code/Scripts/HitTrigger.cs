@@ -85,10 +85,6 @@ namespace DyeTonic
                     //invoke quality
                     InvokeNoteQualityEvent(hitLongNoteQality);
 
-                    //invoke NetworkEvent
-                    if (PhotonNetwork.InRoom)
-                        SendNetworkData(50, hitLongNoteQality, player);
-
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
 
