@@ -52,6 +52,7 @@ namespace DyeTonic
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
         public static event Action<int, int, int,bool, bool> OnNetworkDataSend;
+        public static event Action<float, int, bool> OnNoteRemove;
 
         private void OnEnable()
         {
@@ -83,7 +84,7 @@ namespace DyeTonic
                     _songManager.songCombo++;
 
                     //invoke quality
-                    OnNoteQualityUpdate?.Invoke(hitLongNoteQality);
+                    InvokeNoteQualityEvent(hitLongNoteQality);
 
                     //update onPressBeat
                     onPressBeat = _songManager.songPosInBeats;
@@ -145,8 +146,13 @@ namespace DyeTonic
                         if (context.action.WasPressedThisFrame())
                         {
                             Debug.Log(CalculateBeatQuality(normalnoteComponent.NoteData));
-                            CalculateScore(hitLongNoteQality);
+
+                            //send network note delete
+                            if (PhotonNetwork.InRoom)
+                                SendNoteRemove(normalnoteComponent.NoteData);
+
                             //calculate score
+                            CalculateScore(CalculateBeatQuality(normalnoteComponent.NoteData));
                             Destroy(hit.transform.gameObject);
                         }
 
@@ -167,6 +173,11 @@ namespace DyeTonic
                 {
                     hitLongNoteQality = NoteQuality.Miss;
                     Debug.Log(hitLongNoteQality);
+
+                    //send network note delete
+                    if (PhotonNetwork.InRoom)
+                        SendNoteRemove(hitLongNote.NoteData);
+
                     //calculate score
                     CalculateScore(hitLongNoteQality);
                     //Update to UI
@@ -400,12 +411,21 @@ namespace DyeTonic
 
             SpawnEffect(noteQuality);
 
-            //invoke Note quality event
             InvokeNoteQualityEvent(noteQuality);
 
             AssignScore(score, noteQuality, playerData);
+        }
 
-            Debug.Log("Event invoked");
+        private void SendNoteRemove(NoteData noteData)
+        {
+            bool isPlayer1;
+
+            if (player != Player.Player1)
+                isPlayer1 = false;
+            else
+                isPlayer1 = true;
+
+            OnNoteRemove?.Invoke(noteData.beat, noteData.track, isPlayer1);
         }
 
     }
