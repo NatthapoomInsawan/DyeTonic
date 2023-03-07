@@ -570,13 +570,20 @@ RectTransform:
   - {fileID: 1474981116}
   - {fileID: 1682185571}
   - {fileID: 1407410314}
+<<<<<<< HEAD
   - {fileID: 808749496}
+=======
+>>>>>>> origin/main
   m_Father: {fileID: 135427067}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 174.8, y: 0}
+=======
+  m_AnchoredPosition: {x: 174.8, y: -20.215193}
+>>>>>>> origin/main
   m_SizeDelta: {x: -461.02, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195619155
@@ -652,7 +659,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 0, y: -1.7848}
+=======
+  m_AnchoredPosition: {x: 0, y: -22}
+>>>>>>> origin/main
   m_SizeDelta: {x: 200, y: 215.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414644078
@@ -677,11 +688,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'PREFECT
 
+<<<<<<< HEAD
     GREAT
 
     GOOD
 
     BAD
+=======
+    GOOD
+
+    OFFBEAT
+>>>>>>> origin/main
 
     MISS'
   m_isRightToLeft: 0
@@ -929,13 +946,20 @@ RectTransform:
   - {fileID: 2112731940}
   - {fileID: 826486332}
   - {fileID: 1271556861}
+<<<<<<< HEAD
   - {fileID: 1338198604}
+=======
+>>>>>>> origin/main
   m_Father: {fileID: 135427067}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -173.6, y: 0}
+=======
+  m_AnchoredPosition: {x: -173.6, y: -20.215193}
+>>>>>>> origin/main
   m_SizeDelta: {x: -461.02, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808203686
@@ -976,6 +1000,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808203684}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &808749495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1136,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808749495}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/main
 --- !u!1 &826486331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1150,11 @@ GameObject:
   - component: {fileID: 826486334}
   - component: {fileID: 826486333}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Good combo
+=======
+  m_Name: Offbeat combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1821,7 +1852,11 @@ GameObject:
   - component: {fileID: 1271556863}
   - component: {fileID: 1271556862}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Bad combo
+=======
+  m_Name: Miss combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1844,7 +1879,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -0.00027466, y: -43}
+=======
+  m_AnchoredPosition: {x: -0.00027466, y: -46.999996}
+>>>>>>> origin/main
   m_SizeDelta: {x: 113.98, y: 25.507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271556862
@@ -2020,6 +2059,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293316094}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1338198603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,6 +2195,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338198603}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/main
 --- !u!1 &1407410313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2209,11 @@ GameObject:
   - component: {fileID: 1407410316}
   - component: {fileID: 1407410315}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Bad combo
+=======
+  m_Name: Miss combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2190,7 +2236,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -0.00027466, y: -43}
+=======
+  m_AnchoredPosition: {x: -0.00027466, y: -47}
+>>>>>>> origin/main
   m_SizeDelta: {x: 113.98, y: 25.507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407410315
@@ -2302,7 +2352,11 @@ GameObject:
   - component: {fileID: 1474981118}
   - component: {fileID: 1474981117}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Great combo
+=======
+  m_Name: Good combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2437,7 +2491,11 @@ GameObject:
   - component: {fileID: 1682185573}
   - component: {fileID: 1682185572}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Good combo
+=======
+  m_Name: Offbeat combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2881,7 +2939,11 @@ GameObject:
   - component: {fileID: 2112731942}
   - component: {fileID: 2112731941}
   m_Layer: 5
+<<<<<<< HEAD
   m_Name: Great combo
+=======
+  m_Name: Good combo
+>>>>>>> origin/main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
