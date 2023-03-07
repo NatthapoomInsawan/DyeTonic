@@ -66,7 +66,7 @@ namespace DyeTonic
         private void GameEnd()
         {
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(GAME_END_EVENT, null, raiseEventOptions, SendOptions.SendUnreliable);
+            PhotonNetwork.RaiseEvent(GAME_END_EVENT, null, raiseEventOptions, SendOptions.SendReliable);
         }
 
         private void InvokePhotonEvent(int score, int qualityNumber, int track, bool isSongCombo,bool isPlayer1)
@@ -74,7 +74,7 @@ namespace DyeTonic
             object[] datas = new object[] { score, qualityNumber, track, isSongCombo, isPlayer1 };
 
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(SCORE_UPDATE_EVENT, datas, raiseEventOptions, SendOptions.SendUnreliable);
+            PhotonNetwork.RaiseEvent(SCORE_UPDATE_EVENT, datas, raiseEventOptions, SendOptions.SendReliable);
         }
         public void OnEvent(EventData photonEvent)
         {
