@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace DyeTonic
         private bool songEnd;
 
         public static event Action OnSongeEnd;
+        public static event Action OnGameEnd;
 
         //how much time (in seconds) has passed since the song started
         private float dspSongTime;
@@ -103,7 +105,11 @@ namespace DyeTonic
         private void GameOver()
         {
             DOTween.Clear();
-            SceneManager.LoadSceneAsync("GameOverScene");
+            OnGameEnd?.Invoke();
+            if (!PhotonNetwork.InRoom)
+                SceneManager.LoadSceneAsync("GameOverScene");
+            else
+                PhotonNetwork.LoadLevel("GameOverScene");
         }
 
     }

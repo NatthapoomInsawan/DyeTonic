@@ -224,6 +224,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
       value: 0
       objectReference: {fileID: 0}
@@ -388,6 +392,16 @@ MonoBehaviour:
   - {fileID: 1971349240}
   - {fileID: 1540788008}
   - {fileID: 1695080780}
+  track1Transform:
+  - {fileID: 570036686}
+  - {fileID: 1301102175}
+  - {fileID: 1608181462}
+  - {fileID: 496605786}
+  track2Transform:
+  - {fileID: 543397103}
+  - {fileID: 173781076}
+  - {fileID: 830582448}
+  - {fileID: 81415421}
 --- !u!1001 &154594015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,6 +452,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
@@ -725,6 +743,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
@@ -2083,6 +2105,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
       value: 1
       objectReference: {fileID: 0}
@@ -3262,6 +3288,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
       value: 0
       objectReference: {fileID: 0}
@@ -3467,6 +3497,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
@@ -3860,6 +3894,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
@@ -4325,6 +4363,10 @@ PrefabInstance:
     - target: {fileID: 4215908464731337498, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
+      propertyPath: track
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4215908464731337499, guid: 4a16e5b99b92fa6419a410573e0ee58f, type: 3}
       propertyPath: player
