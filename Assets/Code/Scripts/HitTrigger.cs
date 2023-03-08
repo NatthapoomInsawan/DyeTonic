@@ -96,6 +96,7 @@ namespace DyeTonic
                     //spawn effect
                     SpawnEffect(hitLongNoteQality);
 
+                    Debug.Log("long note press update");
                 }
             }
 
