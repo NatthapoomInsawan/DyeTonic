@@ -387,6 +387,8 @@ namespace DyeTonic
             else
                 isSongCombo = false;
 
+            Debug.Log("send network data");
+
             OnNetworkDataSend?.Invoke(score, qualityNumber, track, isSongCombo, isPlayer1);
 
         }
@@ -414,6 +416,8 @@ namespace DyeTonic
             InvokeNoteQualityEvent(noteQuality);
 
             AssignScore(score, noteQuality, playerData);
+
+            Debug.Log("recieved network data");
         }
 
         private void SendNoteRemove(NoteData noteData)
