@@ -157,6 +157,9 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 69d0a8d13671e8948bb1d74e01561a1d, type: 3}
+  - {fileID: 21300000, guid: a5c800a537a257749b402cecf4b7808e, type: 3}
+  - {fileID: 21300000, guid: 2726bc1de47dd2145b106542ed59ad46, type: 3}
+  - {fileID: 21300000, guid: bbd68b00fc63e224d8a83530f6349493, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -251,58 +254,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &319779165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 319779167}
-  - component: {fileID: 319779166}
-  m_Layer: 0
-  m_Name: Ciar_Touchy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &319779166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319779165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Ciar
-  nameColor: {r: 0.735849, g: 0.46918786, b: 0, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: a5c800a537a257749b402cecf4b7808e, type: 3}
-  portraitsFace: 2
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &319779167
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319779165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399591747
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +364,11 @@ MonoBehaviour:
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: e64f5dae5e546f440864b13a431ef5e0, type: 3}
+  - {fileID: 21300000, guid: 0bcf89538ead9a04b9aa73d65486e4e2, type: 3}
+  - {fileID: 21300000, guid: 99e19c560842d4d49b001b1c065668b8, type: 3}
+  - {fileID: 21300000, guid: a4a50477ccdec3549b8840b470da0e1b, type: 3}
+  - {fileID: 21300000, guid: a02496a7a669a7b4c93b3c4350c2685c, type: 3}
+  - {fileID: 21300000, guid: 3292652dee31d5143858180621b26564, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -429,7 +385,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &524749111
 GameObject:
@@ -591,58 +547,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572192330}
   m_CullTransparentMesh: 1
---- !u!1 &834680605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 834680607}
-  - component: {fileID: 834680606}
-  m_Layer: 0
-  m_Name: Luke_Worry_OP_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &834680606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834680605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: 0bcf89538ead9a04b9aa73d65486e4e2, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &834680607
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834680605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922331238
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +604,7 @@ Transform:
   m_Children:
   - {fileID: 1247114211}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933299492
 GameObject:
@@ -768,7 +672,7 @@ SpriteRenderer:
   m_Size: {x: 16, y: 9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &933299494
@@ -784,111 +688,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &937191838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937191840}
-  - component: {fileID: 937191839}
-  m_Layer: 0
-  m_Name: Luke_Worry_Close_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &937191839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937191838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: 99e19c560842d4d49b001b1c065668b8, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &937191840
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937191838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1035383204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1035383206}
-  - component: {fileID: 1035383205}
-  m_Layer: 0
-  m_Name: Luke_Smile_Close_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1035383205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035383204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: a4a50477ccdec3549b8840b470da0e1b, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &1035383206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035383204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186933969
 GameObject:
@@ -971,59 +771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1204513339
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1204513341}
-  - component: {fileID: 1204513340}
-  m_Layer: 0
-  m_Name: Ciar_Smile_Open_Eye
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1204513340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204513339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Ciar
-  nameColor: {r: 0.735849, g: 0.46918786, b: 0, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: bbd68b00fc63e224d8a83530f6349493, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &1204513341
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204513339}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1247114210
 GameObject:
@@ -1200,7 +948,7 @@ MonoBehaviour:
     \u0E44\u0E27\u0E49\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19\u0E14\u0E49\u0E27\u0E22\u0E01\u0E31\u0E19\u0E2D\u0E35\u0E01\u0E19\u0E30
     \n"
   description: 
-  character: {fileID: 1204513340}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1298,7 +1046,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1343622332}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1343622337}
   variables: []
   description: 
   stepPause: 0
@@ -1390,7 +1139,7 @@ MonoBehaviour:
   storyText: "\u0E07\u0E31\u0E49\u0E19\u0E19\u0E32\u0E22\u0E01\u0E47\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19\u0E01\u0E31\u0E1A\u0E0A\u0E31\u0E49\u0E19\u0E2A\u0E34
     \u0E21\u0E32\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E35\u0E2A\u0E35\u0E2A\u0E31\u0E19\u0E01\u0E31\u0E19"
   description: 
-  character: {fileID: 1035383205}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1417,7 +1166,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 2005128449}
+  character: {fileID: 167942096}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: 2726bc1de47dd2145b106542ed59ad46, type: 3}
   offset: 0
@@ -1448,7 +1197,7 @@ MonoBehaviour:
   storyText: "\u0E41\u0E25\u0E49\u0E27\u0E19\u0E32\u0E22\u0E2A\u0E19\u0E38\u0E01\u0E44\u0E2B\u0E21
     \u0E16\u0E49\u0E32\u0E0A\u0E2D\u0E1A\u0E41\u0E25\u0E49\u0E27\u0E08\u0E30\u0E2A\u0E19\u0E43\u0E08\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E17\u0E33\u0E44\u0E21\u0E40\u0E25\u0E48\u0E32!! "
   description: 
-  character: {fileID: 319779166}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1475,7 +1224,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 319779166}
+  character: {fileID: 167942096}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: a5c800a537a257749b402cecf4b7808e, type: 3}
   offset: 0
@@ -1505,7 +1254,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u0E44\u0E21\u0E48\u0E25\u0E48\u0E30 \u0E17\u0E35\u0E48\u0E19\u0E35\u0E48\u0E40\u0E02\u0E32\u0E44\u0E21\u0E48\u0E17\u0E33\u0E01\u0E31\u0E19\u0E41\u0E1A\u0E1A\u0E19\u0E31\u0E49\u0E19\u0E2B\u0E23\u0E2D\u0E01 "
   description: 
-  character: {fileID: 2056225451}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1532,7 +1281,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 2056225451}
+  character: {fileID: 465360928}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: 3292652dee31d5143858180621b26564, type: 3}
   offset: 0
@@ -1563,7 +1312,7 @@ MonoBehaviour:
   storyText: "\u0E0A\u0E37\u0E48\u0E2D \u201CLuke\u201D \u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19
     \u0E0A\u0E31\u0E49\u0E19\u0E01\u0E47\u0E41\u0E04\u0E48\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E14\u0E19\u0E15\u0E23\u0E35"
   description: 
-  character: {fileID: 1035383205}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1590,7 +1339,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 937191839}
+  character: {fileID: 465360928}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: 99e19c560842d4d49b001b1c065668b8, type: 3}
   offset: 0
@@ -1651,7 +1400,7 @@ MonoBehaviour:
   storyText: "\u0E0A\u0E31\u0E49\u0E19\u0E0A\u0E37\u0E48\u0E2D \u201CCiar\u201D \u0E40\u0E1B\u0E47\u0E19\u0E19\u0E31\u0E01\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E17\u0E35\u0E48\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E27\u0E48\u0E32\u0E08\u0E30\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E17\u0E31\u0E48\u0E27\u0E42\u0E25\u0E01\u0E14\u0E49\u0E27\u0E22\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E14\u0E19\u0E15\u0E23\u0E35\u0E43\u0E2B\u0E49\u0E43\u0E19\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E35\u0E2A\u0E35\u0E2A\u0E31\u0E19\u0E02\u0E36\u0E49\u0E19\u0E21\u0E32
     \u0E41\u0E25\u0E49\u0E27\u0E19\u0E32\u0E22\u0E25\u0E48\u0E30"
   description: 
-  character: {fileID: 1035383205}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1678,7 +1427,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u0E19\u0E31\u0E48\u0E19\u0E2A\u0E34\u0E19\u0E30... "
   description: 
-  character: {fileID: 1035383205}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1705,7 +1454,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 1035383205}
+  character: {fileID: 465360928}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: a4a50477ccdec3549b8840b470da0e1b, type: 3}
   offset: 0
@@ -1735,7 +1484,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u0E2D\u0E37\u0E21\u0E21\u0E21\u0E21...\u0E25\u0E2D\u0E07\u0E14\u0E39\u0E01\u0E47\u0E44\u0E14\u0E49"
   description: 
-  character: {fileID: 1035383205}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1762,7 +1511,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 1
   stage: {fileID: 0}
-  character: {fileID: 1204513340}
+  character: {fileID: 167942096}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 21300000, guid: bbd68b00fc63e224d8a83530f6349493, type: 3}
   offset: 0
@@ -2067,58 +1816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813018951}
   m_CullTransparentMesh: 1
---- !u!1 &2005128448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2005128450}
-  - component: {fileID: 2005128449}
-  m_Layer: 0
-  m_Name: Ciar_Smile_Close_Eye
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2005128449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005128448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Ciar
-  nameColor: {r: 0.735849, g: 0.46918786, b: 0, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: 2726bc1de47dd2145b106542ed59ad46, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &2005128450
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005128448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2037042333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,107 +1892,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037042333}
   m_CullTransparentMesh: 1
---- !u!1 &2056225450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2056225452}
-  - component: {fileID: 2056225451}
-  m_Layer: 0
-  m_Name: Luke_Hurry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2056225451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056225450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: 3292652dee31d5143858180621b26564, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &2056225452
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056225450}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2129303429
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2129303431}
-  - component: {fileID: 2129303430}
-  m_Layer: 0
-  m_Name: Luke_Smile_OP_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2129303430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129303429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: a02496a7a669a7b4c93b3c4350c2685c, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &2129303431
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129303429}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
