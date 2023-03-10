@@ -5,6 +5,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace DyeTonic
 {
@@ -26,9 +28,11 @@ namespace DyeTonic
         private const byte SCORE_UPDATE_EVENT = 0;
         private const byte GAME_END_EVENT = 1;
         private const byte NOTE_REMOVE_EVENT = 2;
+        private const byte LONG_NOTE_BEAT_EVENT = 3;
 
         //event
         public static event Action<int, NoteQuality, int, bool, bool> OnRecieveNetworkDatas;
+        public static event Action OnComboUpdate;
 
         private void Awake()
         {
@@ -52,6 +56,7 @@ namespace DyeTonic
             PhotonNetwork.AddCallbackTarget(this);
             HitTrigger.OnNetworkDataSend += InvokePhotonEvent;
             HitTrigger.OnNoteRemove += InvokeNoteRemoveEvent;
+            HitTrigger.OnLongNoteBeatDataSend += LongNoteBeat;
             SongPlayer.OnGameEnd += GameEnd; 
         }
 
@@ -60,21 +65,23 @@ namespace DyeTonic
             PhotonNetwork.RemoveCallbackTarget(this);
             HitTrigger.OnNetworkDataSend -= InvokePhotonEvent;
             HitTrigger.OnNoteRemove -= InvokeNoteRemoveEvent;
+            HitTrigger.OnLongNoteBeatDataSend -= LongNoteBeat;
             SongPlayer.OnGameEnd -= GameEnd;
         }
 
-        private void GameEnd()
+        private void GameEnd(bool gameLose)
         {
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(GAME_END_EVENT, null, raiseEventOptions, SendOptions.SendReliable);
+            object[] data = new object[] { gameLose };
+            PhotonNetwork.RaiseEvent(GAME_END_EVENT, data, raiseEventOptions, SendOptions.SendReliable);
         }
 
         private void InvokePhotonEvent(int score, int qualityNumber, int track, bool isSongCombo,bool isPlayer1)
         {
-            object[] datas = new object[] { score, qualityNumber, track, isSongCombo, isPlayer1 };
+            object[] data = new object[] { score, qualityNumber, track, isSongCombo, isPlayer1 };
 
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(SCORE_UPDATE_EVENT, datas, raiseEventOptions, SendOptions.SendReliable);
+            PhotonNetwork.RaiseEvent(SCORE_UPDATE_EVENT, data, raiseEventOptions, SendOptions.SendReliable);
         }
         public void OnEvent(EventData photonEvent)
         {
@@ -82,12 +89,12 @@ namespace DyeTonic
 
             if (eventCode == SCORE_UPDATE_EVENT)
             {
-                object[] datas = (object[])photonEvent.CustomData;
-                int score = (int)datas[0];
-                int qualityNumber = (int)datas[1];
-                int track = (int)datas[2];
-                bool isSongCombo = (bool)datas[3];
-                bool isPlayer1 = (bool)datas[4];
+                object[] data = (object[])photonEvent.CustomData;
+                int score = (int)data[0];
+                int qualityNumber = (int)data[1];
+                int track = (int)data[2];
+                bool isSongCombo = (bool)data[3];
+                bool isPlayer1 = (bool)data[4];
 
                 NoteQuality noteQuality = NoteQuality.Miss;
 
@@ -114,17 +121,56 @@ namespace DyeTonic
             
             if (eventCode == GAME_END_EVENT)
             {
-                PhotonNetwork.LoadLevel("GameOverScene");
+                object[] data = (object[])photonEvent.CustomData;
+
+                if ((bool)data[0])
+                    _songManager.HP = 0;
+
+                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
             }
 
             if (eventCode == NOTE_REMOVE_EVENT)
             {
-                object[] datas = (object[])photonEvent.CustomData;
+                object[] data = (object[])photonEvent.CustomData;
                 
-                if ((bool)datas[2])
-                    NoteRemove((float)datas[0], (int)datas[1], track1Transform);
+                if ((bool)data[2])
+                    NoteRemove((float)data[0], (int)data[1], track1Transform);
                 else
-                    NoteRemove((float)datas[0], (int)datas[1], track2Transform);
+                    NoteRemove((float)data[0], (int)data[1], track2Transform);
+            }
+
+            if (eventCode == LONG_NOTE_BEAT_EVENT)
+            {
+                object[] data = (object[])photonEvent.CustomData;
+
+                int qualityNumber = (int)data[1];
+                NoteQuality noteQuality = NoteQuality.Offbeat;
+
+                switch (qualityNumber)
+                {
+                    case 0:
+                        noteQuality = NoteQuality.Offbeat;
+                        break;
+                    case 1:
+                        noteQuality = NoteQuality.Perfect;
+                        break;
+                    case 2:
+                        noteQuality = NoteQuality.Good;
+                        break;
+                    case 3:
+                        noteQuality = NoteQuality.Miss;
+                        break;
+                }
+
+                if (noteQuality == NoteQuality.Miss)
+                    _songManager.songCombo = 0;
+                else
+                    _songManager.songCombo += (int)data[0];
+
+                OnComboUpdate?.Invoke();
+
+                Debug.Log("song combo: " + _songManager.songCombo);
+
             }
 
         }
@@ -151,9 +197,9 @@ namespace DyeTonic
 
         private void InvokeNoteRemoveEvent(float beat, int track, bool isPlayer1)
         {
-            object[] datas = new object[] { beat, track, isPlayer1 };
+            object[] data = new object[] { beat, track, isPlayer1 };
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(NOTE_REMOVE_EVENT, datas, raiseEventOptions,SendOptions.SendUnreliable);
+            PhotonNetwork.RaiseEvent(NOTE_REMOVE_EVENT, data, raiseEventOptions,SendOptions.SendUnreliable);
         }
 
         private void NoteRemove(float beat, int track, List<Transform> trackTransform)
@@ -173,6 +219,13 @@ namespace DyeTonic
                     Destroy(transform.gameObject);
 
             }
+        }
+
+        private void LongNoteBeat(int beat, int beatQuality)
+        {
+            object[] datas = new object[] { beat, beatQuality };
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            PhotonNetwork.RaiseEvent(LONG_NOTE_BEAT_EVENT, datas, raiseEventOptions, SendOptions.SendReliable);
         }
 
     }

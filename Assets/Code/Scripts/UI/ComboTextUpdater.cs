@@ -21,6 +21,7 @@ namespace DyeTonic
         {
             //subscribe event
             HitTrigger.OnScoreUpdate += UpdateUI;
+            NetworkGameplayManager.OnComboUpdate += UpdateUI;
 
         }
 
@@ -28,6 +29,7 @@ namespace DyeTonic
         {
             //unsubscribe event
             HitTrigger.OnScoreUpdate -= UpdateUI;
+            NetworkGameplayManager.OnComboUpdate -= UpdateUI;
 
         }
 
