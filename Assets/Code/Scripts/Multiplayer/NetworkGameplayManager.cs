@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace DyeTonic
 {
@@ -68,10 +69,11 @@ namespace DyeTonic
             SongPlayer.OnGameEnd -= GameEnd;
         }
 
-        private void GameEnd()
+        private void GameEnd(bool gameLose)
         {
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
-            PhotonNetwork.RaiseEvent(GAME_END_EVENT, null, raiseEventOptions, SendOptions.SendReliable);
+            object[] data = new object[] { gameLose };
+            PhotonNetwork.RaiseEvent(GAME_END_EVENT, data, raiseEventOptions, SendOptions.SendReliable);
         }
 
         private void InvokePhotonEvent(int score, int qualityNumber, int track, bool isSongCombo,bool isPlayer1)
@@ -119,8 +121,12 @@ namespace DyeTonic
             
             if (eventCode == GAME_END_EVENT)
             {
+                object[] data = (object[])photonEvent.CustomData;
+
+                if ((bool)data[0])
+                    _songManager.HP = 0;
+
                 SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
-                _songManager.HP = 0;
             }
 
             if (eventCode == NOTE_REMOVE_EVENT)
