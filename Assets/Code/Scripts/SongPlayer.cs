@@ -105,11 +105,11 @@ namespace DyeTonic
         private void GameOver()
         {
             DOTween.Clear();
-            OnGameEnd?.Invoke();
             if (!PhotonNetwork.InRoom)
-                SceneManager.LoadSceneAsync("GameOverScene");
+                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
             else
-                PhotonNetwork.LoadLevel("GameOverScene");
+                OnGameEnd?.Invoke();
+            gameObject.SetActive(false);
         }
 
     }

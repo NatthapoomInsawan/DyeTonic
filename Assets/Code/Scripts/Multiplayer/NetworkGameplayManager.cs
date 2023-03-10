@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
@@ -118,7 +119,8 @@ namespace DyeTonic
             
             if (eventCode == GAME_END_EVENT)
             {
-                PhotonNetwork.LoadLevel("GameOverScene");
+                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
+                _songManager.HP = 0;
             }
 
             if (eventCode == NOTE_REMOVE_EVENT)
