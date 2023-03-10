@@ -221,7 +221,6 @@ namespace DyeTonic
 
         public override void OnConnectedToMaster()
         {
-            PhotonNetwork.JoinLobby();
             SceneManager.LoadScene("LobbyScene");
         }
 
