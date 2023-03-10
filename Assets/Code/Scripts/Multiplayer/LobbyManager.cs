@@ -18,6 +18,7 @@ namespace DyeTonic
         void Start()
         {
             playerNameText.text = PhotonNetwork.NickName;
+            PhotonNetwork.JoinLobby();
         }
 
         public override void OnJoinedLobby()
