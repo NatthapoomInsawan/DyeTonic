@@ -81,36 +81,36 @@ MonoBehaviour:
   - beat: 28.1
     track: 1
     endBeat: 28.6
-  - beat: 23.3
+  - beat: 28.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 29
+  - beat: 29.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 30
+  - beat: 31
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 31.2
+  - beat: 31.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 31.9
+  - beat: 32.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 32.7
+  - beat: 33
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 33.2
+  - beat: 33.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 33.7
+  - beat: 33.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 34.4
+  - beat: 34.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 35.2
+  - beat: 35.3
     track: 1
-    endBeat: 23.4
+    endBeat: 35.7
   - beat: 23.3
     track: 1
     endBeat: 23.4
