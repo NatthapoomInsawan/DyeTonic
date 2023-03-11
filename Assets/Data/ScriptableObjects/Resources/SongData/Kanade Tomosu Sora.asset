@@ -60,4 +60,7 @@ MonoBehaviour:
   - beat: 4
     track: 1
     endBeat: 44
+  - beat: 888
+    track: 1
+    endBeat: 52
   notesLine2: []
