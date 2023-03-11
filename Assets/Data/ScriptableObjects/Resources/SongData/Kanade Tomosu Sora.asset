@@ -81,457 +81,442 @@ MonoBehaviour:
   - beat: 28.1
     track: 1
     endBeat: 28.6
-  - beat: 23.3
+  - beat: 28.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 29
+  - beat: 29.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 30
+  - beat: 31
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 31.2
+  - beat: 31.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 31.9
+  - beat: 32.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 32.7
+  - beat: 33
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 33.2
+  - beat: 33.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 33.7
+  - beat: 33.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 34.4
+  - beat: 34.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 35.2
+  - beat: 35.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 35.7
+  - beat: 35.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 36.2
+  - beat: 36.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 36.6
+  - beat: 36.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 37.2
+  - beat: 37.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 37.8
+  - beat: 38.3
+    track: 2
+    endBeat: 38.8
+  - beat: 38.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 39.2
+  - beat: 39.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 40.1
+  - beat: 40.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 40.6
+  - beat: 40.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 41.2
+  - beat: 41.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 42.2
+  - beat: 42.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 42.6
+  - beat: 42.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 42.9
+  - beat: 43.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 44
+  - beat: 44.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 44.5
+  - beat: 45
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 46.1
+  - beat: 49.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 49.4
+  - beat: 49.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 50
+  - beat: 50.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 51.2
+  - beat: 53
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 53.6
+  - beat: 53.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 53.8
+  - beat: 54.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 54.6
+  - beat: 55
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 55.1
+  - beat: 55.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 55.4
+  - beat: 57.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 57.5
+  - beat: 57.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 58
+  - beat: 58.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 58.6
+  - beat: 58.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 58.9
+  - beat: 59.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 59.5
+  - beat: 59.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 59.9
+  - beat: 60.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 60.5
+  - beat: 61
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 61.6
+  - beat: 61.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 61.9
+  - beat: 63
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 63.1
+  - beat: 63.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 63.4
+  - beat: 64.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 64.4
+  - beat: 65
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 65
+  - beat: 65.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 65.5
+  - beat: 66
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 66
+  - beat: 66.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 66.5
+  - beat: 67
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 67
+  - beat: 67.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 67.4
+  - beat: 67.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 67.9
+  - beat: 68.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 68.6
+  - beat: 69.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 69.2
+  - beat: 69.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 69.6
+  - beat: 70.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 70.8
+  - beat: 71.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 71.2
+  - beat: 71.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 71.8
+  - beat: 72.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 72.7
+  - beat: 73.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 73.2
+  - beat: 74
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 74
+  - beat: 75
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 75
+  - beat: 75.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 75.7
+  - beat: 79.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 79.6
+  - beat: 80
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 80.8
+  - beat: 81.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 81.1
+  - beat: 81.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 81.8
+  - beat: 82.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 82.1
+  - beat: 82.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 82.6
+  - beat: 83
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 83
+  - beat: 83.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 83.9
+  - beat: 84.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 84.7
+  - beat: 85
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 85
+  - beat: 85.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 85.7
+  - beat: 85.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 85.9
+  - beat: 86.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 86.7
+  - beat: 87
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 87
+  - beat: 87.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 88.2
+  - beat: 89.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 89.1
+  - beat: 89.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 89.8
+  - beat: 90.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 90.6
+  - beat: 91.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 91.6
+  - beat: 92.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 92.6
+  - beat: 93
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 93
+  - beat: 93.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 94.5
+  - beat: 94.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 95.4
+  - beat: 95.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 96.7
+  - beat: 96.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 96.9
+  - beat: 97.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 97.3
+  - beat: 98
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 98
+  - beat: 98.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 98.5
+  - beat: 99.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 100
+  - beat: 100.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 100.6
+  - beat: 100.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 100.9
+  - beat: 101.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 101.4
+  - beat: 101.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 102.4
+  - beat: 103.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 104
+  - beat: 104.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 104.6
+  - beat: 105
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 105.6
+  - beat: 106.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 106.4
+  - beat: 106.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 108.3
+  - beat: 108.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 108.5
+  - beat: 109
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 109
+  - beat: 109.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 109.5
+  - beat: 110.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 111
+  - beat: 110.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 112.5
+  - beat: 112.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 112.9
+  - beat: 113.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 113.3
+  - beat: 113.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 113.9
+  - beat: 114.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 114.6
+  - beat: 115
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 115
+  - beat: 115.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 115.8
+  - beat: 116
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 116
+  - beat: 116.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 116.9
+  - beat: 117.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 117.9
+  - beat: 118.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 119.6
+  - beat: 112.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 112.5
+  - beat: 122.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 123.7
+  - beat: 123.8
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 125.8
+  - beat: 126.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 127.3
+  - beat: 128
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 128.8
+  - beat: 129
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 129.1
+  - beat: 129.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 129.7
+  - beat: 130.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 133.9
+  - beat: 134.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 135.1
+  - beat: 135.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 137.7
+  - beat: 138.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 139.2
+  - beat: 139.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 141.8
+  - beat: 139.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 141.8
+  - beat: 142.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 142.4
+  - beat: 142.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 142.9
+  - beat: 143.7
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 143.7
+  - beat: 144.1
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 144.1
+  - beat: 145
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 145
+  - beat: 145.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 145.4
+  - beat: 146.2
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 146.2
+  - beat: 147.4
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 147.4
+  - beat: 147.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 147.9
+  - beat: 148.3
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 148.3
+  - beat: 149
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 149
+  - beat: 149.5
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 149.5
+  - beat: 150
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 150
+  - beat: 151
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 151
+  - beat: 151.6
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 151.6
+  - beat: 151.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
+    endBeat: 152.7
+  - beat: 152.9
     track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
-  - beat: 23.3
-    track: 1
-    endBeat: 23.4
+    endBeat: 154.6
   notesLine2: []
