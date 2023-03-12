@@ -608,7 +608,10 @@ MonoBehaviour:
     track: 4
     endBeat: 60
   - beat: 61
-    track: 3
+    track: 1
+    endBeat: 61
+  - beat: 62
+    track: 4
     endBeat: 62
   - beat: 63
     track: 1
@@ -619,3 +622,6 @@ MonoBehaviour:
   - beat: 65
     track: 2
     endBeat: 65
+  - beat: 66
+    track: 3
+    endBeat: 66
