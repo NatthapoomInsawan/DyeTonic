@@ -625,3 +625,42 @@ MonoBehaviour:
   - beat: 66
     track: 3
     endBeat: 66
+  - beat: 67
+    track: 2
+    endBeat: 67
+  - beat: 68
+    track: 4
+    endBeat: 68
+  - beat: 68.5
+    track: 1
+    endBeat: 68.5
+  - beat: 69
+    track: 4
+    endBeat: 69
+  - beat: 70
+    track: 2
+    endBeat: 70
+  - beat: 71
+    track: 3
+    endBeat: 71
+  - beat: 72
+    track: 2
+    endBeat: 72
+  - beat: 73
+    track: 4
+    endBeat: 73
+  - beat: 74
+    track: 3
+    endBeat: 74
+  - beat: 75
+    track: 2
+    endBeat: 75
+  - beat: 75
+    track: 1
+    endBeat: 75
+  - beat: 76
+    track: 3
+    endBeat: 78
+  - beat: 80
+    track: 2
+    endBeat: 80
