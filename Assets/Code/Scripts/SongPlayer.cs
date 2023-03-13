@@ -25,9 +25,10 @@ namespace DyeTonic
         [SerializeField] private float songPositionInBeats;
 
         private bool songEnd;
+        private bool gameLose;
 
         public static event Action OnSongeEnd;
-        public static event Action OnGameEnd;
+        public static event Action<bool> OnGameEnd;
 
         //how much time (in seconds) has passed since the song started
         private float dspSongTime;
@@ -96,8 +97,11 @@ namespace DyeTonic
                 songEnd = true;
             }
 
+            if (_songManager.HP <= 0)
+                gameLose = true;
+
             //game over condition
-            if (songPosition >= _songManager.currentSongData.song.length + 2 || _songManager.HP <= 0)
+            if (songPosition >= _songManager.currentSongData.song.length + 2 || gameLose)
                 GameOver();
 
         }
@@ -105,11 +109,15 @@ namespace DyeTonic
         private void GameOver()
         {
             DOTween.Clear();
-            OnGameEnd?.Invoke();
             if (!PhotonNetwork.InRoom)
-                SceneManager.LoadSceneAsync("GameOverScene");
+            {
+                if (gameLose)
+                    _songManager.HP = 0;
+                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
+            }
             else
-                PhotonNetwork.LoadLevel("GameOverScene");
+                OnGameEnd?.Invoke(gameLose);
+            gameObject.SetActive(false);
         }
 
     }
