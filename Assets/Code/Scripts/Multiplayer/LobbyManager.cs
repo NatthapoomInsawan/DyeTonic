@@ -22,6 +22,17 @@ namespace DyeTonic
             PhotonNetwork.JoinLobby();
         }
 
+        public void OnDisconnectButton()
+        {
+            PhotonNetwork.Disconnect();
+        }
+
+        public override void OnDisconnected(DisconnectCause cause)
+        {
+            SceneManager.LoadScene("LoginScene");
+            base.OnDisconnected(cause);
+        }
+
         public override void OnJoinedLobby()
         {
             Debug.Log("Connected to lobby!");
