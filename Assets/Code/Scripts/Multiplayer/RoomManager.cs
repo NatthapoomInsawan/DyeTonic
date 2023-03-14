@@ -119,6 +119,11 @@ namespace DyeTonic
                     readyButtonText.text = "Starting..";
                     readyButton.interactable = false;
                     leaveButton.interactable = false;
+
+                    var roomCustomProperties = new ExitGames.Client.Photon.Hashtable();
+                    roomCustomProperties.Add("gameStart", true);
+                    PhotonNetwork.CurrentRoom.SetCustomProperties(roomCustomProperties);
+
                     PhotonNetwork.LoadLevel("GameplayScene");
                 }
             }
