@@ -41,8 +41,9 @@ namespace DyeTonic
             //room options
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.MaxPlayers = 2;
-            string[] lobbyPropertyNames = new string[1];
+            string[] lobbyPropertyNames = new string[2];
             lobbyPropertyNames[0] = "songDataName";
+            lobbyPropertyNames[1] = "gameStart";
             roomOptions.CustomRoomPropertiesForLobby = lobbyPropertyNames;
 
             //create room by creator name
@@ -55,6 +56,7 @@ namespace DyeTonic
             //set room custom properties
             var roomCustomProperties = new ExitGames.Client.Photon.Hashtable();
             roomCustomProperties.Add("songDataName", songDataToLoad);
+            roomCustomProperties.Add("gameStart", false);
 
             PhotonNetwork.CurrentRoom.SetCustomProperties(roomCustomProperties);
 
