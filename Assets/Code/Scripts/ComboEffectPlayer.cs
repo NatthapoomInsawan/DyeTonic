@@ -15,6 +15,12 @@ namespace DyeTonic
         [SerializeField] ParticleSystem rightScreenParticle;
         [SerializeField] ParticleSystem stageClearParticle;
 
+        [Header("SFX Audio channel")]
+        [SerializeField] AudioChannelSO _SFXaudioChannel;
+
+        [Header("SFX Audio channel")]
+        [SerializeField] AudioClip stageClearSFX;
+
         private void OnEnable()
         {
             //subscribe event
@@ -52,6 +58,7 @@ namespace DyeTonic
 
         private void SongEnd()
         {
+            _SFXaudioChannel.RaisePlayRequest(stageClearSFX);
             stageClearParticle.Play();
         }
 
