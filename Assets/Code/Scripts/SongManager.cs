@@ -10,6 +10,8 @@ namespace DyeTonic
 
         [SerializeField] private SongData currentSongData;
 
+        [SerializeField] private bool isStoryMode = false;
+
         //the current position of the song (in beats)
         public float songPosInBeats;
 
@@ -38,6 +40,16 @@ namespace DyeTonic
         public SongData GetCurrentSongData()
         {
             return currentSongData;
+        }
+
+        public void SetStoryMode (bool storyMode)
+        {
+            isStoryMode = storyMode;
+        }
+
+        public bool IsStoryMode()
+        {
+            return isStoryMode;
         }
 
 
