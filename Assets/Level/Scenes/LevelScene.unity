@@ -577,7 +577,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 182024985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.SongManager, Assembly-CSharp
+        m_MethodName: SetSongData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DyeTonic.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 728531139}
+        m_TargetAssemblyTypeName: DyeTonic.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chap1-1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &182024985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +723,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 245692745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.SongManager, Assembly-CSharp
+        m_MethodName: SetSongData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DyeTonic.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 728531139}
+        m_TargetAssemblyTypeName: DyeTonic.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chap2-2_Chap3-1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &245692745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1625,6 +1673,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &728531138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728531140}
+  - component: {fileID: 728531139}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &728531139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728531138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db86d753af9b00d4795973a2ac4b5539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &728531140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728531138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 138.95659, y: 81.01953, z: -131.56215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742032680
 GameObject:
@@ -4339,7 +4431,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2127688614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.SongManager, Assembly-CSharp
+        m_MethodName: SetSongData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+          m_ObjectArgumentAssemblyTypeName: DyeTonic.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 728531139}
+        m_TargetAssemblyTypeName: DyeTonic.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chap1-2_Chap2-1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2127688614
 MonoBehaviour:
   m_ObjectHideFlags: 0
