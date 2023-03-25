@@ -45,7 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+  player: 1
+  isActive: 1
+  track: 1
   offbeatHit: {fileID: 8255215019295333937, guid: 3c9a56e09045052468964a058872f378, type: 3}
   perfectHit: {fileID: 3716275016998676315, guid: 35d4fdd2e65591c40b7a412346988a30, type: 3}
   goodHit: {fileID: 7194952087870367276, guid: e0a802203b8343146ba627dc4d15e1ad, type: 3}
   missHit: {fileID: 3722875482359105488, guid: e618c4deabb851e4c8018adfcbd0adfc, type: 3}
+  _SFXaudioChannel: {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
+  offbeatSFX: {fileID: 8300000, guid: 71d918c6058f8c0418d442c5c2dc5652, type: 3}
+  perfectSFX: {fileID: 8300000, guid: f8449315ae680964fb736716640e72a7, type: 3}
+  goodSFX: {fileID: 8300000, guid: 99221201b9d80b4498e2ff9d10e533a0, type: 3}
+  missSFX: {fileID: 0}
