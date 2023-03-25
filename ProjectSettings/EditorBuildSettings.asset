@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/GameOverScene.unity
     guid: 8b84608da9171e34e92276dcc096a10b
+  - enabled: 1
+    path: Assets/Design/Dialogue/Chap1-1.unity
+    guid: 7097a6a06cff0234298d7f7ae36eed40
+  - enabled: 1
+    path: Assets/Design/Dialogue/Chap1-2_Chap2-1.unity
+    guid: b3453c45c3802df4c80afab68daee4e4
+  - enabled: 1
+    path: Assets/Design/Dialogue/Chap2-2_Chap3-1.unity
+    guid: cd3e070f7da4d3b448a6e5695ec61952
   m_configObjects: {}
