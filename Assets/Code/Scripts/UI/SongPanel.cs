@@ -41,7 +41,7 @@ namespace DyeTonic
             base.UpdateSongCoverDisplay(songData);
 
             //set current songData
-            _songManager.currentSongData = songData;
+            _songManager.SetSongData(songData);
 
             //play song
             if (songData.song != null)

@@ -38,7 +38,7 @@ namespace DyeTonic
         {
             //if songdata is null load current songdata from songManager
             if (_songData == null)
-                _songData = _songManager.currentSongData;
+                _songData = _songManager.GetCurrentSongData();
         }
 
         // Start is called before the first frame update
