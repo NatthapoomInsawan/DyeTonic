@@ -32,6 +32,14 @@ namespace DyeTonic
         [SerializeField] private GameObject goodHit;
         [SerializeField] private GameObject missHit;
 
+        [Header("SFX audio channel")]
+        [SerializeField] private AudioChannelSO _SFXaudioChannel;
+
+        [Header("SFX")]
+        [SerializeField] private AudioClip offbeatSFX;
+        [SerializeField] private AudioClip perfectSFX;
+        [SerializeField] private AudioClip goodSFX;
+
         private float onPressBeat;
 
         private bool wasPressed;
@@ -339,12 +347,15 @@ namespace DyeTonic
             {
                 case NoteQuality.Offbeat:
                     Instantiate(offbeatHit, transform);
+                    _SFXaudioChannel.RaisePlayRequest(offbeatSFX);
                     break;
                 case NoteQuality.Perfect:
                     Instantiate(perfectHit, transform);
+                    _SFXaudioChannel.RaisePlayRequest(perfectSFX);
                     break;
                 case NoteQuality.Good:
                     Instantiate(goodHit, transform);
+                    _SFXaudioChannel.RaisePlayRequest(goodSFX);
                     break;
                 case NoteQuality.Miss:
                     Instantiate(missHit, transform);

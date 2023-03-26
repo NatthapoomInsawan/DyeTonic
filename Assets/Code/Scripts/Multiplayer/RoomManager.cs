@@ -90,10 +90,10 @@ namespace DyeTonic
 
         private void PlayRoomSong()
         {
-            _songManager.currentSongData = _roomSongData;
+            _songManager.SetSongData(_roomSongData);
 
             //play song
-            _audioSource.clip = _songManager.currentSongData.song;
+            _audioSource.clip = _songManager.GetCurrentSongData().song;
             _audioSource.time = 9.5f;
             _audioSource.Play();
         }
