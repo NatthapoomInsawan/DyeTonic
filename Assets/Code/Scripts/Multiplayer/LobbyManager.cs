@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace DyeTonic
 {
@@ -18,6 +19,18 @@ namespace DyeTonic
         void Start()
         {
             playerNameText.text = PhotonNetwork.NickName;
+            PhotonNetwork.JoinLobby();
+        }
+
+        public void OnDisconnectButton()
+        {
+            PhotonNetwork.Disconnect();
+        }
+
+        public override void OnDisconnected(DisconnectCause cause)
+        {
+            SceneManager.LoadScene("LoginScene");
+            base.OnDisconnected(cause);
         }
 
         public override void OnJoinedLobby()
@@ -41,13 +54,23 @@ namespace DyeTonic
 
                 var roomButtonComponent = roomObject.GetComponent<RoomSelectButton>();
 
+                var buttonComponent = roomObject.GetComponent<Button>();
+
                 roomButtonComponent.RoomName = room.Name;
 
-                if (room.CustomProperties["songDataName"] == null)
+                if (room.CustomProperties["songDataName"] == null || room.CustomProperties["gameStart"] == null)
+                {
                     Destroy(roomObject);
-                else
-                    roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["songDataName"]));
+                    continue;
+                }
 
+                roomButtonComponent.UpdateSongCoverDisplay(Resources.Load<SongData>("SongData/" + room.CustomProperties["songDataName"]));
+
+                if (room.PlayerCount == room.MaxPlayers)
+                    buttonComponent.interactable = false;
+
+                if ((bool)room.CustomProperties["gameStart"] == true)
+                    Destroy(roomObject);
             }
         }
     }

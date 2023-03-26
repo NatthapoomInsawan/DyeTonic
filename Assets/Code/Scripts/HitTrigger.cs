@@ -23,7 +23,7 @@ namespace DyeTonic
         [SerializeField] private SongManager _songManager;
         [SerializeField] private Player player = Player.Player2;
         [SerializeField] private bool isActive = true;
-        [Range(1,4)]
+        [Range(1, 4)]
         [SerializeField] private int track = 1;
 
         [Header("Effect Prefab")]
@@ -35,6 +35,8 @@ namespace DyeTonic
         private float onPressBeat;
 
         private bool wasPressed;
+
+        private int longNoteBeatCount;
 
         LongNote hitLongNote;
         NoteQuality hitLongNoteQality;
@@ -51,8 +53,9 @@ namespace DyeTonic
         public static event Action<NoteQuality> OnNoteQualityUpdate;
         public static event Action OnNoteMiss;
         public static event Action OnNoteHit;
-        public static event Action<int, int, int,bool, bool> OnNetworkDataSend;
+        public static event Action<int, int, int, bool, bool> OnNetworkDataSend;
         public static event Action<float, int, bool> OnNoteRemove;
+        public static event Action<int, int> OnLongNoteBeatDataSend;
 
         private void OnEnable()
         {
@@ -73,15 +76,25 @@ namespace DyeTonic
             if (wasPressed)
                 Debug.DrawLine(transform.position + new Vector3(0, 0, -2.5f), transform.position + new Vector3(0, 0, 2.5f), Color.red);
 
+            if (hitLongNote != null && (_songManager.songPosInBeats >= hitLongNote.NoteData.endBeat))
+            {
+                SendLongNoteBeatCount();
+                hitLongNote = null;
+            }
+
             //Update long note press score
             if (hitLongNote != null && wasPressed == true)
             {
-                if (_songManager.songPosInBeats - onPressBeat > 0.5f) 
+                if (_songManager.songPosInBeats - onPressBeat > 0.5f)
                 {
-                    AssignScore(50, hitLongNoteQality, player);
 
                     //increse song combo
                     _songManager.songCombo++;
+
+                    //long note beat count
+                    longNoteBeatCount++;
+
+                    AssignScore(50, hitLongNoteQality, player);
 
                     //invoke quality
                     InvokeNoteQualityEvent(hitLongNoteQality);
@@ -96,13 +109,14 @@ namespace DyeTonic
                     //spawn effect
                     SpawnEffect(hitLongNoteQality);
 
+                    Debug.Log("long note press update");
                 }
             }
 
         }
 
-        public void ProcessTriggerInput(InputAction.CallbackContext context) 
-        { 
+        public void ProcessTriggerInput(InputAction.CallbackContext context)
+        {
             if (isActive)
             {
                 if (context.performed)
@@ -139,7 +153,7 @@ namespace DyeTonic
                         onPressBeat = _songManager.songPosInBeats;
 
                         //calculate score
-                        CalculateScore( hitLongNoteQality);
+                        CalculateScore(hitLongNoteQality);
                     }
                     else if (normalnoteComponent != null)
                     {
@@ -174,9 +188,9 @@ namespace DyeTonic
                     hitLongNoteQality = NoteQuality.Miss;
                     Debug.Log(hitLongNoteQality);
 
-                    //send network note delete
+                    //send long note beat
                     if (PhotonNetwork.InRoom)
-                        SendNoteRemove(hitLongNote.NoteData);
+                        SendLongNoteBeatCount();
 
                     //calculate score
                     CalculateScore(hitLongNoteQality);
@@ -185,10 +199,16 @@ namespace DyeTonic
                     OnNoteMiss?.Invoke();
                     Destroy(hitLongNote.gameObject);
                 }
+                else if (hitLongNote != null && _songManager.songPosInBeats > hitLongNote.NoteData.endBeat)
+                {
+                    //send long note beat
+                    if (PhotonNetwork.InRoom)
+                        SendLongNoteBeatCount();
+                }
             }
         }
 
-        private void CalculateScore (NoteQuality noteQuality)
+        private void CalculateScore(NoteQuality noteQuality)
         {
             int score = 0;
 
@@ -238,12 +258,12 @@ namespace DyeTonic
         private NoteQuality CalculateBeatQuality(NoteData noteData)
         {
             //Calculate error value
-            float errorValue = (_songManager.songPosInBeats-noteData.beat)/noteData.beat * 100;
+            float errorValue = (_songManager.songPosInBeats - noteData.beat) / noteData.beat * 100;
             NoteQuality noteQuality = NoteQuality.Miss;
 
             if (errorValue < 0 && errorValue < -2.5f)
                 noteQuality = NoteQuality.Offbeat;
-            else if ( Mathf.Abs(errorValue) < 1.5f)
+            else if (Mathf.Abs(errorValue) < 1.5f)
                 noteQuality = NoteQuality.Perfect;
             else if (Mathf.Abs(errorValue) < 2.5f)
                 noteQuality = NoteQuality.Good;
@@ -291,7 +311,7 @@ namespace DyeTonic
             }
         }
 
-        private void AssignScore (int score, NoteQuality noteQuality, Player player)
+        private void AssignScore(int score, NoteQuality noteQuality, Player player)
         {
             //assign score to player
             if (player == Player.Player2)
@@ -342,7 +362,7 @@ namespace DyeTonic
 
         }
 
-        public void SetHitTriggerActive (bool setting)
+        public void SetHitTriggerActive(bool setting)
         {
             isActive = setting;
         }
@@ -387,11 +407,13 @@ namespace DyeTonic
             else
                 isSongCombo = false;
 
+            Debug.Log("send network data");
+
             OnNetworkDataSend?.Invoke(score, qualityNumber, track, isSongCombo, isPlayer1);
 
         }
 
-        private void RecieveNetworkDatas (int score, NoteQuality noteQuality, int trackData, bool isSongCombo, bool isPlayer1)
+        private void RecieveNetworkDatas(int score, NoteQuality noteQuality, int trackData, bool isSongCombo, bool isPlayer1)
         {
             Player playerData;
 
@@ -404,9 +426,9 @@ namespace DyeTonic
                 return;
 
             //assign song combo
-            if (isSongCombo)
+            if (isSongCombo && score != 50)
                 _songManager.songCombo++;
-            else
+            else if (score != 50)
                 _songManager.songCombo = 0;
 
             SpawnEffect(noteQuality);
@@ -414,6 +436,8 @@ namespace DyeTonic
             InvokeNoteQualityEvent(noteQuality);
 
             AssignScore(score, noteQuality, playerData);
+
+            Debug.Log("recieved network data");
         }
 
         private void SendNoteRemove(NoteData noteData)
@@ -426,6 +450,32 @@ namespace DyeTonic
                 isPlayer1 = true;
 
             OnNoteRemove?.Invoke(noteData.beat, noteData.track, isPlayer1);
+        }
+
+        private void SendLongNoteBeatCount()
+        {
+            int qualityNumber = 0;
+
+            //convert note quality to int
+            switch (hitLongNoteQality)
+            {
+                case NoteQuality.Offbeat:
+                    qualityNumber = 0;
+                    break;
+                case NoteQuality.Perfect:
+                    qualityNumber = 1;
+                    break;
+                case NoteQuality.Good:
+                    qualityNumber = 2;
+                    break;
+                case NoteQuality.Miss:
+                    qualityNumber = 3;
+                    break;
+            }
+
+            OnLongNoteBeatDataSend?.Invoke(longNoteBeatCount, qualityNumber);
+
+            longNoteBeatCount = 0;
         }
 
     }

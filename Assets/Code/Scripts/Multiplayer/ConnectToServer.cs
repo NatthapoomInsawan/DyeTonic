@@ -44,7 +44,6 @@ namespace DyeTonic
 
             //connect to lobby
             SceneManager.LoadScene("LobbyScene");
-            PhotonNetwork.JoinLobby();
         }
 
         public override void OnJoinRoomFailed(short returnCode, string message)
