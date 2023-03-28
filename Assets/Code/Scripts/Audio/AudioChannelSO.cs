@@ -10,11 +10,17 @@ namespace DyeTonic
     public class AudioChannelSO : ScriptableObject
     {
         public event Action<AudioClip, AudioMixerGroup> OnAudioPlayRequest;
+        public event Action<AudioClip, AudioMixerGroup, float> OnAudioPlayRequestWithTime;
         [field:SerializeField] public AudioMixerGroup AudioMixerGroup { get; private set; }
 
         public void RaisePlayRequest(AudioClip audioClip)
         {
             OnAudioPlayRequest?.Invoke(audioClip, AudioMixerGroup);
+        }
+
+        public void RaisePlayRequest(AudioClip audioClip, float time)
+        {
+            OnAudioPlayRequestWithTime?.Invoke(audioClip, AudioMixerGroup, time);
         }
 
     }

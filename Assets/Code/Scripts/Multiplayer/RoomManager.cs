@@ -13,11 +13,11 @@ namespace DyeTonic
     {
         [Header("Scriptable Object referencing")]
         [SerializeField] private SongManager _songManager;
+        [SerializeField] private AudioChannelSO _channelSO;
 
         [Header("Room Information")]
         [SerializeField] private SongData _roomSongData;
         [SerializeField] private TextMeshProUGUI songNameText;
-        [SerializeField] private AudioSource _audioSource;
 
         [Header("Player 1 Text")]
         [SerializeField] private TextMeshProUGUI player1NameText;
@@ -93,9 +93,7 @@ namespace DyeTonic
             _songManager.SetSongData(_roomSongData);
 
             //play song
-            _audioSource.clip = _songManager.GetCurrentSongData().song;
-            _audioSource.time = 9.5f;
-            _audioSource.Play();
+            _channelSO.RaisePlayRequest(_songManager.GetCurrentSongData().song, 9.5f);
         }
 
         private void GameStartCheck()
