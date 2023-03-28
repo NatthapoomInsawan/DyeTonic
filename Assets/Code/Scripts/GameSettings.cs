@@ -10,9 +10,9 @@ namespace DyeTonic
     [System.Serializable]
     public class GameSettings : ScriptableObject
     {
-        public float masterVolume = 20;
-        public float musicVolume = 20;
-        public float SFXVolume = 20;
+        public float masterVolume = 0;
+        public float musicVolume = 0;
+        public float SFXVolume = 0;
 
         public int progress = 0;
 
