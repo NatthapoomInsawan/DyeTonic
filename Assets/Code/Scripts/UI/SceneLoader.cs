@@ -26,6 +26,11 @@ namespace DyeTonic
             SceneManager.UnloadSceneAsync(sceneName);
         }
 
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
         public static void LoadPreviousScene()
         {
             if (PreviousScene != null)
