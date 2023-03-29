@@ -51,9 +51,6 @@ MonoBehaviour:
   - beat: 60
     track: 2
     endBeat: 60
-  - beat: 60
-    track: 2
-    endBeat: 60
   - beat: 60.4
     track: 4
     endBeat: 60.4
@@ -61,7 +58,7 @@ MonoBehaviour:
     track: 2
     endBeat: 61
   - beat: 62
-    track: 2
+    track: 1
     endBeat: 62
   - beat: 62.4
     track: 3
@@ -70,12 +67,24 @@ MonoBehaviour:
     track: 2
     endBeat: 63.3
   - beat: 64
-    track: 3
-    endBeat: 64
-  - beat: 64
     track: 2
     endBeat: 64
   - beat: 65
     track: 3
     endBeat: 65
+  - beat: 66.4
+    track: 4
+    endBeat: 66.4
+  - beat: 67.3
+    track: 2
+    endBeat: 67.3
+  - beat: 68
+    track: 3
+    endBeat: 68
+  - beat: 69
+    track: 4
+    endBeat: 69
+  - beat: 70
+    track: 2
+    endBeat: 70
   notesLine2: []
