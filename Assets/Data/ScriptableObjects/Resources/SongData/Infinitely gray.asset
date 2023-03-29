@@ -124,6 +124,15 @@ MonoBehaviour:
     track: 4
     endBeat: 86
   - beat: 88
-    track: 4
+    track: 2
     endBeat: 88
+  - beat: 91
+    track: 1
+    endBeat: 91
+  - beat: 98
+    track: 3
+    endBeat: 98
+  - beat: 100
+    track: 2
+    endBeat: 100
   notesLine2: []
