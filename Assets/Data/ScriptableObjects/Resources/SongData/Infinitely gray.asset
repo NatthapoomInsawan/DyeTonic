@@ -87,4 +87,43 @@ MonoBehaviour:
   - beat: 70
     track: 2
     endBeat: 70
+  - beat: 72
+    track: 3
+    endBeat: 72
+  - beat: 72.9
+    track: 3
+    endBeat: 72.9
+  - beat: 73.7
+    track: 2
+    endBeat: 73.7
+  - beat: 74.5
+    track: 4
+    endBeat: 74.5
+  - beat: 75
+    track: 3
+    endBeat: 75
+  - beat: 76
+    track: 2
+    endBeat: 76
+  - beat: 77
+    track: 2
+    endBeat: 77
+  - beat: 79
+    track: 2
+    endBeat: 79
+  - beat: 80
+    track: 1
+    endBeat: 80
+  - beat: 82
+    track: 4
+    endBeat: 82
+  - beat: 84
+    track: 3
+    endBeat: 84
+  - beat: 86
+    track: 4
+    endBeat: 86
+  - beat: 88
+    track: 4
+    endBeat: 88
   notesLine2: []
