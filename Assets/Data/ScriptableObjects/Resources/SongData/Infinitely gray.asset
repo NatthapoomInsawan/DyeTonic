@@ -20,47 +20,62 @@ MonoBehaviour:
   notesLine1:
   - beat: 50
     track: 1
-    endBeat: 50.4
-  - beat: 50.5
-    track: 2
-    endBeat: 50.6
-  - beat: 50.6
-    track: 3
-    endBeat: 50.9
+    endBeat: 50
   - beat: 51
-    track: 4
+    track: 2
+    endBeat: 51
+  - beat: 52
+    track: 3
     endBeat: 52
   - beat: 53
+    track: 4
+    endBeat: 53
+  - beat: 54
     track: 2
     endBeat: 54
+  - beat: 55
+    track: 1
+    endBeat: 55
   - beat: 56
+    track: 4
+    endBeat: 56
+  - beat: 57
+    track: 2
+    endBeat: 57
+  - beat: 58
+    track: 4
+    endBeat: 58
+  - beat: 59
     track: 3
     endBeat: 59
   - beat: 60
+    track: 2
+    endBeat: 60
+  - beat: 60
+    track: 2
+    endBeat: 60
+  - beat: 60.4
     track: 4
+    endBeat: 60.4
+  - beat: 61
+    track: 2
+    endBeat: 61
+  - beat: 62
+    track: 2
     endBeat: 62
-  - beat: 63
+  - beat: 62.4
+    track: 3
+    endBeat: 62.4
+  - beat: 63.3
+    track: 2
+    endBeat: 63.3
+  - beat: 64
     track: 3
     endBeat: 64
+  - beat: 64
+    track: 2
+    endBeat: 64
   - beat: 65
-    track: 2
-    endBeat: 84
-  - beat: 85
-    track: 1
-    endBeat: 89
-  - beat: 90
     track: 3
-    endBeat: 91
-  - beat: 91
-    track: 4
-    endBeat: 92
-  - beat: 93
-    track: 4
-    endBeat: 98
-  - beat: 98
-    track: 1
-    endBeat: 99
-  - beat: 99
-    track: 2
-    endBeat: 100
+    endBeat: 65
   notesLine2: []
