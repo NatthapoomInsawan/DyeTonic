@@ -8,7 +8,9 @@ namespace DyeTonic
     public class SongManager : ScriptableObject
     {
 
-        public SongData currentSongData;
+        [SerializeField] private SongData currentSongData;
+
+        [SerializeField] private bool isStoryMode = false;
 
         //the current position of the song (in beats)
         public float songPosInBeats;
@@ -29,6 +31,26 @@ namespace DyeTonic
 
         //Song HP
         public int HP;
+
+        public void SetSongData (SongData songData)
+        {
+            currentSongData = songData;
+        }
+
+        public SongData GetCurrentSongData()
+        {
+            return currentSongData;
+        }
+
+        public void SetStoryMode (bool storyMode)
+        {
+            isStoryMode = storyMode;
+        }
+
+        public bool IsStoryMode()
+        {
+            return isStoryMode;
+        }
 
 
 

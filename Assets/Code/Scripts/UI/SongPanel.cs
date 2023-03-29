@@ -6,12 +6,11 @@ using UnityEngine.UI;
 
 namespace DyeTonic
 {
-    [RequireComponent(typeof(AudioSource))]
     public class SongPanel : SongCoverDisplay
     {
-
-        [SerializeField] private AudioSource audioSource;
+        
         [SerializeField] private SongManager _songManager;
+        [SerializeField] private AudioChannelSO _channelSO;
 
         private void OnEnable()
         {
@@ -22,12 +21,6 @@ namespace DyeTonic
         {
             SongSelectButton.OnSongSelectButtonClick -= UpdateSongCoverDisplay;
         }
-
-        private void Awake()
-        {
-            audioSource = gameObject.GetComponent<AudioSource>();
-        }
-
 
         // Start is called before the first frame update
         protected override void Start()
@@ -41,15 +34,12 @@ namespace DyeTonic
             base.UpdateSongCoverDisplay(songData);
 
             //set current songData
-            _songManager.currentSongData = songData;
+            _songManager.SetSongData(songData);
 
             //play song
             if (songData.song != null)
             {
-                audioSource.clip = songData.song;
-                //play faster at 9.5 sec
-                audioSource.time = 9.5f;
-                audioSource.Play();
+                _channelSO.RaisePlayRequest(songData.song, 9.5f);
             }
         }
     }

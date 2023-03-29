@@ -8,12 +8,13 @@ using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
-    [RequireComponent(typeof(AudioSource))]
+
     public class SongPlayer : MonoBehaviour
     {
         [Header("Scriptable Objects referencing")]
         [SerializeField] SongManager _songManager;
         [SerializeField] SongData _songData;
+        [SerializeField] AudioChannelSO _channelSO;
 
         //the duration of a beat
         [SerializeField] private float secPerBeat;
@@ -37,7 +38,7 @@ namespace DyeTonic
         {
             //if songdata is null load current songdata from songManager
             if (_songData == null)
-                _songData = _songManager.currentSongData;
+                _songData = _songManager.GetCurrentSongData();
 
             //reset songPositionInBeats to 0
             _songManager.songPosInBeats = 0;
@@ -73,9 +74,7 @@ namespace DyeTonic
             dspSongTime = (float)AudioSettings.dspTime;
 
             //start the song
-            AudioSource audioSource = GetComponent<AudioSource>();
-            audioSource.clip = _songData.song;
-            audioSource.Play();
+            _channelSO.RaisePlayRequest(_songData.song);
 
         }
 
@@ -91,7 +90,7 @@ namespace DyeTonic
             songPositionInBeats = _songManager.songPosInBeats;
 
             //invoke song end
-            if (songPosition >= _songManager.currentSongData.song.length && songEnd != true)
+            if (songPosition >= _songManager.GetCurrentSongData().song.length && songEnd != true)
             {
                 OnSongeEnd?.Invoke();
                 songEnd = true;
@@ -101,7 +100,7 @@ namespace DyeTonic
                 gameLose = true;
 
             //game over condition
-            if (songPosition >= _songManager.currentSongData.song.length + 2 || gameLose)
+            if (songPosition >= _songManager.GetCurrentSongData().song.length + 2 || gameLose)
                 GameOver();
 
         }
