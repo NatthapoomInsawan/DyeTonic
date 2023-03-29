@@ -36,6 +36,8 @@ namespace DyeTonic
         [SerializeField] private Sprite noneSplashArt;
         [SerializeField] private Sprite ciarSplashArt;
         [SerializeField] private Sprite lukeSplashArt;
+        [SerializeField] private Sprite ciarNotReadySplashArt;
+        [SerializeField] private Sprite lukeNotReadySplashArt;
         [SerializeField] private Image player1Splash;
         [SerializeField] private Image player2Splash;
 
@@ -56,10 +58,13 @@ namespace DyeTonic
                 player1NameText.text = targetPlayer.NickName;
 
                 if (changedProps.ContainsKey("ready"))
+                {
                     SetReadyText(player1ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
+                    SetSplashArt(player1Splash, (int)targetPlayer.CustomProperties["character"], (bool)targetPlayer.CustomProperties["ready"]);
+                }
 
                 if (changedProps.ContainsKey("character"))
-                    SetSplashArt(player1Splash, (int)targetPlayer.CustomProperties["character"]);
+                    SetSplashArt(player1Splash, (int)targetPlayer.CustomProperties["character"], (bool)targetPlayer.CustomProperties["ready"]);
 
             }
             else
@@ -67,10 +72,13 @@ namespace DyeTonic
                 player2NameText.text = targetPlayer.NickName;
 
                 if (changedProps.ContainsKey("ready"))
+                {
                     SetReadyText(player2ReadyText, (bool)targetPlayer.CustomProperties["ready"]);
+                    SetSplashArt(player2Splash, (int)targetPlayer.CustomProperties["character"], (bool)targetPlayer.CustomProperties["ready"]);
+                }
 
                 if (changedProps.ContainsKey("character"))
-                    SetSplashArt(player2Splash, (int)targetPlayer.CustomProperties["character"]);
+                    SetSplashArt(player2Splash, (int)targetPlayer.CustomProperties["character"], (bool)targetPlayer.CustomProperties["ready"]);
 
             }
 
@@ -111,6 +119,11 @@ namespace DyeTonic
                     readyButtonText.text = "Starting..";
                     readyButton.interactable = false;
                     leaveButton.interactable = false;
+
+                    var roomCustomProperties = new ExitGames.Client.Photon.Hashtable();
+                    roomCustomProperties.Add("gameStart", true);
+                    PhotonNetwork.CurrentRoom.SetCustomProperties(roomCustomProperties);
+
                     PhotonNetwork.LoadLevel("GameplayScene");
                 }
             }
@@ -164,7 +177,7 @@ namespace DyeTonic
             //show master client property
             player1NameText.text = PhotonNetwork.MasterClient.NickName;
             SetReadyText(player1ReadyText, (bool)PhotonNetwork.MasterClient.CustomProperties["ready"]);
-            SetSplashArt(player1Splash, (int)PhotonNetwork.MasterClient.CustomProperties["character"]);
+            SetSplashArt(player1Splash, (int)PhotonNetwork.MasterClient.CustomProperties["character"], (bool)PhotonNetwork.MasterClient.CustomProperties["ready"]);
 
             PlayRoomSong();
         }
@@ -183,17 +196,25 @@ namespace DyeTonic
             }
         }
 
-        private void SetSplashArt (Image splashArtImage, int character)
+        private void SetSplashArt (Image splashArtImage, int character, bool isReady)
         {
             switch(character)
             {
                 case 0:
-                    splashArtImage.sprite = ciarSplashArt;
+                    if (isReady)
+                        splashArtImage.sprite = ciarSplashArt;
+                    else
+                        splashArtImage.sprite = ciarNotReadySplashArt;
                     break;
                 case 1:
-                    splashArtImage.sprite = lukeSplashArt;
+                    if (isReady)
+                        splashArtImage.sprite = lukeSplashArt;
+                    else
+                        splashArtImage.sprite = lukeNotReadySplashArt;
                     break;
             }
+
+            Debug.Log(isReady);
         }
 
         public void OnReadyButton()
