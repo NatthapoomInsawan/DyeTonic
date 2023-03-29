@@ -217,9 +217,150 @@ MonoBehaviour:
     track: 3
     endBeat: 190
   notesLine2:
-  - beat: 45
+  - beat: 17
     track: 2
-    endBeat: 45
-  - beat: 50
+    endBeat: 0
+  - beat: 19
     track: 3
-    endBeat: 50
+    endBeat: 0
+  - beat: 24
+    track: 2
+    endBeat: 0
+  - beat: 26
+    track: 4
+    endBeat: 0
+  - beat: 29
+    track: 3
+    endBeat: 0
+  - beat: 32
+    track: 2
+    endBeat: 0
+  - beat: 40
+    track: 1
+    endBeat: 0
+  - beat: 44
+    track: 2
+    endBeat: 0
+  - beat: 48
+    track: 3
+    endBeat: 0
+  - beat: 48
+    track: 2
+    endBeat: 0
+  - beat: 50
+    track: 4
+    endBeat: 0
+  - beat: 54
+    track: 3
+    endBeat: 0
+  - beat: 58
+    track: 2
+    endBeat: 0
+  - beat: 60
+    track: 3
+    endBeat: 0
+  - beat: 60
+    track: 1
+    endBeat: 0
+  - beat: 62
+    track: 3
+    endBeat: 0
+  - beat: 66
+    track: 4
+    endBeat: 0
+  - beat: 70
+    track: 2
+    endBeat: 0
+  - beat: 74
+    track: 1
+    endBeat: 0
+  - beat: 79
+    track: 2
+    endBeat: 0
+  - beat: 82
+    track: 3
+    endBeat: 0
+  - beat: 90
+    track: 2
+    endBeat: 0
+  - beat: 100
+    track: 3
+    endBeat: 0
+  - beat: 106
+    track: 4
+    endBeat: 0
+  - beat: 106
+    track: 2
+    endBeat: 0
+  - beat: 114
+    track: 4
+    endBeat: 0
+  - beat: 129
+    track: 3
+    endBeat: 0
+  - beat: 132
+    track: 1
+    endBeat: 0
+  - beat: 135
+    track: 3
+    endBeat: 0
+  - beat: 138
+    track: 4
+    endBeat: 0
+  - beat: 143
+    track: 1
+    endBeat: 0
+  - beat: 148
+    track: 3
+    endBeat: 0
+  - beat: 150
+    track: 4
+    endBeat: 0
+  - beat: 152
+    track: 2
+    endBeat: 0
+  - beat: 154
+    track: 1
+    endBeat: 0
+  - beat: 157
+    track: 3
+    endBeat: 0
+  - beat: 161
+    track: 4
+    endBeat: 0
+  - beat: 170
+    track: 2
+    endBeat: 0
+  - beat: 178
+    track: 1
+    endBeat: 0
+  - beat: 186
+    track: 3
+    endBeat: 0
+  - beat: 192
+    track: 4
+    endBeat: 0
+  - beat: 198
+    track: 2
+    endBeat: 0
+  - beat: 202
+    track: 1
+    endBeat: 0
+  - beat: 208
+    track: 3
+    endBeat: 0
+  - beat: 208
+    track: 2
+    endBeat: 0
+  - beat: 212
+    track: 4
+    endBeat: 0
+  - beat: 216
+    track: 3
+    endBeat: 0
+  - beat: 220
+    track: 2
+    endBeat: 0
+  - beat: 224
+    track: 1
+    endBeat: 0
