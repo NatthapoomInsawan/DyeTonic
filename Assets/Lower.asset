@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
+  m_Name: Lower
+  m_EditorClassIdentifier: 
+  songName: Lower
+  songArtist: 
+  song: {fileID: 8300000, guid: eae75373f097f714197351eeb37c0177, type: 3}
+  songBpm: 0
+  songSprite: {fileID: 0}
+  notesLine1: []
+  notesLine2: []
