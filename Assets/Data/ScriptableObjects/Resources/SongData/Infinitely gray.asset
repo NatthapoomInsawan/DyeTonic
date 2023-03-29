@@ -216,4 +216,10 @@ MonoBehaviour:
   - beat: 186
     track: 3
     endBeat: 190
-  notesLine2: []
+  notesLine2:
+  - beat: 45
+    track: 2
+    endBeat: 45
+  - beat: 50
+    track: 3
+    endBeat: 50
