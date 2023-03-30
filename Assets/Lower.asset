@@ -15,7 +15,13 @@ MonoBehaviour:
   songName: Lower
   songArtist: 
   song: {fileID: 8300000, guid: eae75373f097f714197351eeb37c0177, type: 3}
-  songBpm: 0
+  songBpm: 132
   songSprite: {fileID: 0}
-  notesLine1: []
+  notesLine1:
+  - beat: 0
+    track: 3
+    endBeat: 0
+  - beat: 0
+    track: 2
+    endBeat: 0
   notesLine2: []
