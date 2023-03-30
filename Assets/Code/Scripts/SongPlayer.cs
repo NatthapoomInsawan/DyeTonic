@@ -8,12 +8,13 @@ using UnityEngine.SceneManagement;
 
 namespace DyeTonic
 {
-    [RequireComponent(typeof(AudioSource))]
+
     public class SongPlayer : MonoBehaviour
     {
         [Header("Scriptable Objects referencing")]
         [SerializeField] SongManager _songManager;
         [SerializeField] SongData _songData;
+        [SerializeField] AudioChannelSO _channelSO;
 
         //the duration of a beat
         [SerializeField] private float secPerBeat;
@@ -73,9 +74,7 @@ namespace DyeTonic
             dspSongTime = (float)AudioSettings.dspTime;
 
             //start the song
-            AudioSource audioSource = GetComponent<AudioSource>();
-            audioSource.clip = _songData.song;
-            audioSource.Play();
+            _channelSO.RaisePlayRequest(_songData.song);
 
         }
 
