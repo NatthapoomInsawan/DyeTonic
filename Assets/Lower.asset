@@ -160,9 +160,24 @@ MonoBehaviour:
     track: 3
     endBeat: 0
   - beat: 185
+    track: 1
+    endBeat: 194
+  - beat: 195
     track: 4
-    endBeat: 196
-  - beat: 185
-    track: 4
-    endBeat: 196
+    endBeat: 203
+  - beat: 204
+    track: 3
+    endBeat: 0
+  - beat: 205
+    track: 2
+    endBeat: 0
+  - beat: 206
+    track: 1
+    endBeat: 0
+  - beat: 208
+    track: 3
+    endBeat: 0
+  - beat: 210
+    track: 2
+    endBeat: 214
   notesLine2: []
