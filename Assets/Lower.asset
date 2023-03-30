@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc508b8697365645b660384f003b9b5, type: 3}
+  m_Name: Lower
+  m_EditorClassIdentifier: 
+  songName: Lower
+  songArtist: 
+  song: {fileID: 8300000, guid: eae75373f097f714197351eeb37c0177, type: 3}
+  songBpm: 132
+  songSprite: {fileID: 0}
+  notesLine1:
+  - beat: 21
+    track: 1
+    endBeat: 0
+  - beat: 22
+    track: 2
+    endBeat: 0
+  - beat: 23
+    track: 1
+    endBeat: 0
+  - beat: 24
+    track: 4
+    endBeat: 0
+  - beat: 26
+    track: 3
+    endBeat: 0
+  - beat: 27
+    track: 1
+    endBeat: 0
+  - beat: 28
+    track: 2
+    endBeat: 0
+  - beat: 30
+    track: 4
+    endBeat: 0
+  - beat: 31
+    track: 2
+    endBeat: 0
+  - beat: 32
+    track: 3
+    endBeat: 0
+  - beat: 34
+    track: 1
+    endBeat: 0
+  - beat: 38
+    track: 2
+    endBeat: 0
+  - beat: 39
+    track: 3
+    endBeat: 0
+  - beat: 40
+    track: 2
+    endBeat: 0
+  - beat: 44
+    track: 2
+    endBeat: 0
+  - beat: 46
+    track: 3
+    endBeat: 0
+  - beat: 47
+    track: 2
+    endBeat: 0
+  - beat: 50
+    track: 1
+    endBeat: 53
+  - beat: 85
+    track: 2
+    endBeat: 0
+  - beat: 87
+    track: 1
+    endBeat: 0
+  - beat: 90
+    track: 2
+    endBeat: 0
+  - beat: 93
+    track: 4
+    endBeat: 0
+  - beat: 96
+    track: 3
+    endBeat: 0
+  - beat: 100
+    track: 1
+    endBeat: 104
+  - beat: 105
+    track: 4
+    endBeat: 114
+  - beat: 117
+    track: 3
+    endBeat: 130
+  - beat: 133
+    track: 4
+    endBeat: 0
+  - beat: 134
+    track: 2
+    endBeat: 0
+  - beat: 135
+    track: 1
+    endBeat: 0
+  - beat: 137
+    track: 3
+    endBeat: 0
+  - beat: 138
+    track: 2
+    endBeat: 0
+  - beat: 141
+    track: 4
+    endBeat: 0
+  - beat: 143
+    track: 2
+    endBeat: 0
+  - beat: 146
+    track: 3
+    endBeat: 0
+  - beat: 147
+    track: 2
+    endBeat: 156
+  - beat: 158
+    track: 4
+    endBeat: 0
+  - beat: 159
+    track: 3
+    endBeat: 0
+  - beat: 161
+    track: 4
+    endBeat: 0
+  - beat: 164
+    track: 2
+    endBeat: 0
+  - beat: 166
+    track: 1
+    endBeat: 0
+  - beat: 168
+    track: 2
+    endBeat: 0
+  - beat: 169
+    track: 4
+    endBeat: 0
+  - beat: 172
+    track: 3
+    endBeat: 0
+  - beat: 174
+    track: 2
+    endBeat: 0
+  - beat: 175.3
+    track: 1
+    endBeat: 0
+  - beat: 178
+    track: 4
+    endBeat: 0
+  - beat: 181.9
+    track: 3
+    endBeat: 0
+  - beat: 185
+    track: 1
+    endBeat: 194
+  - beat: 195
+    track: 4
+    endBeat: 203
+  - beat: 204
+    track: 3
+    endBeat: 0
+  - beat: 205
+    track: 2
+    endBeat: 0
+  - beat: 206
+    track: 1
+    endBeat: 0
+  - beat: 208
+    track: 3
+    endBeat: 0
+  - beat: 210
+    track: 2
+    endBeat: 214
+  notesLine2: []
