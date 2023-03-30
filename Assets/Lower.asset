@@ -33,13 +33,16 @@ MonoBehaviour:
   - beat: 26
     track: 3
     endBeat: 0
+  - beat: 27
+    track: 4
+    endBeat: 0
   - beat: 28
     track: 2
     endBeat: 0
   - beat: 30
     track: 4
     endBeat: 0
-  - beat: 30
+  - beat: 31
     track: 2
     endBeat: 0
   - beat: 34
