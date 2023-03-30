@@ -3821,7 +3821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 0}
-  _songData: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+  _songData: {fileID: 11400000, guid: 2f2a596243b309f45a3caddbc8dc0664, type: 2}
   noteSelfDestroy: 0
   _normalNote: {fileID: 7967211962095986510, guid: cc3045dfd8404654dada71983f600da2, type: 3}
   _headNote: {fileID: 7967211962095986510, guid: d5a147827df9fc64eac1cefef33b0117, type: 3}
@@ -3861,7 +3861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
-  _songData: {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
+  _songData: {fileID: 11400000, guid: 2f2a596243b309f45a3caddbc8dc0664, type: 2}
   _textBox: {fileID: 302062059}
   _timelineSlider: {fileID: 1179163523}
   _playButtonText: {fileID: 958483625}
