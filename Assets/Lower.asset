@@ -25,7 +25,7 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 23
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 24
     track: 4
@@ -34,7 +34,7 @@ MonoBehaviour:
     track: 3
     endBeat: 0
   - beat: 27
-    track: 4
+    track: 1
     endBeat: 0
   - beat: 28
     track: 2
@@ -49,10 +49,10 @@ MonoBehaviour:
     track: 3
     endBeat: 0
   - beat: 34
-    track: 4
+    track: 1
     endBeat: 0
   - beat: 38
-    track: 1
+    track: 2
     endBeat: 0
   - beat: 39
     track: 3
@@ -76,24 +76,96 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 87
-    track: 2
+    track: 1
     endBeat: 0
   - beat: 90
-    track: 1
+    track: 2
     endBeat: 0
   - beat: 93
     track: 4
     endBeat: 0
   - beat: 96
-    track: 2
+    track: 3
     endBeat: 0
   - beat: 100
-    track: 2
+    track: 1
     endBeat: 104
   - beat: 105
-    track: 2
+    track: 4
     endBeat: 114
   - beat: 117
-    track: 2
+    track: 3
     endBeat: 130
+  - beat: 133
+    track: 4
+    endBeat: 0
+  - beat: 134
+    track: 2
+    endBeat: 0
+  - beat: 135
+    track: 1
+    endBeat: 0
+  - beat: 137
+    track: 3
+    endBeat: 0
+  - beat: 138
+    track: 2
+    endBeat: 0
+  - beat: 141
+    track: 4
+    endBeat: 0
+  - beat: 143
+    track: 2
+    endBeat: 0
+  - beat: 143
+    track: 3
+    endBeat: 0
+  - beat: 146
+    track: 1
+    endBeat: 0
+  - beat: 146
+    track: 3
+    endBeat: 0
+  - beat: 147
+    track: 2
+    endBeat: 156
+  - beat: 158
+    track: 4
+    endBeat: 0
+  - beat: 159
+    track: 3
+    endBeat: 0
+  - beat: 161
+    track: 4
+    endBeat: 0
+  - beat: 164
+    track: 2
+    endBeat: 0
+  - beat: 166
+    track: 1
+    endBeat: 0
+  - beat: 168
+    track: 3
+    endBeat: 0
+  - beat: 169
+    track: 2
+    endBeat: 0
+  - beat: 172
+    track: 1
+    endBeat: 0
+  - beat: 174
+    track: 2
+    endBeat: 0
+  - beat: 175.3
+    track: 2
+    endBeat: 0
+  - beat: 176
+    track: 2
+    endBeat: 0
+  - beat: 178
+    track: 2
+    endBeat: 0
+  - beat: 181.9
+    track: 2
+    endBeat: 0
   notesLine2: []
