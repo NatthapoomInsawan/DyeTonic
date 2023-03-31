@@ -228,8 +228,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DYETONIC
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1627,7 +1627,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 52.2, y: -47}
-  m_SizeDelta: {x: 45, y: 45.5438}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640487754
 MonoBehaviour:
