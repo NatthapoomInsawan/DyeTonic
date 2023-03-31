@@ -26,7 +26,7 @@ namespace DyeTonic
 
         [SerializeField] private List<AudioChannelSO> audioChannels;
 
-        private static GameObject currentSong;
+        [SerializeField] private GameObject currentSong;
 
         private void OnEnable()
         {
@@ -72,7 +72,7 @@ namespace DyeTonic
             Destroy(instantiateAudio, audioSource.clip.length);
         }
 
-        public static void StopCurrentMusic()
+        public void StopCurrentMusic()
         {
             Destroy(currentSong);
         }
