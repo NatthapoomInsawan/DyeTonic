@@ -236,7 +236,7 @@ MonoBehaviour:
         m_MethodName: RaisePlayRequest
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 637b8e1aab0401a42bed58f24b784a6b, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4488823622575237741, guid: 745b0f5ba459c19459e2811f03d00743, type: 3}
+      propertyPath: startBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f0bc403e45d71949aefdb2559864f25, type: 3}
     - target: {fileID: 4488823622575237743, guid: 745b0f5ba459c19459e2811f03d00743, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -674,7 +678,7 @@ MonoBehaviour:
         m_MethodName: RaisePlayRequest
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 637b8e1aab0401a42bed58f24b784a6b, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1737,7 +1741,7 @@ MonoBehaviour:
         m_MethodName: RaisePlayRequest
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 637b8e1aab0401a42bed58f24b784a6b, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2036,7 +2040,7 @@ MonoBehaviour:
         m_MethodName: RaisePlayRequest
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 637b8e1aab0401a42bed58f24b784a6b, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2182,7 +2186,7 @@ MonoBehaviour:
         m_MethodName: RaisePlayRequest
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 637b8e1aab0401a42bed58f24b784a6b, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
