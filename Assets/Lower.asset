@@ -102,9 +102,18 @@ MonoBehaviour:
   - beat: 85
     track: 2
     endBeat: 89
-  - beat: 96
+  - beat: 89
     track: 3
-    endBeat: 0
+    endBeat: 93
+  - beat: 89
+    track: 1
+    endBeat: 93
+  - beat: 93
+    track: 4
+    endBeat: 98
+  - beat: 93
+    track: 2
+    endBeat: 98
   - beat: 100
     track: 1
     endBeat: 104
