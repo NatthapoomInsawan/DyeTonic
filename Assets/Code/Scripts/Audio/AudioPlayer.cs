@@ -10,6 +10,12 @@ namespace DyeTonic
     {
         private static AudioPlayer instance;
 
+        [SerializeField] private AudioClip startBGM;
+
+        [SerializeField] private List<AudioChannelSO> audioChannels;
+
+        [SerializeField] private GameObject currentSong;
+
         private void Awake()
         {
             if (instance != null && instance != this)
@@ -24,9 +30,11 @@ namespace DyeTonic
             DontDestroyOnLoad(gameObject);
         }
 
-        [SerializeField] private List<AudioChannelSO> audioChannels;
-
-        [SerializeField] private GameObject currentSong;
+        private void Start()
+        {
+            if (audioChannels != null)
+                PlayAudio(startBGM, audioChannels[1].AudioMixerGroup);
+        }
 
         private void OnEnable()
         {
@@ -42,7 +50,7 @@ namespace DyeTonic
             foreach (AudioChannelSO channel in audioChannels)
             {
                 channel.OnAudioPlayRequest -= PlayAudio;
-                channel.OnAudioPlayRequestWithTime += PlayAudio;
+                channel.OnAudioPlayRequestWithTime -= PlayAudio;
             }
         }
 
@@ -51,7 +59,7 @@ namespace DyeTonic
             PlayAudio(_audioClip, _audioMixerGroup, 0.0f);
         }
 
-        public void PlayAudio(AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
+        public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
         {
             GameObject instantiateAudio = new GameObject("Instantiated Audio");
             AudioSource audioSource = (AudioSource)instantiateAudio.AddComponent(typeof(AudioSource));
@@ -70,6 +78,7 @@ namespace DyeTonic
             audioSource.Play();
 
             Destroy(instantiateAudio, audioSource.clip.length);
+            DontDestroyOnLoad(instantiateAudio);
         }
 
         public void StopCurrentMusic()
