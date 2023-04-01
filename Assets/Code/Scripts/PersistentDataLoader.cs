@@ -8,7 +8,7 @@ namespace DyeTonic
     {
         [SerializeField] private GameSettings _settings;
 
-        private PersistentDataLoader instance;
+        private static PersistentDataLoader instance;
 
         private void Awake()
         {
