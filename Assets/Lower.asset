@@ -203,8 +203,8 @@ MonoBehaviour:
     endBeat: 0
   - beat: 152.3
     track: 2
-    endBeat: 156.5
-  - beat: 156.5
+    endBeat: 156
+  - beat: 157
     track: 4
     endBeat: 0
   - beat: 159
