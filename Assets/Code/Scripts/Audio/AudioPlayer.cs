@@ -50,7 +50,7 @@ namespace DyeTonic
             foreach (AudioChannelSO channel in audioChannels)
             {
                 channel.OnAudioPlayRequest -= PlayAudio;
-                channel.OnAudioPlayRequestWithTime += PlayAudio;
+                channel.OnAudioPlayRequestWithTime -= PlayAudio;
             }
         }
 
@@ -59,7 +59,7 @@ namespace DyeTonic
             PlayAudio(_audioClip, _audioMixerGroup, 0.0f);
         }
 
-        public void PlayAudio(AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
+        public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
         {
             GameObject instantiateAudio = new GameObject("Instantiated Audio");
             AudioSource audioSource = (AudioSource)instantiateAudio.AddComponent(typeof(AudioSource));
