@@ -620,9 +620,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.94509804, b: 0.7137255, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 1, g: 0.8784314, b: 0.39215687, a: 1}
-    m_SelectedColor: {r: 1, g: 0.94509804, b: 0.7137255, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -998,11 +998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.7137255
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.94509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
@@ -1010,11 +1010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.7137255
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.94509804
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 558850255399598040, guid: ef98bfc74e37f424c9c38ff13aff816e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
