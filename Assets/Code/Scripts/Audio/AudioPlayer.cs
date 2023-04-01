@@ -10,6 +10,12 @@ namespace DyeTonic
     {
         private static AudioPlayer instance;
 
+        [SerializeField] private AudioClip startBGM;
+
+        [SerializeField] private List<AudioChannelSO> audioChannels;
+
+        [SerializeField] private GameObject currentSong;
+
         private void Awake()
         {
             if (instance != null && instance != this)
@@ -24,9 +30,11 @@ namespace DyeTonic
             DontDestroyOnLoad(gameObject);
         }
 
-        [SerializeField] private List<AudioChannelSO> audioChannels;
-
-        [SerializeField] private GameObject currentSong;
+        private void Start()
+        {
+            if (audioChannels != null)
+                PlayAudio(startBGM, audioChannels[1].AudioMixerGroup);
+        }
 
         private void OnEnable()
         {
@@ -70,6 +78,7 @@ namespace DyeTonic
             audioSource.Play();
 
             Destroy(instantiateAudio, audioSource.clip.length);
+            DontDestroyOnLoad(instantiateAudio);
         }
 
         public void StopCurrentMusic()
