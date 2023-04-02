@@ -2980,7 +2980,7 @@ MonoBehaviour:
   _gameSettings: {fileID: 11400000, guid: f0bf60a6cf2be66419e6ea7707a20b6c, type: 2}
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
   _songList:
-  - {fileID: 11400000, guid: f9addff961c7e704c86455168f29d219, type: 2}
+  - {fileID: 11400000, guid: 2f2a596243b309f45a3caddbc8dc0664, type: 2}
   - {fileID: 11400000, guid: 1a34f641804678c43bb2520ac704d142, type: 2}
   - {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
 --- !u!4 &1523103166
@@ -3364,18 +3364,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
-        m_TargetAssemblyTypeName: DyeTonic.AudioChannelSO, Assembly-CSharp
-        m_MethodName: RaisePlayRequest
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 3618e5ed30c75274691d60e61638a5d8, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1523103165}
         m_TargetAssemblyTypeName: DyeTonic.GameProgressUpdater, Assembly-CSharp
         m_MethodName: OnStageClear
@@ -3383,6 +3371,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.AudioChannelSO, Assembly-CSharp
+        m_MethodName: RaisePlayRequest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 3618e5ed30c75274691d60e61638a5d8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
