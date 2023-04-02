@@ -586,18 +586,6 @@ MonoBehaviour:
   - beat: 174
     track: 1
     endBeat: 0
-  - beat: 178
-    track: 2
-    endBeat: 0
-  - beat: 178
-    track: 1
-    endBeat: 0
-  - beat: 179
-    track: 3
-    endBeat: 0
-  - beat: 180
-    track: 2
-    endBeat: 0
   - beat: 181
     track: 4
     endBeat: 0
@@ -613,21 +601,12 @@ MonoBehaviour:
   - beat: 185
     track: 3
     endBeat: 0
-  - beat: 186
-    track: 2
-    endBeat: 0
-  - beat: 187
-    track: 4
-    endBeat: 0
   - beat: 188
     track: 1
     endBeat: 0
   - beat: 189
     track: 2
     endBeat: 0
-  - beat: 190
-    track: 3
-    endBeat: 0
   - beat: 192
     track: 1
     endBeat: 200
@@ -635,14 +614,14 @@ MonoBehaviour:
     track: 3
     endBeat: 200
   - beat: 201.5
-    track: 1
+    track: 2
     endBeat: 208
   - beat: 201.5
     track: 4
     endBeat: 208
   - beat: 210
-    track: 3
+    track: 1
     endBeat: 226
   - beat: 210
-    track: 2
+    track: 3
     endBeat: 226
