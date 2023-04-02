@@ -249,6 +249,9 @@ MonoBehaviour:
   - beat: 186
     track: 2
     endBeat: 190.5
+  - beat: 186
+    track: 4
+    endBeat: 190.5
   notesLine2:
   - beat: 17
     track: 2
