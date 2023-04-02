@@ -32,6 +32,12 @@ namespace DyeTonic
         //Song HP
         public int HP;
 
+        private void OnEnable()
+        {
+            //preventing from unloading through scenes where it's not being referenced (Which causing data loses)
+            hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void SetSongData (SongData songData)
         {
             currentSongData = songData;
