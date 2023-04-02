@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Lower
   m_EditorClassIdentifier: 
   songName: Lower
-  songArtist: 25ji nightcore de x MEIKO
+  songArtist: 
   song: {fileID: 8300000, guid: eae75373f097f714197351eeb37c0177, type: 3}
   songBpm: 132
-  songSprite: {fileID: 21300000, guid: 524e45cc98ce4d34e8d4035d52e346ea, type: 3}
+  songSprite: {fileID: 0}
   notesLine1:
   - beat: 21
     track: 1
