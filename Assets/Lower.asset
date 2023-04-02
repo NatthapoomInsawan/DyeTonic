@@ -237,21 +237,21 @@ MonoBehaviour:
   - beat: 167
     track: 3
     endBeat: 0
-  - beat: 167
-    track: 2
-    endBeat: 0
   - beat: 168
     track: 2
+    endBeat: 174
+  - beat: 175
+    track: 1
     endBeat: 0
-  - beat: 169
-    track: 4
-    endBeat: 0
-  - beat: 172
+  - beat: 175
     track: 3
     endBeat: 0
-  - beat: 174
+  - beat: 177
     track: 2
-    endBeat: 0
+    endBeat: 179
+  - beat: 177
+    track: 4
+    endBeat: 179
   - beat: 175.3
     track: 1
     endBeat: 0
