@@ -508,9 +508,6 @@ MonoBehaviour:
   - beat: 116
     track: 3
     endBeat: 0
-  - beat: 117
-    track: 3
-    endBeat: 0
   - beat: 118.3
     track: 4
     endBeat: 0
@@ -532,21 +529,21 @@ MonoBehaviour:
   - beat: 123.4
     track: 1
     endBeat: 130
-  - beat: 124.3
-    track: 3
-    endBeat: 0
   - beat: 124
     track: 2
-    endBeat: 0
-  - beat: 125.2
-    track: 3
     endBeat: 0
   - beat: 126.2
     track: 2
     endBeat: 0
-  - beat: 127.5
-    track: 3
-    endBeat: 0
   - beat: 128.8
     track: 2
     endBeat: 0
+  - beat: 133.7
+    track: 1
+    endBeat: 141
+  - beat: 142
+    track: 2
+    endBeat: 149
+  - beat: 150
+    track: 3
+    endBeat: 155
