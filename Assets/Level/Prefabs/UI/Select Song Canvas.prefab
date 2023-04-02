@@ -297,7 +297,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 301.5212, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &558850254823491627
 CanvasRenderer:
@@ -598,8 +598,8 @@ MonoBehaviour:
   songNameText: {fileID: 558850254823491626}
   artistNameText: {fileID: 558850255323121123}
   songImage: {fileID: 558850255293195868}
-  audioSource: {fileID: 558850255071992419}
   _songManager: {fileID: 11400000, guid: 3601a379c433e8741b5e6c883ce831e0, type: 2}
+  _channelSO: {fileID: 0}
 --- !u!82 &558850255071992419
 AudioSource:
   m_ObjectHideFlags: 0
@@ -911,7 +911,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 299.9762, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &558850255323121120
 CanvasRenderer:
