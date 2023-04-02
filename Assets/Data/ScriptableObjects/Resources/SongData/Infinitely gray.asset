@@ -224,25 +224,31 @@ MonoBehaviour:
     endBeat: 170
   - beat: 171
     track: 2
-    endBeat: 170
+    endBeat: 174.4
   - beat: 171
     track: 4
     endBeat: 174.4
-  - beat: 171
-    track: 3
-    endBeat: 174.4
-  - beat: 176.5
+  - beat: 176.3
     track: 1
     endBeat: 0
   - beat: 177
-    track: 1
+    track: 2
     endBeat: 0
-  - beat: 178
-    track: 1
+  - beat: 177.3
+    track: 3
+    endBeat: 0
+  - beat: 177.9
+    track: 4
     endBeat: 0
   - beat: 179
     track: 1
-    endBeat: 0
+    endBeat: 182
+  - beat: 179
+    track: 2
+    endBeat: 182
+  - beat: 186
+    track: 2
+    endBeat: 190.5
   notesLine2:
   - beat: 17
     track: 2
