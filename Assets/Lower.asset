@@ -256,21 +256,18 @@ MonoBehaviour:
     track: 3
     endBeat: 195
   - beat: 182
-    track: 3
-    endBeat: 195
-  - beat: 204
-    track: 3
-    endBeat: 0
-  - beat: 205
-    track: 2
-    endBeat: 0
-  - beat: 206
     track: 1
-    endBeat: 0
-  - beat: 208
-    track: 3
-    endBeat: 0
-  - beat: 210
+    endBeat: 195
+  - beat: 198
     track: 2
-    endBeat: 214
+    endBeat: 208
+  - beat: 198
+    track: 4
+    endBeat: 208
+  - beat: 209
+    track: 1
+    endBeat: 215
+  - beat: 209
+    track: 3
+    endBeat: 215
   notesLine2: []
