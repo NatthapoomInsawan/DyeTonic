@@ -47,7 +47,7 @@ MonoBehaviour:
     endBeat: 57.4
   - beat: 58.4
     track: 3
-    endBeat: 66
+    endBeat: 65.4
   - beat: 59.2
     track: 2
     endBeat: 0
