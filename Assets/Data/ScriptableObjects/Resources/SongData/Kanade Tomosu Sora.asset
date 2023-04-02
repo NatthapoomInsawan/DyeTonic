@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Kanade Tomosu Sora
   m_EditorClassIdentifier: 
   songName: Kanade Tomosu-Sora
-  songArtist: 
+  songArtist: 25ji nightcore de x Luka
   song: {fileID: 8300000, guid: 5d2ea50aad565154a81b1c85999f1bf0, type: 3}
   songBpm: 79
-  songSprite: {fileID: 0}
+  songSprite: {fileID: 21300000, guid: 3756b3104d38e8648892f766d77e262e, type: 3}
   notesLine1:
   - beat: 16.2
     track: 2
