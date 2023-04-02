@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b66b2863ea7db640ba28585b2d882aa, type: 3}
   m_Name: SongManager
   m_EditorClassIdentifier: 
-  currentSongData: {fileID: 11400000, guid: f9addff961c7e704c86455168f29d219, type: 2}
+  currentSongData: {fileID: 11400000, guid: 2f2a596243b309f45a3caddbc8dc0664, type: 2}
   isStoryMode: 0
-  songPosInBeats: 19.92957
+  songPosInBeats: 30.41279
   songCombo: 0
   scoreMultiplier: 1
   player1Score: 0
   player2Score: 0
-  play1HitNotes: 00000000000000000000000000000000
-  play2HitNotes: 00000000000000000000000001000000
-  HP: 95
+  play1HitNotes: 0000000000000000000000000a000000
+  play2HitNotes: 0000000000000000000000000a000000
+  HP: 0
