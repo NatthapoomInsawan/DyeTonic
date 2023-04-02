@@ -266,14 +266,15 @@ namespace DyeTonic
         private NoteQuality CalculateBeatQuality(NoteData noteData)
         {
             //Calculate error value
-            float errorValue = (_songManager.songPosInBeats - noteData.beat) / noteData.beat * 100;
+            float errorValue = ((_songManager.songPosInBeats - noteData.beat) / noteData.beat) *100;
+
             NoteQuality noteQuality = NoteQuality.Miss;
 
             if (errorValue < 0 && errorValue < -2.5f)
                 noteQuality = NoteQuality.Offbeat;
-            else if (Mathf.Abs(errorValue) < 1.5f)
+            else if (errorValue < 0.5f)
                 noteQuality = NoteQuality.Perfect;
-            else if (Mathf.Abs(errorValue) < 2.5f)
+            else if (errorValue < 1f)
                 noteQuality = NoteQuality.Good;
 
             //Update to UI
@@ -368,8 +369,9 @@ namespace DyeTonic
             if (targetTransform != transform)
                 return;
 
-            CalculateBeatQuality(noteData);
             CalculateScore(NoteQuality.Miss);
+            SpawnEffect(NoteQuality.Miss);
+            InvokeNoteQualityEvent(NoteQuality.Miss);
 
         }
 
