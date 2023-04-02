@@ -625,3 +625,6 @@ MonoBehaviour:
   - beat: 210
     track: 3
     endBeat: 226
+  - beat: 210
+    track: 3
+    endBeat: 226
