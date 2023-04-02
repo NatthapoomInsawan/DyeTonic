@@ -84,26 +84,35 @@ MonoBehaviour:
   - beat: 84
     track: 4
     endBeat: 0
-  - beat: 86
+  - beat: 85.2
+    track: 1
+    endBeat: 89
+  - beat: 90
+    track: 3
+    endBeat: 0
+  - beat: 90
+    track: 2
+    endBeat: 0
+  - beat: 92
     track: 1
     endBeat: 0
-  - beat: 88
+  - beat: 92
     track: 3
     endBeat: 0
-  - beat: 90.7
-    track: 2
-    endBeat: 0
-  - beat: 98
+  - beat: 93
     track: 4
+    endBeat: 97
+  - beat: 98.8
+    track: 3
+    endBeat: 0
+  - beat: 98.8
+    track: 2
     endBeat: 0
   - beat: 100
-    track: 3
+    track: 1
     endBeat: 0
-  - beat: 104
-    track: 2
-    endBeat: 0
-  - beat: 106
-    track: 2
+  - beat: 100
+    track: 4
     endBeat: 0
   - beat: 108
     track: 1
