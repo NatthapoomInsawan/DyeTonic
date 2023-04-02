@@ -45,35 +45,20 @@ MonoBehaviour:
   - beat: 54.4
     track: 4
     endBeat: 57.4
-  - beat: 56
+  - beat: 58.4
     track: 3
-    endBeat: 0
-  - beat: 60
+    endBeat: 66
+  - beat: 59.2
     track: 2
     endBeat: 0
-  - beat: 60.4
+  - beat: 60.3
     track: 4
     endBeat: 0
-  - beat: 61
+  - beat: 64.4
     track: 2
     endBeat: 0
-  - beat: 62
+  - beat: 65.5
     track: 1
-    endBeat: 0
-  - beat: 62.4
-    track: 3
-    endBeat: 0
-  - beat: 63.3
-    track: 2
-    endBeat: 0
-  - beat: 64
-    track: 3
-    endBeat: 0
-  - beat: 65
-    track: 4
-    endBeat: 0
-  - beat: 66.4
-    track: 3
     endBeat: 0
   - beat: 67.3
     track: 2
