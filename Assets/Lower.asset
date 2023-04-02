@@ -614,10 +614,10 @@ MonoBehaviour:
     track: 4
     endBeat: 0
   - beat: 243
-    track: 2
+    track: 3
     endBeat: 0
   - beat: 244
-    track: 3
+    track: 2
     endBeat: 0
   - beat: 245
     track: 1
