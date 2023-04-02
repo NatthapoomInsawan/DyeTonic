@@ -601,33 +601,24 @@ MonoBehaviour:
   - beat: 216
     track: 3
     endBeat: 0
-  - beat: 217
-    track: 3
-    endBeat: 0
   - beat: 218
     track: 4
     endBeat: 0
   - beat: 223
-    track: 2
+    track: 3
     endBeat: 228
   - beat: 229
     track: 1
     endBeat: 240
   - beat: 243.5
-    track: 3
-    endBeat: 0
-  - beat: 243.5
     track: 2
     endBeat: 0
   - beat: 244.2
+    track: 3
+    endBeat: 0
+  - beat: 245
     track: 1
     endBeat: 0
-  - beat: 244.2
+  - beat: 245
     track: 4
-    endBeat: 0
-  - beat: 245
-    track: 2
-    endBeat: 0
-  - beat: 245
-    track: 3
     endBeat: 0
