@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b66b2863ea7db640ba28585b2d882aa, type: 3}
   m_Name: SongManager
   m_EditorClassIdentifier: 
-  currentSongData: {fileID: 11400000, guid: f9addff961c7e704c86455168f29d219, type: 2}
-  isStoryMode: 0
-  songPosInBeats: 681.7563
+  currentSongData: {fileID: 11400000, guid: 19c0fe19accbee54787c832c3f777f51, type: 2}
+  isStoryMode: 1
+  songPosInBeats: 27.302511
   songCombo: 0
   scoreMultiplier: 1
-  player1Score: 5350
+  player1Score: 0
   player2Score: 0
-  play1HitNotes: 07000000340000000300000000000000
-  play2HitNotes: 0000000000000000000000001a000000
-  HP: 41
+  play1HitNotes: 00000000000000000000000011000000
+  play2HitNotes: 00000000000000000000000003000000
+  HP: 0

@@ -54,7 +54,7 @@ namespace DyeTonic
         {
             if (PhotonNetwork.InRoom)
                 PhotonNetwork.LeaveRoom();
-            else
+            else if (_songManager.IsStoryMode() != true)
                 SceneLoader.LoadPreviousScene();
         }
 
