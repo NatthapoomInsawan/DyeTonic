@@ -32,9 +32,16 @@ namespace DyeTonic
         //Song HP
         public int HP;
 
+        private void OnEnable()
+        {
+            //preventing from unloading through scenes where it's not being referenced (Which causing data loses)
+            hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void SetSongData (SongData songData)
         {
             currentSongData = songData;
+            Debug.Log("current song data = " + currentSongData);
         }
 
         public SongData GetCurrentSongData()
@@ -45,6 +52,7 @@ namespace DyeTonic
         public void SetStoryMode (bool storyMode)
         {
             isStoryMode = storyMode;
+            Debug.Log("story mode = " + storyMode);
         }
 
         public bool IsStoryMode()

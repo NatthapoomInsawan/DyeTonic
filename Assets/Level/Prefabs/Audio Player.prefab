@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bae56a2c78a74c4b8f9d50f3bf50914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBGM: {fileID: 8300000, guid: 7f0bc403e45d71949aefdb2559864f25, type: 3}
+  currentSong: {fileID: 0}
+  musicAudioMixer: {fileID: -5386174103388625574, guid: e2b93e131584c1e4b926be734cb02a57, type: 2}
   audioChannels:
   - {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
   - {fileID: 11400000, guid: c05e12024e162494ea3b7388c5ec60ed, type: 2}

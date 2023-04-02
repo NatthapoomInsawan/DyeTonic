@@ -10,6 +10,14 @@ namespace DyeTonic
     {
         private static AudioPlayer instance;
 
+        [SerializeField] private AudioClip startBGM;
+
+        [SerializeField] private GameObject currentSong;
+
+        [SerializeField] private AudioMixerGroup musicAudioMixer;
+
+        [SerializeField] private List<AudioChannelSO> audioChannels;
+
         private void Awake()
         {
             if (instance != null && instance != this)
@@ -24,9 +32,11 @@ namespace DyeTonic
             DontDestroyOnLoad(gameObject);
         }
 
-        [SerializeField] private List<AudioChannelSO> audioChannels;
-
-        private static GameObject currentSong;
+        private void Start()
+        {
+            if (audioChannels != null)
+                PlayBGMAudio( startBGM, musicAudioMixer, true);
+        }
 
         private void OnEnable()
         {
@@ -34,6 +44,7 @@ namespace DyeTonic
             {
                 channel.OnAudioPlayRequest += PlayAudio;
                 channel.OnAudioPlayRequestWithTime += PlayAudio;
+                channel.OnBGMPlayRequest += PlayBGMAudio;
             }
         }
 
@@ -42,22 +53,36 @@ namespace DyeTonic
             foreach (AudioChannelSO channel in audioChannels)
             {
                 channel.OnAudioPlayRequest -= PlayAudio;
-                channel.OnAudioPlayRequestWithTime += PlayAudio;
+                channel.OnAudioPlayRequestWithTime -= PlayAudio;
+                channel.OnBGMPlayRequest -= PlayBGMAudio;
             }
         }
 
-        public void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup)
+        private void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup)
         {
             PlayAudio(_audioClip, _audioMixerGroup, 0.0f);
         }
 
-        public void PlayAudio(AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
+        private void PlayAudio(AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time)
+        {
+            PlayAudio(_audioClip, _audioMixerGroup, time, false);
+        }
+
+        private void PlayBGMAudio(AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, bool isLoop)
+        {
+            if (_audioMixerGroup == musicAudioMixer)
+                PlayAudio(_audioClip, _audioMixerGroup, 0.0f, isLoop);
+            else
+                Debug.LogWarning("Wrong audioMixer group requested.");
+        }
+
+        private void PlayAudio (AudioClip _audioClip, AudioMixerGroup _audioMixerGroup, float time, bool isLoop)
         {
             GameObject instantiateAudio = new GameObject("Instantiated Audio");
             AudioSource audioSource = (AudioSource)instantiateAudio.AddComponent(typeof(AudioSource));
 
             //if audio is music
-            if (_audioMixerGroup == audioChannels[1].AudioMixerGroup)
+            if (_audioMixerGroup == musicAudioMixer)
             {
                 Destroy(currentSong);
                 currentSong = instantiateAudio;
@@ -69,10 +94,16 @@ namespace DyeTonic
             audioSource.time = time;
             audioSource.Play();
 
-            Destroy(instantiateAudio, audioSource.clip.length);
+            //if loop
+            if (isLoop)
+                audioSource.loop = true;
+            else
+                Destroy(instantiateAudio, audioSource.clip.length);
+
+            DontDestroyOnLoad(instantiateAudio);
         }
 
-        public static void StopCurrentMusic()
+        public void StopCurrentMusic()
         {
             Destroy(currentSong);
         }

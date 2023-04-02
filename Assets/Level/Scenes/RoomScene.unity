@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SONG
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -892,8 +892,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: song name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1103,8 +1103,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAYER NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1759,8 +1759,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NONE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1894,8 +1894,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: READY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.8784314, b: 0.39215687, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2060,6 +2060,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.AudioChannelSO, Assembly-CSharp
+        m_MethodName: RaisePlayRequest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 3dd59b80e02ec734baa38b0057d2eab6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2163,8 +2175,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAYER NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2458,7 +2470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 51, y: -45.8}
+  m_AnchoredPosition: {x: 34.3, y: -34}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786552502
@@ -2484,7 +2496,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 0.8784314, b: 0.39215687, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2512,6 +2524,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 925a101bd9074dd429d6082daf736010, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.AudioChannelSO, Assembly-CSharp
+        m_MethodName: RaisePlayRequest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 3618e5ed30c75274691d60e61638a5d8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c05e12024e162494ea3b7388c5ec60ed, type: 2}
+        m_TargetAssemblyTypeName: DyeTonic.AudioChannelSO, Assembly-CSharp
+        m_MethodName: RaiseBGMPlayRequest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 7f0bc403e45d71949aefdb2559864f25, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2691,8 +2727,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NONE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
-  m_sharedMaterial: {fileID: -6465318145063784144, guid: 0a295ac4319b81246a25d14ab73e9beb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
+  m_sharedMaterial: {fileID: -6465318145063784144, guid: d4157129a3503364799f7a14c09cb4b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -11,6 +11,8 @@ namespace DyeTonic
     {
         public event Action<AudioClip, AudioMixerGroup> OnAudioPlayRequest;
         public event Action<AudioClip, AudioMixerGroup, float> OnAudioPlayRequestWithTime;
+        public event Action<AudioClip, AudioMixerGroup, bool> OnBGMPlayRequest;
+
         [field:SerializeField] public AudioMixerGroup AudioMixerGroup { get; private set; }
 
         public void RaisePlayRequest(AudioClip audioClip)
@@ -21,6 +23,11 @@ namespace DyeTonic
         public void RaisePlayRequest(AudioClip audioClip, float time)
         {
             OnAudioPlayRequestWithTime?.Invoke(audioClip, AudioMixerGroup, time);
+        }
+
+        public void RaiseBGMPlayRequest(AudioClip audioClip)
+        {
+            OnBGMPlayRequest?.Invoke(audioClip, AudioMixerGroup, true);
         }
 
     }

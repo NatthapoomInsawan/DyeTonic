@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Ciar
-  nameColor: {r: 0.735849, g: 0.46918786, b: 0, a: 1}
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 69d0a8d13671e8948bb1d74e01561a1d, type: 3}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Luke
-  nameColor: {r: 0.32251176, g: 0, b: 0.6226415, a: 1}
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: e64f5dae5e546f440864b13a431ef5e0, type: 3}
@@ -1131,7 +1131,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1343622332}
   selectedCommands:
-  - {fileID: 1343622337}
+  - {fileID: 1343622348}
   variables: []
   description: 
   stepPause: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   storyText: "\u0E07\u0E31\u0E49\u0E19\u0E19\u0E32\u0E22\u0E01\u0E47\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19\u0E01\u0E31\u0E1A\u0E0A\u0E31\u0E49\u0E19\u0E2A\u0E34
     \u0E21\u0E32\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E35\u0E2A\u0E35\u0E2A\u0E31\u0E19\u0E01\u0E31\u0E19"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 167942096}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1396,7 +1396,7 @@ MonoBehaviour:
   storyText: "\u0E0A\u0E37\u0E48\u0E2D \u201CLuke\u201D \u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19
     \u0E0A\u0E31\u0E49\u0E19\u0E01\u0E47\u0E41\u0E04\u0E48\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E25\u0E48\u0E19\u0E14\u0E19\u0E15\u0E23\u0E35"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 465360928}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1484,7 +1484,7 @@ MonoBehaviour:
   storyText: "\u0E0A\u0E31\u0E49\u0E19\u0E0A\u0E37\u0E48\u0E2D \u201CCiar\u201D \u0E40\u0E1B\u0E47\u0E19\u0E19\u0E31\u0E01\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E17\u0E35\u0E48\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E1D\u0E31\u0E19\u0E27\u0E48\u0E32\u0E08\u0E30\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E17\u0E31\u0E48\u0E27\u0E42\u0E25\u0E01\u0E14\u0E49\u0E27\u0E22\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E14\u0E19\u0E15\u0E23\u0E35\u0E43\u0E2B\u0E49\u0E43\u0E19\u0E42\u0E25\u0E01\u0E19\u0E35\u0E49\u0E21\u0E35\u0E2A\u0E35\u0E2A\u0E31\u0E19\u0E02\u0E36\u0E49\u0E19\u0E21\u0E32
     \u0E41\u0E25\u0E49\u0E27\u0E19\u0E32\u0E22\u0E25\u0E48\u0E30"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 167942096}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u0E2D\u0E37\u0E21\u0E21\u0E21\u0E21...\u0E25\u0E2D\u0E07\u0E14\u0E39\u0E01\u0E47\u0E44\u0E14\u0E49"
   description: 
-  character: {fileID: 0}
+  character: {fileID: 465360928}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
