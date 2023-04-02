@@ -60,50 +60,29 @@ MonoBehaviour:
   - beat: 62.7
     track: 2
     endBeat: 0
-  - beat: 67.3
+  - beat: 66.5
     track: 1
-    endBeat: 0
-  - beat: 68
-    track: 1
-    endBeat: 0
-  - beat: 69
-    track: 2
-    endBeat: 0
-  - beat: 70
-    track: 3
-    endBeat: 0
-  - beat: 72
-    track: 2
-    endBeat: 0
-  - beat: 72.9
+    endBeat: 72
+  - beat: 66.5
     track: 4
-    endBeat: 0
+    endBeat: 72
+  - beat: 73.7
+    track: 2
+    endBeat: 81
   - beat: 73.7
     track: 3
-    endBeat: 0
-  - beat: 74.5
-    track: 2
-    endBeat: 0
-  - beat: 75
+    endBeat: 81
+  - beat: 82.5
     track: 1
     endBeat: 0
-  - beat: 76
+  - beat: 82.5
     track: 2
     endBeat: 0
-  - beat: 77
-    track: 3
-    endBeat: 0
-  - beat: 79
-    track: 2
-    endBeat: 0
-  - beat: 80
-    track: 4
-    endBeat: 0
-  - beat: 82
+  - beat: 84
     track: 3
     endBeat: 0
   - beat: 84
-    track: 2
+    track: 4
     endBeat: 0
   - beat: 86
     track: 1
