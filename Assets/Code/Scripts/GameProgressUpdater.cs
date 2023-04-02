@@ -40,7 +40,7 @@ namespace DyeTonic
         {
             if (_songManager.IsStoryMode() && _gameSettings.progress == 3 && _songManager.HP != 0)
                 SceneManager.LoadScene("Chapter 3_2");
-            else
+            else if (_songManager.IsStoryMode())
                 SceneLoader.LoadPreviousScene();
         }
     }
