@@ -414,10 +414,19 @@ MonoBehaviour:
     endBeat: 0
   - beat: 73
     track: 3
-    endBeat: 75
-  - beat: 78.4
+    endBeat: 0
+  - beat: 78.3
     track: 2
     endBeat: 0
-  - beat: 79
+  - beat: 82.3
     track: 2
+    endBeat: 0
+  - beat: 82.3
+    track: 4
+    endBeat: 0
+  - beat: 83.6
+    track: 1
+    endBeat: 0
+  - beat: 83.6
+    track: 3
     endBeat: 0
