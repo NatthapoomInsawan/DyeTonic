@@ -449,10 +449,10 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 90
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 91.3
-    track: 4
+    track: 2
     endBeat: 0
   - beat: 93.3
     track: 3
@@ -461,19 +461,19 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 95
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 96.5
     track: 2
     endBeat: 0
   - beat: 97.4
-    track: 3
+    track: 4
     endBeat: 0
   - beat: 98.4
-    track: 1
+    track: 3
     endBeat: 0
   - beat: 100
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 102
     track: 4
