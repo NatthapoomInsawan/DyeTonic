@@ -286,29 +286,14 @@ MonoBehaviour:
   - beat: 24
     track: 3
     endBeat: 0
-  - beat: 25
-    track: 2
-    endBeat: 0
-  - beat: 25
-    track: 4
-    endBeat: 0
-  - beat: 26
-    track: 1
-    endBeat: 0
   - beat: 26
     track: 3
     endBeat: 0
   - beat: 27
     track: 2
     endBeat: 0
-  - beat: 27
-    track: 4
-    endBeat: 0
   - beat: 28
     track: 3
-    endBeat: 0
-  - beat: 28
-    track: 1
     endBeat: 0
   - beat: 29
     track: 2
@@ -352,6 +337,51 @@ MonoBehaviour:
   - beat: 40
     track: 2
     endBeat: 0
-  - beat: 40
+  - beat: 41.4
+    track: 3
+    endBeat: 0
+  - beat: 42
     track: 4
     endBeat: 0
+  - beat: 43
+    track: 1
+    endBeat: 0
+  - beat: 44
+    track: 2
+    endBeat: 0
+  - beat: 44
+    track: 4
+    endBeat: 0
+  - beat: 45
+    track: 2
+    endBeat: 0
+  - beat: 47
+    track: 3
+    endBeat: 0
+  - beat: 49
+    track: 3
+    endBeat: 0
+  - beat: 54
+    track: 3
+    endBeat: 0
+  - beat: 54
+    track: 1
+    endBeat: 0
+  - beat: 54
+    track: 3
+    endBeat: 0
+  - beat: 55.6
+    track: 2
+    endBeat: 0
+  - beat: 55.6
+    track: 4
+    endBeat: 0
+  - beat: 56
+    track: 1
+    endBeat: 0
+  - beat: 57
+    track: 2
+    endBeat: 0
+  - beat: 58
+    track: 3
+    endBeat: 62
