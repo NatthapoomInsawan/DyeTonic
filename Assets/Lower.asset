@@ -316,3 +316,42 @@ MonoBehaviour:
   - beat: 29
     track: 4
     endBeat: 0
+  - beat: 30
+    track: 1
+    endBeat: 0
+  - beat: 30
+    track: 3
+    endBeat: 0
+  - beat: 31
+    track: 1
+    endBeat: 0
+  - beat: 32
+    track: 2
+    endBeat: 0
+  - beat: 33
+    track: 3
+    endBeat: 0
+  - beat: 34
+    track: 4
+    endBeat: 0
+  - beat: 35
+    track: 2
+    endBeat: 0
+  - beat: 36
+    track: 4
+    endBeat: 0
+  - beat: 37
+    track: 3
+    endBeat: 0
+  - beat: 38
+    track: 1
+    endBeat: 0
+  - beat: 39
+    track: 2
+    endBeat: 0
+  - beat: 40
+    track: 2
+    endBeat: 0
+  - beat: 40
+    track: 4
+    endBeat: 0
