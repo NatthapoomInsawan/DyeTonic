@@ -272,14 +272,47 @@ MonoBehaviour:
     endBeat: 215
   notesLine2:
   - beat: 22
-    track: 1
-    endBeat: 0
-  - beat: 22.7
     track: 3
     endBeat: 0
   - beat: 23
-    track: 0
+    track: 2
     endBeat: 0
   - beat: 23
-    track: 0
+    track: 4
+    endBeat: 0
+  - beat: 24
+    track: 1
+    endBeat: 0
+  - beat: 24
+    track: 3
+    endBeat: 0
+  - beat: 25
+    track: 2
+    endBeat: 0
+  - beat: 25
+    track: 4
+    endBeat: 0
+  - beat: 26
+    track: 1
+    endBeat: 0
+  - beat: 26
+    track: 3
+    endBeat: 0
+  - beat: 27
+    track: 2
+    endBeat: 0
+  - beat: 27
+    track: 4
+    endBeat: 0
+  - beat: 28
+    track: 3
+    endBeat: 0
+  - beat: 28
+    track: 1
+    endBeat: 0
+  - beat: 29
+    track: 2
+    endBeat: 0
+  - beat: 29
+    track: 4
     endBeat: 0
