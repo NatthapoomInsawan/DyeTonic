@@ -302,7 +302,7 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 29.4
-    track: 2
+    track: 3
     endBeat: 0
   - beat: 30
     track: 1
@@ -314,55 +314,55 @@ MonoBehaviour:
     track: 3
     endBeat: 0
   - beat: 31.9
-    track: 2
+    track: 4
     endBeat: 0
   - beat: 33.3
     track: 3
     endBeat: 0
   - beat: 33.9
-    track: 4
+    track: 2
     endBeat: 0
   - beat: 34.5
-    track: 4
-    endBeat: 0
-  - beat: 35.5
-    track: 4
-    endBeat: 0
-  - beat: 36
     track: 3
     endBeat: 0
-  - beat: 37.3
+  - beat: 35.5
     track: 1
+    endBeat: 0
+  - beat: 36
+    track: 2
+    endBeat: 0
+  - beat: 37.3
+    track: 4
     endBeat: 0
   - beat: 37.9
     track: 3
     endBeat: 0
   - beat: 38.5
-    track: 4
+    track: 2
     endBeat: 0
   - beat: 39.2
     track: 3
     endBeat: 0
   - beat: 40
-    track: 4
+    track: 1
     endBeat: 0
   - beat: 41.3
-    track: 2
-    endBeat: 0
-  - beat: 42
-    track: 1
-    endBeat: 0
-  - beat: 42.6
     track: 3
     endBeat: 0
-  - beat: 43.3
-    track: 4
-    endBeat: 0
-  - beat: 44
+  - beat: 42
     track: 2
     endBeat: 0
-  - beat: 45.2
+  - beat: 42.6
+    track: 4
+    endBeat: 0
+  - beat: 43.3
+    track: 2
+    endBeat: 0
+  - beat: 44
     track: 1
+    endBeat: 0
+  - beat: 45.2
+    track: 2
     endBeat: 0
   - beat: 45.9
     track: 3
@@ -371,13 +371,16 @@ MonoBehaviour:
     track: 4
     endBeat: 0
   - beat: 47.5
-    track: 2
+    track: 3
     endBeat: 0
   - beat: 48.3
-    track: 1
+    track: 2
     endBeat: 0
   - beat: 50.5
     track: 3
+    endBeat: 0
+  - beat: 50.5
+    track: 1
     endBeat: 0
   - beat: 52
     track: 4
@@ -385,35 +388,47 @@ MonoBehaviour:
   - beat: 54
     track: 3
     endBeat: 0
+  - beat: 54
+    track: 2
+    endBeat: 0
   - beat: 56
     track: 2
     endBeat: 0
   - beat: 58
-    track: 1
+    track: 2
+    endBeat: 0
+  - beat: 58
+    track: 4
     endBeat: 0
   - beat: 62.7
     track: 3
     endBeat: 0
   - beat: 63.8
-    track: 1
+    track: 2
+    endBeat: 0
+  - beat: 63.8
+    track: 4
     endBeat: 0
   - beat: 66.6
     track: 1
     endBeat: 0
   - beat: 68
-    track: 1
+    track: 3
+    endBeat: 0
+  - beat: 68
+    track: 4
     endBeat: 0
   - beat: 70.6
     track: 1
     endBeat: 0
   - beat: 70.6
-    track: 1
+    track: 2
     endBeat: 0
   - beat: 72
     track: 3
     endBeat: 0
   - beat: 74.7
-    track: 3
+    track: 2
     endBeat: 0
   - beat: 74.3
     track: 3
@@ -421,6 +436,12 @@ MonoBehaviour:
   - beat: 76.2
     track: 3
     endBeat: 0
+  - beat: 76.2
+    track: 1
+    endBeat: 0
   - beat: 79.8
-    track: 3
+    track: 2
+    endBeat: 0
+  - beat: 79.8
+    track: 4
     endBeat: 0
