@@ -392,16 +392,19 @@ MonoBehaviour:
     track: 2
     endBeat: 0
   - beat: 56
-    track: 2
+    track: 3
     endBeat: 0
   - beat: 58
     track: 2
     endBeat: 0
   - beat: 58
-    track: 4
+    track: 1
+    endBeat: 0
+  - beat: 60.2
+    track: 3
     endBeat: 0
   - beat: 62.7
-    track: 3
+    track: 4
     endBeat: 0
   - beat: 63.8
     track: 2
@@ -427,21 +430,231 @@ MonoBehaviour:
   - beat: 72
     track: 3
     endBeat: 0
-  - beat: 74.7
-    track: 2
-    endBeat: 0
   - beat: 74.3
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 76.2
-    track: 3
+    track: 2
     endBeat: 0
   - beat: 76.2
     track: 1
     endBeat: 0
-  - beat: 79.8
+  - beat: 78.7
     track: 2
     endBeat: 0
-  - beat: 79.8
+  - beat: 78.7
     track: 4
     endBeat: 0
+  - beat: 80
+    track: 2
+    endBeat: 0
+  - beat: 80
+    track: 4
+    endBeat: 0
+  - beat: 80
+    track: 4
+    endBeat: 0
+  - beat: 82.5
+    track: 1
+    endBeat: 89
+  - beat: 83.4
+    track: 2
+    endBeat: 0
+  - beat: 87.6
+    track: 2
+    endBeat: 0
+  - beat: 87.6
+    track: 2
+    endBeat: 0
+  - beat: 90
+    track: 4
+    endBeat: 98
+  - beat: 91
+    track: 3
+    endBeat: 0
+  - beat: 95.5
+    track: 3
+    endBeat: 0
+  - beat: 97.9
+    track: 3
+    endBeat: 0
+  - beat: 99.4
+    track: 4
+    endBeat: 0
+  - beat: 99.4
+    track: 2
+    endBeat: 0
+  - beat: 103.5
+    track: 1
+    endBeat: 0
+  - beat: 103.5
+    track: 3
+    endBeat: 0
+  - beat: 107.7
+    track: 2
+    endBeat: 0
+  - beat: 107.7
+    track: 4
+    endBeat: 0
+  - beat: 110.4
+    track: 1
+    endBeat: 0
+  - beat: 111
+    track: 2
+    endBeat: 0
+  - beat: 113
+    track: 4
+    endBeat: 116
+  - beat: 117
+    track: 2
+    endBeat: 125
+  - beat: 129.7
+    track: 3
+    endBeat: 0
+  - beat: 129.7
+    track: 2
+    endBeat: 0
+  - beat: 131.9
+    track: 3
+    endBeat: 0
+  - beat: 131.9
+    track: 2
+    endBeat: 0
+  - beat: 134.9
+    track: 1
+    endBeat: 0
+  - beat: 134.9
+    track: 4
+    endBeat: 0
+  - beat: 134.8
+    track: 3
+    endBeat: 0
+  - beat: 136.4
+    track: 2
+    endBeat: 0
+  - beat: 136.4
+    track: 2
+    endBeat: 0
+  - beat: 138.6
+    track: 1
+    endBeat: 0
+  - beat: 140.4
+    track: 2
+    endBeat: 0
+  - beat: 142.6
+    track: 3
+    endBeat: 0
+  - beat: 144.6
+    track: 4
+    endBeat: 0
+  - beat: 146
+    track: 3
+    endBeat: 0
+  - beat: 148
+    track: 2
+    endBeat: 0
+  - beat: 148
+    track: 2
+    endBeat: 0
+  - beat: 150.6
+    track: 2
+    endBeat: 0
+  - beat: 152
+    track: 3
+    endBeat: 0
+  - beat: 152
+    track: 2
+    endBeat: 0
+  - beat: 154
+    track: 3
+    endBeat: 0
+  - beat: 156
+    track: 1
+    endBeat: 0
+  - beat: 156
+    track: 1
+    endBeat: 0
+  - beat: 158
+    track: 2
+    endBeat: 0
+  - beat: 161
+    track: 3
+    endBeat: 178
+  - beat: 164
+    track: 4
+    endBeat: 0
+  - beat: 166
+    track: 3
+    endBeat: 0
+  - beat: 170
+    track: 2
+    endBeat: 0
+  - beat: 174
+    track: 1
+    endBeat: 0
+  - beat: 178
+    track: 2
+    endBeat: 0
+  - beat: 178
+    track: 1
+    endBeat: 0
+  - beat: 178
+    track: 2
+    endBeat: 0
+  - beat: 179
+    track: 4
+    endBeat: 0
+  - beat: 179
+    track: 3
+    endBeat: 0
+  - beat: 180
+    track: 2
+    endBeat: 0
+  - beat: 181
+    track: 1
+    endBeat: 0
+  - beat: 182
+    track: 3
+    endBeat: 0
+  - beat: 183
+    track: 1
+    endBeat: 0
+  - beat: 184
+    track: 4
+    endBeat: 0
+  - beat: 185
+    track: 2
+    endBeat: 0
+  - beat: 186
+    track: 4
+    endBeat: 0
+  - beat: 187
+    track: 2
+    endBeat: 0
+  - beat: 188
+    track: 3
+    endBeat: 0
+  - beat: 189
+    track: 1
+    endBeat: 0
+  - beat: 190
+    track: 3
+    endBeat: 0
+  - beat: 192
+    track: 2
+    endBeat: 200
+  - beat: 192
+    track: 3
+    endBeat: 200
+  - beat: 201.5
+    track: 1
+    endBeat: 208
+  - beat: 201.5
+    track: 4
+    endBeat: 208
+  - beat: 210
+    track: 3
+    endBeat: 226
+  - beat: 210
+    track: 2
+    endBeat: 226
