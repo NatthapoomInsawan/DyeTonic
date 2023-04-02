@@ -222,20 +222,20 @@ MonoBehaviour:
   - beat: 164
     track: 3
     endBeat: 0
+  - beat: 164.7
+    track: 2
+    endBeat: 0
   - beat: 165
     track: 2
     endBeat: 0
-  - beat: 166
+  - beat: 165.5
     track: 1
-    endBeat: 172
-  - beat: 165.6
-    track: 2
     endBeat: 0
   - beat: 166.3
     track: 1
     endBeat: 0
   - beat: 166.3
-    track: 3
+    track: 1
     endBeat: 0
   - beat: 167
     track: 2
