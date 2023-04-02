@@ -198,35 +198,35 @@ MonoBehaviour:
   - beat: 150
     track: 4
     endBeat: 0
-  - beat: 150.9
+  - beat: 151
     track: 3
     endBeat: 0
-  - beat: 150.9
+  - beat: 151
     track: 1
     endBeat: 0
-  - beat: 156
-    track: 1
+  - beat: 153
+    track: 3
     endBeat: 162
-  - beat: 157
+  - beat: 154
     track: 2
     endBeat: 0
-  - beat: 159
+  - beat: 158
+    track: 2
+    endBeat: 0
+  - beat: 161
     track: 2
     endBeat: 0
   - beat: 163
-    track: 3
-    endBeat: 165
-  - beat: 166
-    track: 1
+    track: 4
     endBeat: 0
-  - beat: 166
+  - beat: 164
     track: 3
     endBeat: 0
-  - beat: 167
+  - beat: 165
     track: 2
     endBeat: 0
-  - beat: 168
-    track: 3
+  - beat: 166
+    track: 1
     endBeat: 172
   - beat: 165.6
     track: 2
