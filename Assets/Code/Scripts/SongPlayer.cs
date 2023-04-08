@@ -112,7 +112,7 @@ namespace DyeTonic
             {
                 if (gameLose)
                     _songManager.HP = 0;
-                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
+                SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
             }
             else
                 OnGameEnd?.Invoke(gameLose);

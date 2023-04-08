@@ -126,7 +126,7 @@ namespace DyeTonic
                 if ((bool)data[0])
                     _songManager.HP = 0;
 
-                SceneManager.LoadSceneAsync("GameOverScene", LoadSceneMode.Additive);
+                SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
             }
 
             if (eventCode == NOTE_REMOVE_EVENT)
